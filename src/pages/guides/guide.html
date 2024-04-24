@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WV"/>
+  <meta name="keyword" content="WV" />
+  <title>WV GUIDE</title>
+
+  <link rel="icon" type="image/svg+xml" href="../../../assets/img/wever_favicon.svg" />
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="guide">
+  <div class="deco sub"><span></span><span></span><span></span></div>
+  <header class="pf_hd">
+    <div class="pf_inner">
+      <h1 class="logo">
+        <a href="../../index.html"><img src="../../assets/img/common/logo_b.svg" alt="wever 로고"></a>
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="./guide.html" class="fs_14 fw_semibold hov_opacity">Docs</a></li>
+          <li><a href="#" class="fs_14 fw_semibold hov_opacity">Component</a></li>
+          <li><a href="../admin/adm.html" class="fs_14 fw_semibold hov_opacity" target="_blank">Admin</a></li>
+          <li><a href="#" class="fs_14 fw_semibold hov_opacity">Icons</a></li>
+          <li><a href="../projects/list.html" class="fs_14 fw_semibold hov_opacity">Projects</a></li>
+          <li><a href="#" class="fs_14 fw_semibold hov_opacity">Download</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="pf_cont">
+    <div class="pf_inner">
+      <div class="wv_row w_100">
+        <aside class="pf_nav wv_col_2">
+          <h2 class="fs_16 fw_semibold pb_20">Layout</h2>
+          <div class="sub">
+            <button type="button" class="fs_14 fw_regular active">Display</button>
+            <button type="button" class="fs_14 fw_regular">Aspect Ratio</button>
+            <button type="button" class="fs_14 fw_regular">Flex</button>
+            <button type="button" class="fs_14 fw_regular">Position</button>
+            <button type="button" class="fs_14 fw_regular">Margin & Padding</button>
+          </div>
+          <h2 class="fs_16 fw_semibold pb_20 mt_30">Content</h2>
+          <div class="sub">
+            <button type="button" class="fs_14 fw_regular active">Font size</button>
+            <button type="button" class="fs_14 fw_regular active">Font weight</button>
+            <button type="button" class="fs_14 fw_regular active">Line height</button>
+            <button type="button" class="fs_14 fw_regular active">Text align</button>
+            <button type="button" class="fs_14 fw_regular active">Text clamp</button>
+            <button type="button" class="fs_14 fw_regular active">Text indent & dot</button>
+          </div>
+        </aside>
+        <div class="pf_desc wv_col_10">
+          <section>
+            <!--          LAYOUT -->
+            <article>
+              <p class="fs_14 fw_regular pf_tag">Layout</p>
+              <h3 class="fs_28 fw_bold mb_40 mt_4">Display</h3>
+
+              <div class="dp_f w_100 jtf_bet gap20">
+                <div class="wv_col_6">
+                  <h4 class="fs_18 fw_semibold">PC</h4>
+                  <table class="pf_table ">
+                    <colgroup>
+                      <col style="width: 40%;">
+                      <col style="width: 60%;">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>Attribute</th>
+                        <th>Class</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="attribute">display: block</td>
+                        <td class="class">.dp_b</td>
+                      </tr>
+                      <tr>
+                        <td class="attribute">display: inline-block</td>
+                        <td class="class">.dp_ib</td>
+                      </tr>
+                      <tr>
+                        <td class="attribute">display: inline</td>
+                        <td class="class">.dp_i</td>
+                      </tr>
+                      <tr>
+                        <td class="attribute">display: flex</td>
+                        <td class="class">.dp_f</td>
+                      </tr>
+                      <tr>
+                        <td class="attribute">display: inline-flex</td>
+                        <td class="class">.dp_if</td>
+                      </tr>
+                      <tr>
+                        <td class="attribute">display: grid</td>
+                        <td class="class">.dp_g</td>
+                      </tr>
+                      <tr>
+                        <td class="attribute">display: inline-grid</td>
+                        <td class="class">.dp_ig</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="wv_col_6">
+                  <h4 class="fs_18 fw_semibold">MO</h4>
+                  <table class="pf_table ">
+                    <colgroup>
+                      <col style="width: 40%;">
+                      <col style="width: 60%;">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th>Class</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td class="attribute">display: block</td>
+                      <td class="class">.md_dp_b</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">display: inline-block</td>
+                      <td class="class">.md_dp_ib</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">display: inline</td>
+                      <td class="class">.md_dp_i</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">display: flex</td>
+                      <td class="class">.md_dp_f</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">display: inline-flex</td>
+                      <td class="class">.md_dp_if</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">display: grid</td>
+                      <td class="class">.md_dp_g</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">display: inline-grid</td>
+                      <td class="class">.md_dp_ig</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <h4 class="fs_18 fw_semibold mt_60">Responsive Show & Hide</h4>
+              <table class="pf_table mt_10">
+                <colgroup>
+                  <col style="width: 20%;">
+                  <col style="width: 40%;">
+                  <col style="width: 40%;">
+                </colgroup>
+                <thead>
+                <tr>
+                  <th>Breakpoints</th>
+                  <th>Class</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td class="attribute">min-width: 1599px</td>
+                  <td class="class">
+                    .m_hide : block <br>
+                    .m_show		 : none <br>
+                    .res_1600_s	: none <br>
+                    .res_1440_s	: none <br>
+                    .res_1024_s	: none <br>
+                    .res_1280_s	: none <br>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="attribute">max-width: 1600px</td>
+                  <td class="class">
+                    .res_1600_s	: block <br>
+                    .res_1600_h : none
+                  </td>
+                </tr>
+                <tr>
+                  <td class="attribute">max-width: 1440px</td>
+                  <td class="class">
+                    .res_1440_s : block <br>
+                    .res_1440_h : none
+                  </td>
+                </tr>
+                <tr>
+                  <td class="attribute">max-width: 1280px</td>
+                  <td class="class">
+                    .res_1280_s : block <br>
+                    .res_1280_h : none
+                  </td>
+                </tr>
+                <tr>
+                  <td class="attribute">max-width: 1024px</td>
+                  <td class="class">
+                    .res_1024_s : block <br>
+                    .res_1024_h : none
+                  </td>
+                </tr>
+                <tr>
+                  <td class="attribute">max-width: 768px</td>
+                  <td class="class">
+                    .m_show : block <br>
+                    .m_hide : none
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </article>
+            <article>
+              <p class="fs_14 fw_regular pf_tag">Layout</p>
+              <h3 class="fs_28 fw_bold mb_40 mt_4">Aspect Ratio</h3>
+
+              <div class="wv_col_12">
+                <table class="pf_table ">
+                  <colgroup>
+                    <col style="width: 40%;">
+                    <col style="width: 60%;">
+                  </colgroup>
+                  <thead>
+                  <tr>
+                    <th>Attribute</th>
+                    <th>Class</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td class="attribute">aspect_auto: auto</td>
+                    <td class="class">.aspect_auto</td>
+                  </tr>
+                  <tr>
+                    <td class="attribute">aspect_auto: 1/1</td>
+                    <td class="class">.aspect_square</td>
+                  </tr>
+                  <tr>
+                    <td class="attribute">aspect_auto: 1/1</td>
+                    <td class="class">.aspect_video</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </article>
+            <article>
+              <p class="fs_!4 fw_regular pf_tag">Layout</p>
+              <h3 class="fs_28 fw_bold mb_40 mt_4">Flex</h3>
+
+              <div class="dp_f w_100 jtf_bet gap20">
+                <div class="wv_col_6">
+                  <h4 class="fs_18 fw_semibold">PC</h4>
+                  <table class="pf_table ">
+                    <colgroup>
+                      <col style="width: 40%;">
+                      <col style="width: 60%;">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th class="pl_20">Class</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td class="attribute">flex-direction: column</td>
+                      <td class="class pl_20">.fd_col</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">flex-direction: column-reverse</td>
+                      <td class="class pl_20">.fd_col_rvs</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">flex-direction: row</td>
+                      <td class="class pl_20">.fd_row</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">flex-direction: row-reverse</td>
+                      <td class="class pl_20">.fd_row_rvs</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">align-items: center</td>
+                      <td class="class pl_20">.al_center</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">align-items: flex-start</td>
+                      <td class="class pl_20">.al_start</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">align-items: flex-end</td>
+                      <td class="class pl_20">.al_end</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">justify-content: center</td>
+                      <td class="class pl_20">.jtf_center</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">justify-content: flex-start</td>
+                      <td class="class pl_20">.jtf_start</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">justify-content: flex-end</td>
+                      <td class="class pl_20">.jtf_end</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">justify-content: space-between</td>
+                      <td class="class pl_20">.jtf_bet</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">justify-content: space-around</td>
+                      <td class="class pl_20">.jtf_aro</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">flex-wrap: wrap</td>
+                      <td class="class pl_20">.fd_wrap</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">flex-wrap: nowrap</td>
+                      <td class="class pl_20">.fd_nowrap</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">
+                        display: flex <br>
+                        justify-content: center <br>
+                        align-items: center
+                      </td>
+                      <td class="class pl_20">.fd_center</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="wv_col_6">
+                  <h4 class="fs_18 fw_semibold">MO</h4>
+                  <table class="pf_table ">
+                    <colgroup>
+                      <col style="width: 40%;">
+                      <col style="width: 60%;">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th class="pl_20">Class</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td class="attribute">flex-direction: column</td>
+                      <td class="class pl_20">.md_fd_col</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">flex-direction: column-reverse</td>
+                      <td class="class pl_20">.md_fd_col_rvs</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">flex-direction: row</td>
+                      <td class="class pl_20">.md_fd_row</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">flex-direction: row-reverse</td>
+                      <td class="class pl_20">.md_fd_row_rvs</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">align-items: center</td>
+                      <td class="class pl_20">.md_al_center</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">align-items: flex-start</td>
+                      <td class="class pl_20">.md_al_start</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">align-items: flex-end</td>
+                      <td class="class pl_20">.md_al_end</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">justify-content: center</td>
+                      <td class="class pl_20">.md_jtf_center</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">justify-content: flex-start</td>
+                      <td class="class pl_20">.md_jtf_start</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">justify-content: flex-end</td>
+                      <td class="class pl_20">.md_jtf_end</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">justify-content: space-between</td>
+                      <td class="class pl_20">.md_jtf_bet</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">justify-content: space-around</td>
+                      <td class="class pl_20">.md_jtf_aro</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">flex-wrap: wrap</td>
+                      <td class="class pl_20">.md_fd_wrap</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">flex-wrap: nowrap</td>
+                      <td class="class pl_20">.md_fd_nowrap</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">
+                        display: flex <br>
+                        justify-content: center <br>
+                        align-items: center
+                      </td>
+                      <td class="class pl_20">.md_fd_center</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="wv_col_6 mt_40">
+                <h4 class="fs_18 fw_semibold">Gap</h4>
+                <table class="pf_table ">
+                  <colgroup>
+                    <col style="width: 40%;">
+                    <col style="width: 60%;">
+                  </colgroup>
+                  <thead>
+                  <tr>
+                    <th>Attribute</th>
+                    <th class="pl_20">Class</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td class="attribute">gap: 36px</td>
+                    <td class="class pl_20">.gap36</td>
+                  </tr>
+                  <tr>
+                    <td class="attribute">gap: 30px</td>
+                    <td class="class pl_20">.gap30</td>
+                  </tr>
+                  <tr>
+                    <td class="attribute">gap: 20px</td>
+                    <td class="class pl_20">.gap20</td>
+                  </tr>
+                  <tr>
+                    <td class="attribute">gap: 10px</td>
+                    <td class="class pl_20">.gap10</td>
+                  </tr>
+                  <tr>
+                    <td class="attribute">gap: 0px</td>
+                    <td class="class pl_20">.gap0</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="dp_f jtf_bet gap20">
+                <div class="wv_col_6">
+                  <p class="fs_16 fw_medium mt_40">flex-direction: column</p>
+                  <div class="example_cont mt_10">
+                    <div class="bg_purple dp_f fd_col">
+                      <div class="dummy_box">dummy1</div>
+                      <div class="dummy_box">dummy2</div>
+                      <div class="dummy_box">dummy3</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="wv_col_6">
+                  <p class="fs_16 fw_medium mt_40">flex-direction: column</p>
+                  <div class="example_cont mt_10">
+                    <div class="bg_purple dp_f fd_row">
+                      <div class="dummy_box">dummy1</div>
+                      <div class="dummy_box">dummy2</div>
+                      <div class="dummy_box">dummy3</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dp_f jtf_bet gap20">
+                <div class="wv_col_6">
+                  <p class="fs_16 fw_medium mt_40">flex-direction: row-reverse</p>
+                  <div class="example_cont mt_10">
+                    <div class="bg_purple dp_f fd_col_rvs">
+                      <div class="dummy_box">dummy1</div>
+                      <div class="dummy_box">dummy2</div>
+                      <div class="dummy_box">dummy3</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="wv_col_6">
+                  <p class="fs_16 fw_medium mt_40">flex-direction: column-reverse</p>
+                  <div class="example_cont mt_10">
+                    <div class="bg_purple dp_f fd_row_rvs">
+                      <div class="dummy_box">dummy1</div>
+                      <div class="dummy_box">dummy2</div>
+                      <div class="dummy_box">dummy3</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dp_f jtf_bet gap20">
+                <div class="wv_col_6">
+                  <p class="fs_16 fw_medium mt_40">row - align-items: flex-start</p>
+                  <div class="example_cont mt_10">
+                    <div class="bg_purple dp_f al_start" style="height: 200px">
+                      <div class="dummy_box">dummy1</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="wv_col_6">
+                  <p class="fs_16 fw_medium mt_40">column - align-items: flex-start</p>
+                  <div class="example_cont mt_10">
+                    <div class="bg_purple dp_f jtf_start" style="height: 200px">
+                      <div class="dummy_box">dummy1</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dp_f jtf_bet gap20">
+                <div class="wv_col_6">
+                  <p class="fs_16 fw_medium mt_40">row - align-items: center</p>
+                  <div class="example_cont mt_10">
+                    <div class="bg_purple dp_f al_center" style="height: 200px">
+                      <div class="dummy_box">dummy1</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="wv_col_6">
+                  <p class="fs_16 fw_medium mt_40">column - align-items: center</p>
+                  <div class="example_cont mt_10">
+                    <div class="bg_purple dp_f jtf_center" style="height: 200px">
+                      <div class="dummy_box">dummy1</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dp_f jtf_bet gap20">
+                <div class="wv_col_6">
+                  <p class="fs_16 fw_medium mt_40">row - align-items: flex-end</p>
+                  <div class="example_cont mt_10">
+                    <div class="bg_purple dp_f al_end" style="height: 200px">
+                      <div class="dummy_box">dummy1</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="wv_col_6">
+                  <p class="fs_16 fw_medium mt_40">column - align-items: flex-end</p>
+                  <div class="example_cont mt_10">
+                    <div class="bg_purple dp_f jtf_end" style="height: 200px">
+                      <div class="dummy_box">dummy1</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wv_col_12">
+                <p class="fs_16 fw_medium mt_40">justify-content: space-between</p>
+                <div class="example_cont mt_10">
+                  <div class="bg_purple dp_f jtf_bet al_center" style="height: 200px">
+                    <div class="dummy_box">dummy1</div>
+                    <div class="dummy_box">dummy2</div>
+                    <div class="dummy_box">dummy3</div>
+                    <div class="dummy_box">dummy4</div>
+                    <div class="dummy_box">dummy5</div>
+                  </div>
+                </div>
+              </div>
+              <div class="wv_col_12">
+                <p class="fs_16 fw_medium mt_40">justify-content: space-around</p>
+                <div class="example_cont mt_10">
+                  <div class="bg_purple dp_f jtf_aro al_center" style="height: 200px">
+                    <div class="dummy_box">dummy1</div>
+                    <div class="dummy_box">dummy2</div>
+                    <div class="dummy_box">dummy3</div>
+                    <div class="dummy_box">dummy4</div>
+                    <div class="dummy_box">dummy5</div>
+                  </div>
+                </div>
+              </div>
+              <div class="wv_col_12">
+                <p class="fs_16 fw_medium mt_40">
+                  display: flex; <br>
+                  justify-content: center <br>
+                  align-items: center
+                </p>
+                <div class="example_cont mt_10">
+                  <div class="bg_purple fd_center" style="height: 200px">
+                    <div class="dummy_box">dummy1</div>
+                  </div>
+                </div>
+              </div>
+              <div class="wv_col_12">
+                <p class="fs_16 fw_medium mt_40">
+                  flex-wrap: wrap
+                </p>
+                <div class="example_cont mt_10">
+                  <div class="bg_purple dp_f fd_wrap" style="height: max-content">
+                    <div class="dummy_box" style="width: 350px;">dummy1</div>
+                    <div class="dummy_box" style="width: 350px;">dummy2</div>
+                    <div class="dummy_box" style="width: 350px;">dummy3</div>
+                    <div class="dummy_box" style="width: 350px;">dummy4</div>
+                  </div>
+                </div>
+              </div>
+              <div class="wv_col_12">
+                <p class="fs_16 fw_medium mt_40">
+                  flex-wrap: nowrap
+                </p>
+                <div class="example_cont mt_10">
+                  <div class="bg_purple dp_f fd_nowrap" style="height: max-content">
+                    <div class="dummy_box" style="width: 350px;">dummy1</div>
+                    <div class="dummy_box" style="width: 350px;">dummy2</div>
+                    <div class="dummy_box" style="width: 350px;">dummy3</div>
+                    <div class="dummy_box" style="width: 350px;">dummy4</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article>
+              <p class="fs_14 fw_regular pf_tag">Layout</p>
+              <h3 class="fs_28 fw_bold mb_40 mt_4">Position</h3>
+
+              <div class="dp_f w_100 jtf_bet gap20">
+                <div class="wv_col_6">
+                  <h4 class="fs_18 fw_semibold">PC</h4>
+                  <table class="pf_table ">
+                    <colgroup>
+                      <col style="width: 40%;">
+                      <col style="width: 60%;">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th>Class</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="attribute">position: relative</td>
+                        <td class="class">.pos_re</td>
+                      </tr>
+                      <tr>
+                        <td class="attribute">position: absolute</td>
+                        <td class="class">.pos_ab</td>
+                      </tr>
+                      <tr>
+                        <td class="attribute">position: fixed</td>
+                        <td class="class">.pos_fx</td>
+                      </tr>
+                      <tr>
+                        <td class="attribute">position: sticky</td>
+                        <td class="class">.pos_sk</td>
+                      </tr>
+                      <tr>
+                        <td class="attribute">position: static</td>
+                        <td class="class">.pos_st</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="wv_col_6">
+                  <h4 class="fs_18 fw_semibold">MO</h4>
+                  <table class="pf_table ">
+                    <colgroup>
+                      <col style="width: 40%;">
+                      <col style="width: 60%;">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th>Class</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td class="attribute">position: relative</td>
+                      <td class="class">.md_pos_re</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">position: absolute</td>
+                      <td class="class">.md_pos_ab</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">position: fixed</td>
+                      <td class="class">.md_pos_fx</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">position: sticky</td>
+                      <td class="class">.md_pos_sk</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">position: static</td>
+                      <td class="class">.md_pos_st</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </article>
+            <article>
+              <p class="fs_14 fw_regular pf_tag">Layout</p>
+              <h3 class="fs_28 fw_bold mb_40 mt_4">Margin & Padding</h3>
+              <p class="fs_16 fw_medium"><strong>간격 사이즈</strong> : [ 300, 260, 200, 160, 140, 120, 100, 80, 70, 60, 50, 40, 36, 30, 20, 16, 12, 10, 8, 6, 4 ]</p>
+              <p class="fs_16 fw_medium mt_10"><strong>PC 접두사</strong> : mt_* , ml_* , mr_* , mb_* , pt_* , pl_* , pr_* , pb_*</p>
+              <p class="fs_16 fw_medium mt_10"><strong>MO 접두사</strong> : md_mt_* , md_ml_* , md_mr_* , md_mb_* , md_pt_* , md_pl_* , md_pr_* , md_pb_*</p>
+            </article>
+            <!--          LAYOUT END -->
+          </section>
+          <section>
+            <!--          CONTENT -->
+            <article>
+              <p class="fs_14 fw_regular pf_tag">Content</p>
+              <h3 class="fs_28 fw_bold mb_40 mt_4">Font size</h3>
+              <p class="fs_16 fw_medium"><strong>폰트 사이즈</strong> : [ 200, 100, 80, 68, 60, 52, 50, 40, 36, 32, 30, 28, 24, 20, 18, 16, 14, 12, 10 ]</p>
+              <p class="fs_16 fw_medium mt_10"><strong>PC 접두사</strong> : fs_* </p>
+              <p class="fs_16 fw_medium mt_10"><strong>MO 접두사</strong> : md_fs_* </p>
+            </article>
+            <article>
+              <p class="fs_14 fw_regular pf_tag">Content</p>
+              <h3 class="fs_28 fw_bold mb_40 mt_4">Font weight</h3>
+
+              <div class="dp_f w_100 jtf_bet gap20 mt_60">
+                <div class="wv_col_6">
+                  <h4 class="fs_18 fw_semibold">PC</h4>
+                  <table class="pf_table ">
+                    <colgroup>
+                      <col style="width: 40%;">
+                      <col style="width: 60%;">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th>Class</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td class="attribute">font-weight: 100</td>
+                      <td class="class">.fw_thin</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">font-weight: 200</td>
+                      <td class="class">.fw_exLight</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">font-weight: 300</td>
+                      <td class="class">.fw_light</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">font-weight: 400</td>
+                      <td class="class">.fw_regular</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">font-weight: 500</td>
+                      <td class="class">.fw_medium</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">font-weight: 600</td>
+                      <td class="class">.fw_semibold</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">font-weight: 700</td>
+                      <td class="class">.fw_bold</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">font-weight: 800</td>
+                      <td class="class">.fw_exBold</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">font-weight: 900</td>
+                      <td class="class">.fw_heavy</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="wv_col_6">
+                  <h4 class="fs_18 fw_semibold">MO</h4>
+                  <table class="pf_table ">
+                    <colgroup>
+                      <col style="width: 40%;">
+                      <col style="width: 60%;">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th>Class</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td class="attribute">font-weight: 100</td>
+                      <td class="class">.md_fw_thin</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">font-weight: 200</td>
+                      <td class="class">.md_fw_exLight</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">font-weight: 300</td>
+                      <td class="class">.md_fw_light</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">font-weight: 400</td>
+                      <td class="class">.md_fw_regular</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">font-weight: 500</td>
+                      <td class="class">.md_fw_medium</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">font-weight: 600</td>
+                      <td class="class">.md_fw_semibold</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">font-weight: 700</td>
+                      <td class="class">.md_fw_bold</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">font-weight: 800</td>
+                      <td class="class">.md_fw_exBold</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">font-weight: 900</td>
+                      <td class="class">.md_fw_heavy</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </article>
+            <article>
+              <p class="fs_14 fw_regular pf_tag">Content</p>
+              <h3 class="fs_28 fw_bold mb_40 mt_4">Line height</h3>
+
+              <div class="dp_f w_100 jtf_bet gap20 mt_60">
+                <div class="wv_col_6">
+                  <h4 class="fs_18 fw_semibold">PC</h4>
+                  <table class="pf_table ">
+                    <colgroup>
+                      <col style="width: 40%;">
+                      <col style="width: 60%;">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th>Class</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td class="attribute">line-height: 64px</td>
+                      <td class="class">.lih64</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">line-height: 42px</td>
+                      <td class="class">.lih42</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">line-height: 36px</td>
+                      <td class="class">.lih36</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">line-height: 30px</td>
+                      <td class="class">.lih30</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">line-height: 24px</td>
+                      <td class="class">.lih24</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">line-height: 20px</td>
+                      <td class="class">.lih20</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="wv_col_6">
+                  <h4 class="fs_18 fw_semibold">MO</h4>
+                  <table class="pf_table ">
+                    <colgroup>
+                      <col style="width: 40%;">
+                      <col style="width: 60%;">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th>Class</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td class="attribute">line-height: 64px</td>
+                      <td class="class">.md_lih64</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">line-height: 42px</td>
+                      <td class="class">.md_lih42</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">line-height: 36px</td>
+                      <td class="class">.md_lih36</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">line-height: 30px</td>
+                      <td class="class">.md_lih30</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">line-height: 24px</td>
+                      <td class="class">.md_lih24</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">line-height: 20px</td>
+                      <td class="class">.md_lih20</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="dp_f w_100 jtf_bet gap20 mt_60">
+                <div class="wv_col_6">
+                  <h4 class="fs_18 fw_semibold">PC</h4>
+                  <table class="pf_table ">
+                    <colgroup>
+                      <col style="width: 40%;">
+                      <col style="width: 60%;">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th>Class</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td class="attribute">line-height: 150%</td>
+                      <td class="class">.lih150per</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">line-height: 135%</td>
+                      <td class="class">.lih135per</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">line-height: 135%</td>
+                      <td class="class">.lih130per</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">line-height: 125%</td>
+                      <td class="class">.lih125per</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">line-height: 120%</td>
+                      <td class="class">.lih120per</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">line-height: 110%</td>
+                      <td class="class">.lih110per</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="wv_col_6">
+                  <h4 class="fs_18 fw_semibold">MO</h4>
+                  <table class="pf_table ">
+                    <colgroup>
+                      <col style="width: 40%;">
+                      <col style="width: 60%;">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th>Class</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td class="attribute">line-height: 150%</td>
+                      <td class="class">.md_lih150per</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">line-height: 135%</td>
+                      <td class="class">.md_lih135per</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">line-height: 135%</td>
+                      <td class="class">.md_lih130per</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">line-height: 125%</td>
+                      <td class="class">.md_lih125per</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">line-height: 120%</td>
+                      <td class="class">.md_lih120per</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">line-height: 110%</td>
+                      <td class="class">.md_lih110per</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </article>
+            <article>
+              <p class="fs_14 fw_regular pf_tag">Content</p>
+              <h3 class="fs_28 fw_bold mb_40 mt_4">Text align</h3>
+
+              <div class="dp_f w_100 jtf_bet gap20 mt_60">
+                <div class="wv_col_6">
+                  <h4 class="fs_18 fw_semibold">PC</h4>
+                  <table class="pf_table ">
+                    <colgroup>
+                      <col style="width: 40%;">
+                      <col style="width: 60%;">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th>Class</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td class="attribute">text-align: center</td>
+                      <td class="class">.ta_center</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">text-align: left</td>
+                      <td class="class">.ta_left</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">text-align: right</td>
+                      <td class="class">.ta_right</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="wv_col_6">
+                  <h4 class="fs_18 fw_semibold">MO</h4>
+                  <table class="pf_table ">
+                    <colgroup>
+                      <col style="width: 40%;">
+                      <col style="width: 60%;">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th>Class</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td class="attribute">text-align: center</td>
+                      <td class="class">.md_ta_center</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">text-align: left</td>
+                      <td class="class">.md_ta_left</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">text-align: right</td>
+                      <td class="class">.md_ta_right</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </article>
+            <article>
+              <p class="fs_14 fw_regular pf_tag">Content</p>
+              <h3 class="fs_28 fw_bold mt_4">Text clamp</h3>
+              <p class="fs_14 fw_regular mt_10 mb_40">사용 시 .txt_over_dot 클래스를 추가로 붙여주세요</p>
+              <div class="dp_f w_100 jtf_bet gap20 mt_60">
+                <div class="wv_col_6">
+                  <h4 class="fs_18 fw_semibold">PC</h4>
+                  <table class="pf_table ">
+                    <colgroup>
+                      <col style="width: 40%;">
+                      <col style="width: 60%;">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th>Class</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td class="attribute">-webkit-line-clamp: 1</td>
+                      <td class="class">.clamp1</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">-webkit-line-clamp: 2</td>
+                      <td class="class">.clamp2</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">-webkit-line-clamp: 3</td>
+                      <td class="class">.clamp3</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="wv_col_6">
+                  <h4 class="fs_18 fw_semibold">MO</h4>
+                  <table class="pf_table ">
+                    <colgroup>
+                      <col style="width: 40%;">
+                      <col style="width: 60%;">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th>Class</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td class="attribute">-webkit-line-clamp: 1</td>
+                      <td class="class">.md_clamp1</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">-webkit-line-clamp: 2</td>
+                      <td class="class">.md_clamp2</td>
+                    </tr>
+                    <tr>
+                      <td class="attribute">-webkit-line-clamp: 3</td>
+                      <td class="class">.md_clamp3</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="example_cont mt_40">
+                <div class="bg_purple dp_f fd_col pl_20 pr_20 lih150per">
+                  <span class="fs_20 fw_medium mt_40 mb_10">clamp1</span>
+                  <p class="txt_over_dot clamp1 ">
+                    홍어 명인이 물었다. "남도에선 큰 집인일이 있을 때 홍어를 상에 올리는데, 옛 어른들이 말씀하시던 잔칫집 홍어와 상갓집 홍어의 차이를 아십니까?" "글쎄요. 맛이 다른가요? 분위기 탓일까요?" "잔칫집 홍어는 미리 날을 받아놓고 품질이 좋은 걸 찾아 충분한 시간과 정성으로 삭히니 맛이 좋지만, 상갓집 홍어는 갑작스럽게 구해 급히 올리는 것이니 맛있기가 힘들다는 얘기죠." 슬픈 일은 느닷없이 닥친다는 걸, 홍어로도 배운다.홍어 명인이 물었다. "남도에선 큰 집인일이 있을 때 홍어를 상에 올리는데, 옛 어른들이 말씀하시던 잔칫집 홍어와 상갓집 홍어의 차이를 아십니까?" "글쎄요. 맛이 다른가요? 분위기 탓일까요?" "잔칫집 홍어는 미리 날을 받아놓고 품질이 좋은 걸 찾아 충분한 시간과 정성으로 삭히니 맛이 좋지만, 상갓집 홍어는 갑작스럽게 구해 급히 올리는 것이니 맛있기가 힘들다는 얘기죠." 슬픈 일은 느닷없이 닥친다는 걸, 홍어로도 배운다.
+                  </p>
+                  <span class="fs_20 fw_medium mt_30 mb_10">clamp2</span>
+                  <p class="txt_over_dot clamp2 ">
+                    홍어 명인이 물었다. "남도에선 큰 집인일이 있을 때 홍어를 상에 올리는데, 옛 어른들이 말씀하시던 잔칫집 홍어와 상갓집 홍어의 차이를 아십니까?" "글쎄요. 맛이 다른가요? 분위기 탓일까요?" "잔칫집 홍어는 미리 날을 받아놓고 품질이 좋은 걸 찾아 충분한 시간과 정성으로 삭히니 맛이 좋지만, 상갓집 홍어는 갑작스럽게 구해 급히 올리는 것이니 맛있기가 힘들다는 얘기죠." 슬픈 일은 느닷없이 닥친다는 걸, 홍어로도 배운다.홍어 명인이 물었다. "남도에선 큰 집인일이 있을 때 홍어를 상에 올리는데, 옛 어른들이 말씀하시던 잔칫집 홍어와 상갓집 홍어의 차이를 아십니까?" "글쎄요. 맛이 다른가요? 분위기 탓일까요?" "잔칫집 홍어는 미리 날을 받아놓고 품질이 좋은 걸 찾아 충분한 시간과 정성으로 삭히니 맛이 좋지만, 상갓집 홍어는 갑작스럽게 구해 급히 올리는 것이니 맛있기가 힘들다는 얘기죠." 슬픈 일은 느닷없이 닥친다는 걸, 홍어로도 배운다.
+                  </p>
+                  <span class="fs_20 fw_medium mt_30 mb_10">clamp3</span>
+                  <p class="txt_over_dot clamp3 ">
+                    홍어 명인이 물었다. "남도에선 큰 집인일이 있을 때 홍어를 상에 올리는데, 옛 어른들이 말씀하시던 잔칫집 홍어와 상갓집 홍어의 차이를 아십니까?" "글쎄요. 맛이 다른가요? 분위기 탓일까요?" "잔칫집 홍어는 미리 날을 받아놓고 품질이 좋은 걸 찾아 충분한 시간과 정성으로 삭히니 맛이 좋지만, 상갓집 홍어는 갑작스럽게 구해 급히 올리는 것이니 맛있기가 힘들다는 얘기죠." 슬픈 일은 느닷없이 닥친다는 걸, 홍어로도 배운다.홍어 명인이 물었다. "남도에선 큰 집인일이 있을 때 홍어를 상에 올리는데, 옛 어른들이 말씀하시던 잔칫집 홍어와 상갓집 홍어의 차이를 아십니까?" "글쎄요. 맛이 다른가요? 분위기 탓일까요?" "잔칫집 홍어는 미리 날을 받아놓고 품질이 좋은 걸 찾아 충분한 시간과 정성으로 삭히니 맛이 좋지만, 상갓집 홍어는 갑작스럽게 구해 급히 올리는 것이니 맛있기가 힘들다는 얘기죠." 슬픈 일은 느닷없이 닥친다는 걸, 홍어로도 배운다.
+                  </p>
+                  <span class="fs_20 fw_medium mt_30 mb_10 ">clamp4</span>
+                  <p class="txt_over_dot clamp4 mb_40">
+                    홍어 명인이 물었다. "남도에선 큰 집인일이 있을 때 홍어를 상에 올리는데, 옛 어른들이 말씀하시던 잔칫집 홍어와 상갓집 홍어의 차이를 아십니까?" "글쎄요. 맛이 다른가요? 분위기 탓일까요?" "잔칫집 홍어는 미리 날을 받아놓고 품질이 좋은 걸 찾아 충분한 시간과 정성으로 삭히니 맛이 좋지만, 상갓집 홍어는 갑작스럽게 구해 급히 올리는 것이니 맛있기가 힘들다는 얘기죠." 슬픈 일은 느닷없이 닥친다는 걸, 홍어로도 배운다.홍어 명인이 물었다. "남도에선 큰 집인일이 있을 때 홍어를 상에 올리는데, 옛 어른들이 말씀하시던 잔칫집 홍어와 상갓집 홍어의 차이를 아십니까?" "글쎄요. 맛이 다른가요? 분위기 탓일까요?" "잔칫집 홍어는 미리 날을 받아놓고 품질이 좋은 걸 찾아 충분한 시간과 정성으로 삭히니 맛이 좋지만, 상갓집 홍어는 갑작스럽게 구해 급히 올리는 것이니 맛있기가 힘들다는 얘기죠." 슬픈 일은 느닷없이 닥친다는 걸, 홍어로도 배운다.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article>
+              <p class="fs_14 fw_regular pf_tag">Content</p>
+              <h3 class="fs_28 fw_bold mt_4">Text Indent & dot</h3>
+              <div class="dp_f w_100 jtf_bet gap20 mt_60">
+                <div class="wv_col_6">
+                  <table class="pf_table ">
+                    <colgroup>
+                      <col style="width: 40%;">
+                      <col style="width: 60%;">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                      <th>Class</th>
+                      <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="class">.indent</td>
+                        <td class="description">들여쓰기</td>
+                      </tr>
+                      <tr>
+                        <td class="class">.dot</td>
+                        <td class="description">문장 앞에 점 추가</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="example_cont mt_40">
+                <div class="bg_purple dp_f fd_col pl_20 pr_20 pt_40 pb_40 lih150per">
+                  <p class="indent">
+                    작업 중 하면 안돼는 말은 어? 입니다. <br>
+                    그리고 엇?도 포함입니다.
+                  </p>
+                  <p class="dot mt_20">
+                    작업 중 하면 안돼는 말은 어? 입니다. <br>
+                    그리고 엇?도 포함입니다.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <!--          CONTENT END -->
+          </section>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <footer class="pf_ft">
+    <button class="scroll_btn scr_btn" data-scr="up">
+      <span>Top</span>
+    </button>
+    <p class="fs_14 fw_semibold">wevercns ⓒ 2024</p>
+  </footer>
+
+</div>
+
+<script type="module" src="../../assets/js/guide/guide.js"></script>
+<script type="module" src="../../assets/js/wv_compo.js"></script>
+</body>
+</html>
