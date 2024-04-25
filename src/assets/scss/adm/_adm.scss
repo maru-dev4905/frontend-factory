@@ -285,21 +285,23 @@ main.admin_page{
   z-index : 1000;
   width: 315px;
   height: 100%;
-  padding: 52px 20px 40px 64px;
   background-color: var(--adm_white1);
   border-right: 2px solid var(--adm_white2);
-}
-.wv_adm .adm_menu{
-  transition: width 0.4s ease-in-out,
-  padding 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
 }
 .adm_menu.hide{
   width : 70px;
-  padding: 52px 12px;
+  nav{
+    padding: 52px 12px;
+  }
 }
 .adm_menu nav{
   position : relative;
   z-index : 1100;
+  padding: 52px 20px 40px 64px;
+}
+.wv_adm .adm_menu nav{
+  transition: padding 0.4s ease-in-out;
 }
 .adm_menu nav a{
   display : flex;
