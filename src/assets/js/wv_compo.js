@@ -1,11 +1,12 @@
 import toggleMenuEvt from "./components/ToggleMenuEvt.js";
 import scrBtnEvt from './components/ScrBtnEvt.js';
 import tabInit from "./components/Tab/TabInit.js";
+import tabEvt from "./components/Tab/TabEvt.js";
 import targetClickEvt from "./components/TargetAddClassEvt.js";
 import basicModalEvt from "./components/Modal/BasicModalEvt.js";
 import accordionEvt from "./components/AccordionEvt.js";
 
-window.onload = function() {
+window.addEventListener('load', ()=>{
   const components = {
     menuBtn: $(".menu_btn"),
     scrBtn: $(".scr_btn"),
@@ -29,6 +30,9 @@ window.onload = function() {
     },
     accordionTrigger: () => {
       components.accordionBtn.on('click', function(){ accordionEvt($(this)); });
+    },
+    tabTrigger: () => {
+      components.tab.find(".wv_tab_btn").on('click', function(){ tabEvt($(this)); });
     }
   }
 
@@ -39,7 +43,8 @@ window.onload = function() {
     components.accordionBtn.length !== 0 ? triggerEvt.accordionTrigger() : 0;
 
     components.menuBtn.length !== 0 && toggleMenuEvt();
-    components.tab.length !== 0 && tabInit();
+    components.tab.length !== 0 && tabInit(components.tab);
+    components.tab.length !== 0 && triggerEvt.tabTrigger();
   }
   init();
-}
+})

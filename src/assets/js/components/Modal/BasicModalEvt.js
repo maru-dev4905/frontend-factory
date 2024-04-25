@@ -5,11 +5,9 @@ const basicModalEvt = (th) => {
   const modals = $(".wv_modal");
   let name = $(th).data("modal");
 
-  th.hasClass("close_modal") ? closeModal(name) : openModal(name);
-
   const openModal = (name) => {
     if($(th).is("[data-youtube]")){
-      youtubeModalEvt(th, 1);
+      youtubeModalEvt(th,name, 1);
     }
     modals.hide();
     $(`#${name}`).show();
@@ -17,11 +15,13 @@ const basicModalEvt = (th) => {
   }
   const closeModal = (name) => {
     if($(th).is("[data-youtube]")){
-      youtubeModalEvt(th, 0);
+      youtubeModalEvt(th,name, 0);
     }
     $(`#${name}`).hide();
     dim.hide();
   }
+
+  th.hasClass("close_modal") ? closeModal(name) : openModal(name);
 }
 
 export default basicModalEvt;

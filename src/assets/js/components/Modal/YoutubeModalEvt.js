@@ -1,4 +1,4 @@
-const youtubeModalEvt = (th, toggle) => {
+const youtubeModalEvt = (th,name, toggle) => {
   const regExp = /(youtu.*be.*)\/(watch\?v=|embed\/|v|shorts|)(.*?((?=[&#?])|$))/gm;
 
   if(toggle){

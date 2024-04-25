@@ -5,12 +5,12 @@ const scrBtnEvt = (th) => {
     },1000)
   }else if(th.data('scr') === 'down'){
     $("html, body").animate({
-      scrollTop: $("section").eq(1).offset().top
+      scrollTop: $(window).innerHeight()
     },1000)
-  }else if(th.data('anchor')){
-    let anchor = th.data('anchor');
+  }else{
+    let anchor = th.data('scr');
     $("html, body").animate({
-      scrollTop: $(`.${anchor}`).offset().top
+      scrollTop: $(`#${anchor}`).offset().top
     },1000)
   }
 }
