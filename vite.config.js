@@ -9,12 +9,14 @@ export default defineConfig({
   open: true,
   build: {
     minify: false,
+    polyfillModulePreload: false,
     rollupOptions: {
       input: {
         wv: resolve(__dirname, 'src/index.html'),
         admin: resolve(__dirname, 'src/pages/admin/adm.html'),
         guide: resolve(__dirname, 'src/pages/guides/guide.html'),
         component: resolve(__dirname, 'src/pages/component/compo.html'),
+        download: resolve(__dirname, 'src/pages/download/download.html'),
 
         project: resolve(__dirname, 'src/pages/projects/list.html'),
         sample: resolve(__dirname, 'src/pages/projects/sample/sample.html'),
