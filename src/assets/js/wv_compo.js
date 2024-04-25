@@ -40,11 +40,6 @@ window.onload = function() {
 
     components.menuBtn.length !== 0 && toggleMenuEvt();
     components.tab.length !== 0 && tabInit();
-
-
-
-    // components.copyBtn.length !== 0 ? triggerEvt.copyTrigger() : 0;
-    // components.video.length !== 0 ? triggerEvt.videoTrigger() : 0;
   }
   init();
 }
