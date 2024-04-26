@@ -341,12 +341,58 @@
               </li>
             </ul>
           </article>
+
+          <article class="component">
+            <h3 class="fs_30 fw_semibold pb_30 mt_100">Radio & Checkbox Component</h3>
+            <div class="dp_f gap20">
+              <div class="adm_radio">
+                <input type="radio" id="radio1" name="radio" value="radio1">
+                <label for="radio1"><span></span> Radio1</label>
+              </div>
+              <div class="adm_radio">
+                <input type="radio" id="radio2" name="radio" value="radio2">
+                <label for="radio2"><span></span> Radio2</label>
+              </div>
+              <div class="adm_radio">
+                <input type="radio" id="radio3" name="radio" value="radio3">
+                <label for="radio3"><span></span> Radio3</label>
+              </div>
+            </div>
+            <div class="dp_f gap20 mt_40">
+              <div class="adm_checkbox">
+                <input type="checkbox" id="checkbox1" name="checkbox" value="checkbox1">
+                <label for="checkbox1"><span></span> Checkbox1</label>
+              </div>
+              <div class="adm_checkbox">
+                <input type="checkbox" id="checkbox2" name="checkbox" value="checkbox2">
+                <label for="checkbox2"><span></span> Checkbox2</label>
+              </div>
+              <div class="adm_checkbox">
+                <input type="checkbox" id="checkbox3" name="checkbox" value="checkbox3">
+                <label for="checkbox3"><span></span> Checkbox3</label>
+              </div>
+            </div>
+          </article>
+
+          <article class="component">
+            <h3 class="fs_30 fw_semibold pb_30 mt_100">Modal</h3>
+            <button class="wv_modal_btn adm_btn round fill_black2 adm_fc_white2 pt_10 pb_10 pl_30 pr_30" data-modal="testModal">모달창 열기</button>
+            <dialog class="wv_modal adm_modal" id="testModal">
+              <p class="fs_20 lih150per ta_center">
+                해당 분류가 선택된 프로젝트 제안 내역이 있어 <br>
+                삭제할 수 없습니다.
+              </p>
+              <button type="button" class="fs_16 adm_btn fill_gray3 adm_fc_white1 wv_modal_btn round pl_36 pr_36 pt_10 pb_10  mx_auto mt_80 close_modal" data-modal="testModal">확인</button>
+            </dialog>
+          </article>
         </div>
       </div>
     </div>
   </main>
+  <div class="dim"></div>
 </div>
 
 <script type="module" src="../../assets/js/adm.js"></script>
+<script type="module" src="../../assets/js/wv_compo.js"></script>
 </body>
 </html>

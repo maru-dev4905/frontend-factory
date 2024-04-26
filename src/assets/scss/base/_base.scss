@@ -273,6 +273,10 @@ caption.a11y-hidden {
 /* Interval */
 .mx_auto{margin: 0 auto;}
 .my_auto{margin: auto 0;}
+.mt_auto{margin-top: auto !important;}
+.ml_auto{margin-left: auto !important;}
+.mr_auto{margin-right: auto !important;}
+.mb_auto{margin-bottom: auto !important;}
 
 @each $size in $intervalSizes {
   .mt_#{$size}{margin-top:rem($size) !important;}

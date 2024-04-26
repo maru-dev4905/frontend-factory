@@ -410,7 +410,7 @@ main.admin_page{
 .wv_adm .adm_content{
   transition: padding-left 0.4s ease-in-out;
 }
-.adm_menu.hide ~ .adm_content{padding-left: 70px;}
+.adm_menu.hide ~ .admin_page .adm_content{padding-left: 70px;}
 
 /* 관리자 페이지 상단 설명 */
 .adm_cont_hd{
@@ -675,5 +675,112 @@ main.admin_page{
 }
 /* 관리자 페이지 UI 페이지네이션 END */
 
+
+/* 관리자 페이지 UI 라디오 버튼 */
+.adm_radio{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  span{
+    display: inline-block;
+    position: relative;
+    min-width: 18px;
+    min-height: 18px;
+    border-radius: 3px;
+    border: 1px solid var(--adm_gray3);
+  }
+  label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  input:checked + label span{
+    background-color: var(--adm_gray1);
+    border-color: var(--adm_gray1);
+
+    &::before{
+      content: "";
+      width: 6px;
+      height: 1.5px;
+      background-color: var(--adm_white1);
+      position: absolute;
+      transform: rotate(45deg);
+      top: 8.2px;
+      left: 2.5px;
+    }
+    &::after{
+      content: "";
+      width: 10px;
+      height: 1.5px;
+      background-color: var(--adm_white1);
+      position: absolute;
+      transform: rotate(-45deg);
+      top: 7.4px;
+      left: 5.8px;
+    }
+  }
+}
+.adm_checkbox{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  span{
+    display: inline-block;
+    position: relative;
+    min-width: 20px;
+    min-height: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--adm_gray3);
+  }
+  label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  input:checked + label span::before{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    background-color: var(--adm_gray1);
+    content: "";
+    width: 10px;
+    height: 10px;
+  }
+}
+/* 관리자 페이지 UI 라디오 버튼 END */
+
+
+/* 관리자 페이지 UI 기본 모달 */
+.adm_modal{
+  position: fixed;
+  top: 50%; left: 50%;
+  z-index: 100000;
+  transform: translate(-50%,-50%);
+  max-width: 540px;
+  width: 100%;
+  max-height: 300px;
+  height: 100%;
+  border-radius: 30px;
+  padding: 50px 20px 60px;
+  border: none;
+}
+.dim{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  z-index: 99999;
+  background: rgba(0,0,0,0.5);
+}
+/* 관리자 페이지 UI 기본 모달 END */
 
 /* 관리자 화면 END */

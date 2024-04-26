@@ -1,6 +1,7 @@
 import youtubeModalEvt from "./YoutubeModalEvt";
 
 const basicModalEvt = (th) => {
+  console.log(th);
   const dim = $(".dim");
   const modals = $(".wv_modal");
   let name = $(th).data("modal");
