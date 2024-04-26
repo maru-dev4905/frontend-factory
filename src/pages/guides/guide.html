@@ -43,6 +43,8 @@
             <button type="button" class="fs_14 fw_regular active">Display</button>
             <button type="button" class="fs_14 fw_regular">Aspect Ratio</button>
             <button type="button" class="fs_14 fw_regular">Flex</button>
+            <button type="button" class="fs_14 fw_regular">Grid</button>
+            <button type="button" class="fs_14 fw_regular">Gutter</button>
             <button type="button" class="fs_14 fw_regular">Position</button>
             <button type="button" class="fs_14 fw_regular">Margin & Padding</button>
           </div>
@@ -619,6 +621,113 @@
                     <div class="dummy_box" style="width: 350px;">dummy4</div>
                   </div>
                 </div>
+              </div>
+            </article>
+            <article>
+              <p class="fs_14 fw_regular pf_tag">Layout</p>
+              <h3 class="fs_28 fw_bold mb_40 mt_4">Grid</h3>
+              <p class="fs_16 fw_medium"><strong>컬럼 사이즈</strong> : [ 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 ]</p>
+              <p class="fs_16 fw_medium mt_10"><strong>PC 접두사</strong> : wv_col_*</p>
+              <p class="fs_16 fw_medium mt_10"><strong>MO 접두사</strong> : md_wv_col_*</p>
+
+              <p class="fs_16 fw_medium mt_40">
+
+              </p>
+              <div class="example_cont mt_10">
+                <div class="dp_f gap10">
+                  <button type="button" class="pf_btn col_add_btn">컬럼 추가</button>
+                  <button type="button" class="pf_btn col_remove_btn">컬럼 제거</button>
+                </div>
+                <div class="wv_cont mt_10">
+                  <div class="bg_purple dp_f wv_row jtf_center pf_col_wrap">
+                    <div class="dummy_box wv_col">.wv_col</div>
+                    <div class="dummy_box wv_col">.wv_col</div>
+                    <div class="dummy_box wv_col">.wv_col</div>
+                  </div>
+                </div>
+                <script>
+                  $(".col_add_btn").on('click', function(){
+                    $(".pf_col_wrap").append('<div class="dummy_box wv_col">.wv_col</div>')
+                  })
+                  $(".col_remove_btn").on('click', function(){
+                    if($(".pf_col_wrap").children().length > 1){
+                      $(".pf_col_wrap").children().last().remove()
+                    }
+                  })
+                </script>
+              </div>
+              <p class="fs_16 fw_medium mt_40">
+
+              </p>
+              <div class="example_cont mt_10">
+                <div class="wv_cont">
+                  <div class="bg_purple dp_f wv_row ">
+                    <div class="dummy_box wv_col_12">.wv_col_12</div>
+                    <div class="dummy_box wv_col_11">.wv_col_11</div>
+                    <div class="dummy_box wv_col_10">.wv_col_10</div>
+                    <div class="dummy_box wv_col_9">.wv_col_9</div>
+                    <div class="dummy_box wv_col_8">.wv_col_8</div>
+                    <div class="dummy_box wv_col_7">.wv_col_7</div>
+                    <div class="dummy_box wv_col_6">.wv_col_6</div>
+                    <div class="dummy_box wv_col_5">.wv_col_5</div>
+                    <div class="dummy_box wv_col_4">.wv_col_4</div>
+                    <div class="dummy_box wv_col_3">.wv_col_3</div>
+                    <div class="dummy_box wv_col_2">.wv_col_2</div>
+                    <div class="dummy_box wv_col_1">.wv_col_1</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article>
+              <p class="fs_14 fw_regular pf_tag">Layout</p>
+              <h3 class="fs_28 fw_bold mb_40 mt_4">Gutter</h3>
+              <p class="fs_16 fw_medium"><strong>간격 사이즈</strong> : [ 300, 260, 200, 160, 140, 120, 100, 80, 70, 60, 50, 40, 36, 30, 20, 16, 12, 10, 8, 6, 4 ]</p>
+              <p class="fs_16 fw_medium mt_10"><strong>PC 접두사</strong> : gap*</p>
+              <p class="fs_16 fw_medium mt_10"><strong>MO 접두사</strong> : md_gap*</p>
+
+              <div class="example_cont mt_10">
+                <div class="dp_f gap10">
+                  <button type="button" class="pf_btn gap_change_btn">300</button>
+                  <button type="button" class="pf_btn gap_change_btn">260</button>
+                  <button type="button" class="pf_btn gap_change_btn">200</button>
+                  <button type="button" class="pf_btn gap_change_btn">160</button>
+                  <button type="button" class="pf_btn gap_change_btn">140</button>
+                  <button type="button" class="pf_btn gap_change_btn">120</button>
+                  <button type="button" class="pf_btn gap_change_btn">100</button>
+                  <button type="button" class="pf_btn gap_change_btn">80</button>
+                  <button type="button" class="pf_btn gap_change_btn">70</button>
+                  <button type="button" class="pf_btn gap_change_btn">60</button>
+                  <button type="button" class="pf_btn gap_change_btn">50</button>
+                  <button type="button" class="pf_btn gap_change_btn">40</button>
+                  <button type="button" class="pf_btn gap_change_btn">36</button>
+                  <button type="button" class="pf_btn gap_change_btn">30</button>
+                  <button type="button" class="pf_btn gap_change_btn">20</button>
+                  <button type="button" class="pf_btn gap_change_btn">16</button>
+                  <button type="button" class="pf_btn gap_change_btn">12</button>
+                  <button type="button" class="pf_btn gap_change_btn">10</button>
+                  <button type="button" class="pf_btn gap_change_btn">8</button>
+                  <button type="button" class="pf_btn gap_change_btn">6</button>
+                  <button type="button" class="pf_btn gap_change_btn">4</button>
+                  <button type="button" class="pf_btn gap_change_btn on">0</button>
+                </div>
+                <div class="dp_f gap10">
+                <div class="wv_cont mt_10">
+                  <div class="bg_purple dp_f wv_row pf_gap_wrap gap0" data-gap="gap0">
+                    <div class="dummy_box wv_col">dummy1</div>
+                    <div class="dummy_box wv_col">dummy2</div>
+                  </div>
+                </div>
+               </div>
+                <script>
+                  $(".gap_change_btn").on('click', function(){
+                    var gap_size = $(this).text()
+                    $(".pf_gap_wrap").attr('data-gap', 'gap' + gap_size)
+                    $(".pf_gap_wrap").removeClass('gap300 gap260 gap200 gap160 gap140 gap120 gap100 gap80 gap70 gap60 gap50 gap40 gap36 gap30 gap20 gap16 gap12 gap10 gap8 gap6 gap4 gap0');
+                    $(".pf_gap_wrap").addClass(`gap${gap_size}`);
+                    $(".gap_change_btn").removeClass("on");
+                    $(this).addClass("on");
+                  })
+                </script>
               </div>
             </article>
             <article>
