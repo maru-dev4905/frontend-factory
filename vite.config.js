@@ -14,6 +14,7 @@ export default defineConfig({
       input: {
         wv: resolve(__dirname, 'src/index.html'),
         guide: resolve(__dirname, 'src/pages/guides/guide.html'),
+        formguide: resolve(__dirname, 'src/pages/guides/formguide.html'),
         component: resolve(__dirname, 'src/pages/component/compo.html'),
         admin: resolve(__dirname, 'src/pages/admin/adm.html'),
         icons: resolve(__dirname, 'src/pages/icon/icon.html'),

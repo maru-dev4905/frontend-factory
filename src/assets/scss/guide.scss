@@ -432,3 +432,58 @@
     }
   }
 }
+
+.wv_label{
+  padding-top: 12px;
+}
+.wv_ipt[data-ipt=text]{
+  height: 44px;
+  border: 1px solid rgba(209, 202, 202, 0.45);
+}
+.wv_ipt[data-ipt=textarea]{
+  height: 200px;
+  border: 1px solid rgba(209, 202, 202, 0.45);
+}
+.wv_ipt[data-ipt=email]{
+  height: 44px;
+  border: 1px solid rgba(209, 202, 202, 0.45);
+}
+.wv_search{
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 400px;
+  height: 40px;
+  input{
+    width: calc(100% - 40px);
+    border: 1px solid rgba(209, 202, 202, 0.45);
+ }
+  &.st2  input{
+    width: calc(100% - 40px);
+    border-radius: 10px;
+  }
+  &.st3  input{
+    width: 100%;
+    padding-right: 40px;
+  }
+  button{
+    width: 40px;
+  }
+  &.st1 button{
+    height: 100%;
+    display: block;
+    background-color: #cac8c8;
+  }
+  &.st2 button{
+    height: 100%;
+    width: 40px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: #cac8c8;
+  }
+  &.st3 button{
+    position: absolute;
+    right: 6px;
+    height: 100%;
+  }
+}
