@@ -22,6 +22,9 @@ export default defineConfig({
 
         project: resolve(__dirname, 'src/pages/projects/list.html'),
         sample: resolve(__dirname, 'src/pages/projects/sample/sample.html'),
+
+        pko: resolve(__dirname, 'src/pages/projects/pko/index.html'),
+
       },
       output: {
         entryFileNames: `assets/js/[name].js`,
