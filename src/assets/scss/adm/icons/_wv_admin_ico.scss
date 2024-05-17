@@ -23,6 +23,12 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ico_select_arrow:before {
+  content: "\e915";
+}
+.ico_lang:before {
+  content: "\e914";
+}
 .ico_logout:before {
   content: "\e911";
 }
