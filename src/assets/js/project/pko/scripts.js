@@ -22,6 +22,14 @@ $(document).ready(function(){
             }
           }
       );
+    },
+    layoutChange : () => {
+      $(".layout_chg_btn").on("click", function(){
+        $(".layout_chg_btn").removeClass("active");
+        $(this).addClass("active");
+        let layout = $(this).data("layout");
+        $(".pko_layout").removeClass("list grid").addClass(layout);
+      });
     }
   }
 
@@ -29,5 +37,6 @@ $(document).ready(function(){
     pkoScript.filterClickEvt($(this));
   });
   $(".pko_fullpage").length && pkoScript.fullpageInit();
+  $(".layout_chg_wrap").length && pkoScript.layoutChange();
 
 });
