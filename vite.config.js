@@ -24,6 +24,11 @@ export default defineConfig({
         sample: resolve(__dirname, 'src/pages/projects/sample/sample.html'),
 
         pko: resolve(__dirname, 'src/pages/projects/pko/index.html'),
+        publication: resolve(__dirname, 'src/pages/projects/pko/publication.html'),
+        reference: resolve(__dirname, 'src/pages/projects/pko/reference.html'),
+        reference_view: resolve(__dirname, 'src/pages/projects/pko/reference_view.html'),
+        statement: resolve(__dirname, 'src/pages/projects/pko/statement.html'),
+        statement_view: resolve(__dirname, 'src/pages/projects/pko/statement_view.html'),
 
       },
       output: {

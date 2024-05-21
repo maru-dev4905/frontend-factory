@@ -28,7 +28,25 @@ $(document).ready(function(){
         $(".layout_chg_btn").removeClass("active");
         $(this).addClass("active");
         let layout = $(this).data("layout");
-        $(".pko_layout").removeClass("list grid").addClass(layout);
+        $(".pko_layout").removeClass("list grid card").addClass(layout);
+
+        if($("#wv_cont").hasClass("publication")){
+          $(".cont_hd").removeClass("list grid card").addClass(layout);
+          $(".cont_body").removeClass("list grid card").addClass(layout);
+        }
+      });
+    },
+    referenceSwiper: () => {
+      const swiper = new Swiper('.reference_swiper', {
+        slidesPerView: 1,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
       });
     }
   }
@@ -38,5 +56,5 @@ $(document).ready(function(){
   });
   $(".pko_fullpage").length && pkoScript.fullpageInit();
   $(".layout_chg_wrap").length && pkoScript.layoutChange();
-
+  $(".reference_swiper").length && pkoScript.referenceSwiper();
 });
