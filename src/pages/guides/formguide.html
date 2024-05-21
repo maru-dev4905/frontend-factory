@@ -159,26 +159,26 @@
                   <p class="fs_18 fw_semibold mt_10">기본</p>
                   <div class="wv_row mt_6">
                     <label for="ipt7" class="wv_label wv_col_1">전화번호</label>
-                    <input type="text" class="wv_ipt wv_col_10" id="ipt7" data-ipt="email" placeholder="전화번호를 입력해주세요">
+                    <input type="text" class="wv_ipt wv_col_10" id="ipt7" data-ipt="tel" placeholder="전화번호를 입력해주세요" maxlength="12">
                   </div>
 
                   <p class="fs_18 fw_semibold mt_20">필수</p>
                   <div class="wv_row mt_6">
                     <label for="ipt8" class="wv_label wv_col_1">전화번호</label>
-                    <input type="text" class="wv_ipt wv_col_10 required" id="ipt8" data-ipt="email" placeholder="전화번호를 입력해주세요" data-required="ipt8req">
+                    <input type="text" class="wv_ipt wv_col_10 required" id="ipt8" data-ipt="tel" placeholder="전화번호를 입력해주세요" data-required="ipt8req" maxlength="12">
                     <p class="wv_hint_txt fs_12" id="ipt8req">이메일을 입력해주세요.</p>
                   </div>
 
                   <p class="fs_18 fw_semibold mt_20">기본</p>
                   <div class="wv_row mt_6">
                     <label for="ipt9" class="wv_label wv_col_1">휴대폰 번호</label>
-                    <input type="text" class="wv_ipt wv_col_10" id="ipt9" data-ipt="email" placeholder="휴대폰 번호를 입력해주세요">
+                    <input type="text" class="wv_ipt wv_col_10" id="ipt9" data-ipt="phone" placeholder="휴대폰 번호를 입력해주세요" maxlength="13">
                   </div>
 
                   <p class="fs_18 fw_semibold mt_20">필수</p>
                   <div class="wv_row mt_6">
                     <label for="ipt10" class="wv_label wv_col_1">휴대폰 번호</label>
-                    <input type="text" class="wv_ipt wv_col_10 required" id="ipt10" data-ipt="email" placeholder="휴대폰 번호를 입력해주세요" data-required="ipt10req">
+                    <input type="text" class="wv_ipt wv_col_10 required" id="ipt10" data-ipt="phone" placeholder="휴대폰 번호를 입력해주세요" data-required="ipt10req" maxlength="13">
                     <p class="wv_hint_txt fs_12" id="ipt10req">이메일을 입력해주세요.</p>
                   </div>
                 </div>
@@ -200,7 +200,7 @@
                   <p class="fs_18 fw_semibold mt_20">필수</p>
                   <div class="wv_row mt_6">
                     <label for="ipt12" class="wv_label wv_col_2">비밀번호 확인</label>
-                    <input type="text" class="wv_ipt wv_col_9 required" id="ipt12" data-ipt="email" placeholder="비밀번호를 입력해주세요" data-required="ipt6req">
+                    <input type="text" class="wv_ipt wv_col_9 required" id="ipt12" data-ipt="pwChk" placeholder="비밀번호를 입력해주세요" data-required="ipt6req">
                     <p class="wv_hint_txt fs_12" id="ipt6req">이메일을 입력해주세요.</p>
                   </div>
                 </div>
@@ -217,5 +217,6 @@
 </div>
 
 <script type="module" src="../../assets/js/guide/guide.js"></script>
+<script type="module" src="../../assets/js/form/form.js"></script>
 </body>
 </html>
