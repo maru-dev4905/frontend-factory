@@ -5,7 +5,7 @@ import tabEvt from "./components/Tab/TabEvt.js";
 import targetClickEvt from "./components/TargetAddClassEvt.js";
 import basicModalEvt from "./components/Modal/BasicModalEvt.js";
 import accordionEvt from "./components/AccordionEvt.js";
-import copyEvt from "./components/CopyEvt.js";
+import copyEvt from "./components/Copy/CopyEvt.js";
 
 window.addEventListener('load', ()=>{
   const components = {
