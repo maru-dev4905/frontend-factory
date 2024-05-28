@@ -1,11 +1,7 @@
 const socialCopyEvt = (th) => {
+  // 카카오톡 공유 스크립트
+  // https://t1.kakaocdn.net/kakao_js_sdk/2.2.0/kakao.min.js
 
-  if(th.data('social') == 'kakao'){
-    // 카카오톡 공유 스크립트
-    // https://t1.kakaocdn.net/kakao_js_sdk/2.2.0/kakao.min.js
-    // YOUR KEY
-    Kakao.init();
-  }
   shareAct(th.data('social'), window.location, th.data('socialtxt'));
 
   function shareAct(a,url,text){

@@ -36,6 +36,7 @@ window.addEventListener('load', ()=>{
       components.tab.find(".wv_tab_btn").on('click', function(){ tabEvt($(this)); });
     },
     copyTrigger: () => {
+      components.copyBtn.data('social') == 'kakao' && Kakao.init();
       components.copyBtn.on('click', function(){ copyEvt($(this)); });
     }
   }
