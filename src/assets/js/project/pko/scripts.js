@@ -1,6 +1,3 @@
-import('../../../scss/wv.scss');
-import('../../../scss/project/pko/pko.scss');
-
 import fullpage from 'fullpage.js';
 
 $(document).ready(function(){

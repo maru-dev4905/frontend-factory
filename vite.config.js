@@ -9,7 +9,7 @@ export default defineConfig({
   open: true,
   build: {
     minify: false,
-    polyfillModulePreload: false,
+    polyfillModulePreload: true,
     rollupOptions: {
       input: {
         wv: resolve(__dirname, 'src/index.html'),
@@ -23,6 +23,10 @@ export default defineConfig({
         project: resolve(__dirname, 'src/pages/projects/list.html'),
         sample: resolve(__dirname, 'src/pages/projects/sample/sample.html'),
 
+        // test
+        playground: resolve(__dirname, 'src/pages/playground/animation.html'),
+
+        // pko
         pko: resolve(__dirname, 'src/pages/projects/pko/index.html'),
         publication: resolve(__dirname, 'src/pages/projects/pko/publication.html'),
         reference: resolve(__dirname, 'src/pages/projects/pko/reference.html'),
