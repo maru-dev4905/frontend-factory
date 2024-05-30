@@ -35,6 +35,8 @@
         </div>
       </form>
     </div>
+
+<!--    비밀번호 찾기 -->
     <div class="adm_login_cont ml_20">
       <h2 class="fs_40 fw_bold ta_center">비밀번호 찾기</h2>
       <p class="mt_10 fs_20 fw_regular lih125per ta_center">
@@ -46,6 +48,28 @@
           <input type="text" name="email" class="wv_ipt fs_20 wv_email_ipt" placeholder="이메일 주소 (예: example@email.com)" autocomplete="off" required="">
         </div>
         <button type="submit" class="mt_60 adm_btn fill_gray3 round adm_fc_white1 mx_auto fs_20">비밀번호 재설정 메일 보내기</button>
+      </form>
+    </div>
+
+<!--    회원가입 -->
+    <div class="adm_login_cont ml_20">
+      <h2 class="fs_40 fw_bold ta_center">회원가입</h2>
+      <p class="mt_10 fs_20 fw_regular lih125per ta_center">
+        *는 필수 입력 정보입니다.
+      </p>
+      <form action="/Member/Update" method="POST" id="JoinForm" class="mt_70" autocomplete="off">
+        <p class="mt_20 pl_30 fs_16 lih125per">이메일 *</p>
+        <div class="ipt_wrap mt_10">
+          <input type="text" name="email" class="wv_ipt fs_20 wv_email_ipt" placeholder="이메일 주소" autocomplete="off" required="">
+        </div>
+        <p class="mt_20 pl_30 fs_16 lih125per">비밀번호 *</p>
+        <div class="ipt_wrap mt_10">
+          <input type="text" name="email" class="wv_ipt fs_20 wv_email_ipt" placeholder="비밀번호 입력" autocomplete="off" required="">
+        </div>
+        <div class="ipt_wrap mt_10">
+          <input type="text" name="email" class="wv_ipt fs_20 wv_email_ipt" placeholder="비밀번호 확인" autocomplete="off" required="">
+        </div>
+        <button type="submit" class="mt_60 adm_btn fill_gray3 round adm_fc_white1 mx_auto fs_20">완료</button>
       </form>
     </div>
   </main>
