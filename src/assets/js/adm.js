@@ -1,6 +1,3 @@
-import('../scss/wv.scss');
-import('../scss/wv_admin.scss');
-
 window.onload = function(){
   setTimeout(() => {
     $("body").addClass("wv_adm");

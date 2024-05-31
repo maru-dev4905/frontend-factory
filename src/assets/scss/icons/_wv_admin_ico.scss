@@ -1,0 +1,235 @@
+@font-face {
+  font-family: 'wv_admin_ico';
+  src:  url('/assets/icons/adm/wv_admin_ico.eot') format('embedded-opentype'),
+    url('/assets/icons/adm/wv_admin_ico.ttf') format('truetype'),
+    url('/assets/icons/adm/wv_admin_ico.woff') format('woff'),
+    url('/assets/icons/adm/wv_admin_ico.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  font-family: 'wv_admin_ico' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico_clock:before {
+  content: "\e92e";
+}
+.ico_map_marker:before {
+  content: "\e900";
+}
+.ico_map_marker_fill:before {
+  content: "\e901";
+}
+.ico_meatball_circle3:before {
+  content: "\e902";
+}
+.ico_menu_dash3:before {
+  content: "\e903";
+}
+.ico_menu_desh3_round:before {
+  content: "\e904";
+}
+.ico_multi_people_b:before {
+  content: "\e905";
+}
+.ico_multi_people_sm:before {
+  content: "\e906";
+}
+.ico_paperclip:before {
+  content: "\e907";
+}
+.ico_paperclip_rot:before {
+  content: "\e908";
+}
+.ico_pen:before {
+  content: "\e909";
+}
+.ico_pen_sm_fill:before {
+  content: "\e90a";
+}
+.ico_pen_sm:before {
+  content: "\e90b";
+}
+.ico_people:before {
+  content: "\e90c";
+}
+.ico_people_fill:before {
+  content: "\e90d";
+}
+.ico_people_gear_b:before {
+  content: "\e90e";
+}
+.ico_people_profile_b:before {
+  content: "\e90f";
+}
+.ico_people_profile_small:before {
+  content: "\e910";
+}
+.ico_people_profile_small_fill:before {
+  content: "\e911";
+}
+.ico_people_sm:before {
+  content: "\e912";
+}
+.ico_plus_round:before {
+  content: "\e913";
+}
+.ico_print:before {
+  content: "\e914";
+}
+.ico_refresh:before {
+  content: "\e915";
+}
+.ico_search_bold:before {
+  content: "\e916";
+}
+.ico_search_medium:before {
+  content: "\e917";
+}
+.ico_search_medium_round:before {
+  content: "\e918";
+}
+.ico_share_arrow:before {
+  content: "\e919";
+}
+.ico_share_bold:before {
+  content: "\e91a";
+}
+.ico_share_bold_strok:before {
+  content: "\e91b";
+}
+.ico_share_medium:before {
+  content: "\e91c";
+}
+.ico_trash:before {
+  content: "\e91d";
+}
+.ico_arrow_bar_right:before {
+  content: "\e91e";
+}
+.ico_arrow_bold:before {
+  content: "\e91f";
+}
+.ico_arrow_bold_round:before {
+  content: "\e920";
+}
+.ico_arrow_medium_round:before {
+  content: "\e921";
+}
+.ico_arrow_medium_short_tail:before {
+  content: "\e922";
+}
+.ico_arrow_small:before {
+  content: "\e923";
+}
+.ico_arrow_small_long_tail:before {
+  content: "\e924";
+}
+.ico_arrow_small_round:before {
+  content: "\e925";
+}
+.ico_arrow_v_small:before {
+  content: "\e926";
+}
+.ico_arrow_v_small_round:before {
+  content: "\e927";
+}
+.ico_bento_menu:before {
+  content: "\e928";
+}
+.ico_call_fill:before {
+  content: "\e929";
+}
+.ico_chatbox:before {
+  content: "\e92a";
+}
+.ico_chatbox_round:before {
+  content: "\e92b";
+}
+.ico_chetbox_fill:before {
+  content: "\e92c";
+}
+.ico_circle_in_x_b:before {
+  content: "\e92d";
+}
+.ico_clock_fill:before {
+  content: "\e92f";
+}
+.ico_close:before {
+  content: "\e930";
+}
+.ico_download:before {
+  content: "\e931";
+}
+.ico_download_arrow:before {
+  content: "\e932";
+}
+.ico_earth:before {
+  content: "\e933";
+}
+.ico_eye:before {
+  content: "\e934";
+}
+.ico_eye_fill:before {
+  content: "\e935";
+}
+.ico_gear:before {
+  content: "\e937";
+}
+.ico_globe:before {
+  content: "\e938";
+}
+.ico_globe_fill:before {
+  content: "\e939";
+}
+.ico_half_arrow:before {
+  content: "\e93a";
+}
+.ico_half_arrow_round:before {
+  content: "\e93b";
+}
+.ico_heart:before {
+  content: "\e93c";
+}
+.ico_heart_fill:before {
+  content: "\e93d";
+}
+.ico_heart_round:before {
+  content: "\e93e";
+}
+.ico_home:before {
+  content: "\e93f";
+}
+.ico_home_fill:before {
+  content: "\e940";
+}
+.ico_img:before {
+  content: "\e941";
+}
+.ico_letter:before {
+  content: "\e942";
+}
+.ico_letter_fill:before {
+  content: "\e943";
+}
+.ico_lock:before {
+  content: "\e944";
+}
+.ico_lock_fill:before {
+  content: "\e945";
+}
+.ico_logout:before {
+  content: "\e946";
+}
