@@ -17,6 +17,7 @@ export default defineConfig({
         formguide: resolve(__dirname, 'src/pages/guides/formguide.html'),
         component: resolve(__dirname, 'src/pages/component/compo.html'),
         admin: resolve(__dirname, 'src/pages/admin/adm.html'),
+        admin_login: resolve(__dirname, 'src/pages/admin/adm_login.html'),
         icons: resolve(__dirname, 'src/pages/icon/icon.html'),
         download: resolve(__dirname, 'src/pages/download/download.html'),
 
