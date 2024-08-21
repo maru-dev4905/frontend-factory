@@ -17,4 +17,10 @@ $(document).ready(function(){
     $(".lang_btn").toggleClass("on");
     $(".side_lang_list").toggleClass("on");
   });
+
+  $(".lang_btn").on("click", function(){
+    if($(".adm_menu").hasClass("hide")){
+      $(".adm_menu").removeClass("hide");
+    }
+  });
 });

@@ -23,6 +23,24 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ico_briefcase:before {
+  content: "\e936";
+}
+.ico_computer_drawing_pen:before {
+  content: "\e947";
+}
+.ico_double_question_message:before {
+  content: "\e948";
+}
+.ico_note_check:before {
+  content: "\e949";
+}
+.ico_people_in_heart:before {
+  content: "\e94a";
+}
+.ico_puzzle:before {
+  content: "\e94b";
+}
 .ico_clock:before {
   content: "\e92e";
 }

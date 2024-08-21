@@ -56,6 +56,11 @@
 /* Position END */
 
 /* Layout */
+.inner_large{
+  width: var(--inner_large_w);
+  max-width: var(--inner_large_mw);
+  margin: 0 auto;
+}
 .inner_base{
   width: var(--inner_base_w);
   max-width: var(--inner_base_mw);
@@ -70,6 +75,15 @@
   width: var(--inner_sm_w);
   max-width: var(--inner_sm_mw);
   margin: 0 auto;
+}
+
+.grid_lay{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 2.5rem;
+}
+.grid_col{
+  grid-column: var(--colST) / var(--colED);
 }
 
 
@@ -109,7 +123,7 @@
   margin-top: var(--wv-gutter-y);
 }
 .wv_col{
-  flex: 1 0 0%;
+  flex: 1 0 0;
 }
 .wv_col_auto {
   flex: 0 0 auto;
@@ -171,6 +185,12 @@
 
 /* Layout END */
 
+/* Opacity */
+@for $op from 0 through 10{
+  .op_#{$op}{opacity: $op / 10;}
+}
+/* Opacity  END */
+
 /* A11Y */
 #skipNav{
   position: absolute;
@@ -179,21 +199,21 @@
   width: 100%;
   height: 0px;
   z-index: 100000;
-  line-height: 0px;
-  font-size: 0px;
+  line-height: 0;
+  font-size: 0;
 }
 #skipNav a{
   display: block;
   text-align: center;
   width: 100%;
-  line-height: 0px;
-  font-size: 0px;
+  line-height: 0;
+  font-size: 0;
 }
 #skipNav a:focus,
 #skipNav a:hover,
 #skipNav a:active{
   position: absolute;
-  left: 0px;
+  left: 0;
   top: 1000px;
   padding: 8px 0;
   display: block;
@@ -409,6 +429,7 @@ caption.a11y-hidden {
   .md_dp_g{display: grid;}
   .md_dp_ig{display: inline-grid;}
   /* Display END */
+
 
   .md_wv_row{
     --wv-gutter-x: 1.5rem;

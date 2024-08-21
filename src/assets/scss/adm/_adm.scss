@@ -299,6 +299,7 @@ main.admin_page{
   position : relative;
   z-index : 1100;
 }
+.adm_menu nav button,
 .adm_menu nav a{
   display : flex;
   align-items: center;
@@ -309,12 +310,29 @@ main.admin_page{
   line-height: 125%;
   margin-bottom: 28px;
 }
+.wv_adm .adm_menu nav button,
 .wv_adm .adm_menu nav a{
   transition: margin 0.4s ease-in-out;
 }
+.adm_menu nav button{
+  width: 100%;
+}
+.adm_menu nav button::after{
+  content: "\e91f";
+  color: var(--adm_gray1);
+  position: absolute;
+  top: 50%; right: 16px;
+  font-size: 24px;
+  transform: translateY(-50%) rotate(90deg);
+  font-family: wv_admin_ico;
+  transition: color 0.3s ease-in-out,
+                      transform 0.2s ease-in-out;
+}
+.adm_menu.hide nav button,
 .adm_menu.hide nav a{
   margin: 0 auto 28px 12px;
 }
+.adm_menu nav button i,
 .adm_menu nav a i{
   display : flex;
   align-items: center;
@@ -325,13 +343,23 @@ main.admin_page{
   height: 24px;
   color: var(--adm_gray1);
 }
+.wv_adm .adm_menu nav button i,
 .wv_adm .adm_menu nav a i{
   transition: color 0.4s ease-in-out;
 }
+.adm_menu nav button.on i,
+.adm_menu nav button.on::after,
+.adm_menu nav button:hover i,
+.adm_menu nav button:hover::after,
 .adm_menu nav a.active i,
 .adm_menu nav a:hover i{
   color: var(--adm_white1);
 }
+.adm_menu nav button.on::after{
+  transform: translateY(-50%) rotate(270deg);
+}
+
+.adm_menu nav button span,
 .adm_menu nav a span{
   display : flex;
   align-items: center;
@@ -347,6 +375,7 @@ main.admin_page{
   overflow: hidden;
   white-space: nowrap;
 }
+.wv_adm .adm_menu nav button span,
 .wv_adm .adm_menu nav a span{
   transition: background-color 0.2s ease-in-out,
   color 0.2s ease-in-out,
@@ -354,21 +383,85 @@ main.admin_page{
   left 0.4s ease-in-out,
   padding 0.4s ease-in-out
 }
+.adm_menu.hide nav button span,
 .adm_menu.hide nav a span{
   width : 46px;
   left: -12px;
   padding-left: 46px;
 }
 
+.adm_menu nav button.on span,
+.adm_menu nav button:hover span,
 .adm_menu nav a.active span,
 .adm_menu nav a:hover span{
   background-color: var(--adm_gray1);
   color: var(--adm_white1);
   font-weight: 600;
 }
+.adm_menu.hide nav button:hover span,
 .adm_menu.hide nav a:hover span{
   width : 255px;
   padding-left: 58px;
+}
+
+
+.adm_menu nav button + .sub_menu{
+  padding-left: 30px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out,
+                      margin-bottom 0.3s ease-in-out;
+}
+.adm_menu nav button.on + .sub_menu{
+  max-height: 1000px;
+  margin-bottom: 30px;
+}
+.adm_menu nav button + .sub_menu a,
+.adm_menu nav button + .sub_menu button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 125%;
+  color: var(--adm_gray1);
+}
+.adm_menu nav button + .sub_menu button::after{
+  position: absolute;
+  top: 50%; right: 16px;
+  transform: translateY(-50%) rotate(90deg);
+  content: "\e91f";
+  font-size: 18px;
+  font-family: wv_admin_ico;
+  color: var(--adm_gray1);
+  transition: color 0.3s ease-in-out,
+                      transform 0.2s ease-in-out;
+}
+.adm_menu nav button + .sub_menu button+ul{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+.adm_menu nav button + .sub_menu button.on{
+  font-weight: 600;
+}
+.adm_menu nav button + .sub_menu button.on::after{
+  transform: translateY(-50%) rotate(270deg);
+}
+.adm_menu nav button + .sub_menu button.on+ul{
+  max-height: 200px;
+}
+.adm_menu nav button + .sub_menu button+ul a{
+  font-size: 14px;
+  font-weight: 400;
+  color: #9AA2A5;
+}
+.adm_menu nav button + .sub_menu button+ul li:not(:last-child) a{
+  margin-bottom: 10px;
+}
+.adm_menu nav button + .sub_menu button+ul li:last-child a{
+  margin-bottom: 24px;
 }
 
 .adm_menu_btn{
@@ -413,11 +506,12 @@ main.admin_page{
     left 0.4s ease-in-out,
     padding 0.4s ease-in-out;
 
-  .ico_select_arrow{
+  .selected_value ~ i{
+    transform: rotate(90deg);
     transition: transform 0.2s ease-in-out;
   }
-  &.on .ico_select_arrow{
-    transform: rotate(180deg);
+  &.on .selected_value ~  i{
+    transform: rotate(270deg);
   }
 }
 .side_lang_list{
@@ -675,6 +769,7 @@ main.admin_page{
   align-items: center;
   gap : 16px;
   margin-bottom: 40px;
+  padding: 0;
 }
 .adm_breadcrumb li{
   display : flex;
