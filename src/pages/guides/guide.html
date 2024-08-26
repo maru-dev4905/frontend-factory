@@ -15,6 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../../assets/scss/wv.scss">
+  <link rel="stylesheet" href="../../assets/scss/guide.scss">
 </head>
 <body>
 <div id="guide">
@@ -679,6 +680,35 @@
                   </div>
                 </div>
               </div>
+
+              <h3 class="fs_28 fw_bold mt_40 mb_40">Grid Layout</h3>
+              <p class="fs_16 fw_medium mt_10"><strong>레이아웃 CLASS</strong> : .grid_lay</p>
+              <p class="fs_16 fw_medium mt_10"><strong>컬럼 CLASS</strong> : .grid_col</p>
+              <p class="fs_16 fw_medium mt_10"><strong>컬럼 사용 방법</strong> : style="--colST: 1; --colED: 6; --mdColST: 1; --mdColED: -1;"</p>
+              <div class="example_cont mt_10">
+                <div class="grid_lay bg_purple">
+                  <div class="dummy_box w_100per">1</div>
+                  <div class="dummy_box w_100per">2</div>
+                  <div class="dummy_box w_100per">3</div>
+                  <div class="dummy_box w_100per">4</div>
+                  <div class="dummy_box w_100per">5</div>
+                  <div class="dummy_box w_100per">6</div>
+                  <div class="dummy_box w_100per">7</div>
+                  <div class="dummy_box w_100per">8</div>
+                  <div class="dummy_box w_100per">9</div>
+                  <div class="dummy_box w_100per">10</div>
+                  <div class="dummy_box w_100per">11</div>
+                  <div class="dummy_box w_100per">12</div>
+                </div>
+              </div>
+              <div class="example_cont mt_10">
+                <div class="grid_lay bg_purple">
+                  <div class="dummy_box grid_col w_100per" style="--colST: 1; --colED: 6;">column start: 1 <br>column end: 6</div>
+                  <div class="dummy_box grid_col w_100per" style="--colST: 6; --colED: -1;">column start: 6 <br>column end: -1</div>
+                  <div class="dummy_box grid_col w_100per" style="--colST: 3; --colED: 7;">column start: 3 <br>column end: 7</div>
+                  <div class="dummy_box grid_col w_100per" style="--colST: 7; --colED: -1;">column start: 7 <br>column end: -1</div>
+                </div>
+              </div>
             </article>
             <article>
               <p class="fs_14 fw_regular pf_tag">Layout</p>
@@ -1315,6 +1345,47 @@
                     그리고 엇?도 포함입니다.
                   </p>
                 </div>
+              </div>
+            </article>
+
+            <article>
+              <p class="fs_14 fw_regular pf_tag">Content</p>
+              <h3 class="fs_28 fw_bold mt_4">Opacity</h3>
+              <div class="dp_f w_100 jtf_bet gap20 mt_60">
+                <div class="wv_col_6">
+                  <table class="pf_table ">
+                    <colgroup>
+                      <col style="width: 40%;">
+                      <col style="width: 60%;">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                      <th>Class</th>
+                      <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td class="class">.op_*</td>
+                      <td class="description">투명도 조절 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="example_cont mt_40 bg_black1 dp_f">
+                <div class="dummy_box bg_white1 op_0">.op_0</div>
+                <div class="dummy_box bg_white1 op_1">.op_1</div>
+                <div class="dummy_box bg_white1 op_2">.op_2</div>
+                <div class="dummy_box bg_white1 op_3">.op_3</div>
+                <div class="dummy_box bg_white1 op_4">.op_4</div>
+                <div class="dummy_box bg_white1 op_5">.op_5</div>
+                <div class="dummy_box bg_white1 op_6">.op_6</div>
+                <div class="dummy_box bg_white1 op_7">.op_7</div>
+                <div class="dummy_box bg_white1 op_8">.op_8</div>
+                <div class="dummy_box bg_white1 op_9">.op_9</div>
+                <div class="dummy_box bg_white1 op_10">.op_10</div>
               </div>
             </article>
             <!--          CONTENT END -->
