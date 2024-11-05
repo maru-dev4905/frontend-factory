@@ -186,7 +186,7 @@
 
 /* Opacity */
 @for $op from 0 through 10{
-  .op_#{$op}{opacity: $op / 10  !important;}
+  .op_#{$op}{opacity: calc($op / 10) !important;}
 }
 /* Opacity  END */
 
@@ -363,12 +363,10 @@ caption.a11y-hidden {
 /* Responsive END */
 
 
-
-
 /* Form */
 .wv_hint_txt{
   display: none;
-  color: red;
+  color: var(--danger);
 }
 .wv_ipt{
   border-radius: 0;
@@ -377,19 +375,6 @@ caption.a11y-hidden {
   padding: 10px 20px;
 }
 /* Form END */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @media all and (max-width:1600px){
@@ -550,7 +535,6 @@ caption.a11y-hidden {
     .md_pl_#{$size}{padding-left:rem($size) !important;}
   }
 
-
   .md_mt_0				{margin-top: 0 			!important;}
   .md_mr_0				{margin-right: 0 		!important;}
   .md_mb_0				{margin-bottom: 0 	!important;}
@@ -615,4 +599,34 @@ caption.a11y-hidden {
   .md_clamp2{-webkit-line-clamp: 2;}
   .md_clamp3{-webkit-line-clamp: 3;}
   .md_clamp4{-webkit-line-clamp: 4;}
+
+  .wv_tab .scr{
+    width: 100%;
+    overflow-x: scroll;
+    touch-action: pan-x;
+    padding-bottom: 20px;
+  }
+}
+
+
+
+.content_editor{
+  container-name: editor-container;
+  container-type: inline-size;
+  font-size: 16px;
+}
+@container editor-container (max-width: 1440px){
+  #wv, html, .content_editor{
+    font-size: 14px;
+  }
+}
+@container editor-container (max-width: 1024px){
+  #wv, html, .content_editor{
+    font-size: 12px;
+  }
+}
+@container editor-container (max-width: 768px){
+  #wv, html, .content_editor{
+    font-size: 16px;
+  }
 }

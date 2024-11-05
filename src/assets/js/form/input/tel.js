@@ -1,6 +1,6 @@
 const TelIpt = (th, ...arg) => {
   let value = th.val();
-  let REG;
+  let REG=[];
   REG[0] = new RegExp(arg[0]);
   REG[1] = new RegExp(arg[1]);
 

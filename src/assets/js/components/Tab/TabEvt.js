@@ -1,5 +1,4 @@
 const tabEvt = (th)=>{
-  console.log(th);
   if(!th.hasClass("active")){
     th.closest(".tab_btn_wrap").find(".wv_tab_btn").removeClass("active");
     th.addClass("active");
