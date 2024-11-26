@@ -1,0 +1,32 @@
+{%- extends "_templates/_layout.njk" -%}
+{%- import "_templates/_macro/_macro.njk" as macro -%}
+
+{% block content %}
+    <main class="main">
+        {{ include( "_templates/_includes/_sidebarComponent.njk" ) | tabIndent(1) }}
+
+        <section class="sec_component">
+            <div class="inner_base ">
+                <div class="content">
+                    <!-- Alert 방식 Copy Button -->
+                    <button class="wv_copy_btn" data-text="This is sample text">Copy Text</button>
+
+                    <!-- Target 방식 Copy Button -->
+                    <p id="exampleText">This is text inside a target element.</p>
+                    <button class="wv_copy_btn" data-target="exampleText">Copy Target Text</button>
+
+                    <!-- Modal Feedback -->
+                    <div class="wv_modal" id="copySuccessModal">
+                        <div class="wv_modal_content">
+                            <p>Copied to clipboard!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{%- endblock %}
+
+{% block script %}
+    <script src="/assets/js/wv_compo.min.js"></script>
+{%- endblock %}

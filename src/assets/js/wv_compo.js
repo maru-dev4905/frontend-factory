@@ -59,9 +59,11 @@
 import wvTab from "./components/Tab/Tab.js";
 import wvAccordion from "./components/Accordion/Accordion.js";
 import wvModal from "./components/Modal/Modal.js";
+import copyBtn from "./components/Copy/CopyBtn.js"
 
 document.addEventListener('DOMContentLoaded', () => {
   $(".wv_tab").length !== 0 && wvTab();
   $(".wv_accordion").length !== 0 && wvAccordion();
   $(".wv_modal").length !== 0 && wvModal();
+  $(".wv_copy_btn").length !== 0 && copyBtn({ feedback: "modal"});
 });
