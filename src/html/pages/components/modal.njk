@@ -1,0 +1,39 @@
+{%- extends "_templates/_layout.njk" -%}
+{%- import "_templates/_macro/_macro.njk" as macro -%}
+
+{% block content %}
+    <main class="main">
+        {{ include( "_templates/_includes/_sidebarComponent.njk" ) | tabIndent(1) }}
+
+        <section class="sec_component">
+            <div class="inner_base ">
+                <div class="content">
+
+                    <h2 class="pt_60 fs_24">Default Modal</h2>
+                    <p class="fs_16 mt_10 lih150per">
+                        .wv_modal_btn에 data-modal="modal1"을 추가하면 해당 id의 모달이 열립니다. <br>
+                        .wv_modal_btn에 close_modal 클래스를 추가하면 해당 모달이 닫힙니다
+                    </p>
+
+                    <div class="mt_40">
+                        <!-- Trigger Button -->
+                        <button class="wv_modal_btn" data-modal="modal1">Open Modal</button>
+                    </div>
+
+                    <div class="dim"></div> <!-- 배경 dim 처리 -->
+                    <div class="wv_modal" id="modal1">
+                        <div class="wv_modal_content">
+                            <button class="wv_modal_btn close_modal" aria-label="Close modal">×</button>
+                            <h2>Modal Title</h2>
+                            <p class="mt_20">This is the modal content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{%- endblock %}
+
+{% block script %}
+    <script src="/assets/js/wv_compo.min.js"></script>
+{%- endblock %}
