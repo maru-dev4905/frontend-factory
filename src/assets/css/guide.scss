@@ -93,6 +93,7 @@ section {
 }
 
 .sec_component {
+  //Tab Start
   .wv_tab {
     width: 100%;
 
@@ -148,6 +149,45 @@ section {
           display: block;
         }
       }
+    }
+  }
+  // Tab END
+
+  .wv_accordion{
+    width: 100%;
+
+    .wv_accordion_btn{
+      width: 100%;
+      padding: rem(10px) rem(20px);
+      border: 1px solid #ebebeb;
+      background-color: #f6f6f6;
+      font-size: rem(16px);
+      text-align: left;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover{
+        background-color: #ebebeb;
+      }
+    }
+
+    .wv_accordion_panel{
+      max-height: 0px;
+      padding: 0 rem(20px);
+      border: 1px solid #ebebeb;
+      border-top: 0;
+      background-color: #f6f6f6;
+      font-size: rem(14px);
+      overflow: hidden;
+      transition: max-height 0.25s ease-in-out, padding 0.25s ease-in-out;
+    }
+  }
+  li:not(:last-child){
+    margin-bottom: rem(10px);
+  }
+  li.active{
+    .wv_accordion_panel{
+      max-height: 200px;
+      padding: rem(20px) ;
     }
   }
 }

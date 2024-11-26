@@ -57,7 +57,9 @@
 // })
 
 import wvTab from "./components/Tab/Tab.js";
+import wvAccordion from "./components/Accordion/Accordion.js";
 
 document.addEventListener('DOMContentLoaded', () => {
   $(".wv_tab").length !== 0 && wvTab();
+  $(".wv_accordion").length !== 0 && wvAccordion();
 });

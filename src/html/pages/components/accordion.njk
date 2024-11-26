@@ -1,0 +1,63 @@
+{%- extends "_templates/_layout.njk" -%}
+{%- import "_templates/_macro/_macro.njk" as macro -%}
+
+{% block content %}
+    <main class="main">
+        {{ include( "_templates/_includes/_sidebarComponent.njk" ) | tabIndent(1) }}
+
+        <section class="sec_component">
+            <div class="inner_base ">
+                <div class="content">
+
+                    <h2 class="pt_60 fs_24">Single Accordion</h2>
+                    <p class="fs_16 mt_10 lih150per">
+                        Single Accordion은 하나의 아코디언이 열리면 다른 아코디언은 닫히는 형태입니다. <br>
+                        data-type="single" 속성을 추가하여 사용합니다.
+                    </p>
+
+                    <div class="mt_40">
+                        <ul class="wv_accordion" data-type="single">
+                            <li>
+                                <button class="wv_accordion_btn">탭1</button>
+                                <div class="wv_accordion_panel" id="wv_accordion_panel_1">
+                                    <p>탭1의 내용입니다.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="wv_accordion_btn">탭2</button>
+                                <div class="wv_accordion_panel" id="wv_accordion_panel_2">
+                                    <p>탭2의 내용입니다.</p>
+                                </div>
+                        </ul>
+                    </div>
+
+                    <h2 class="pt_60 fs_24">Multi Accordion</h2>
+                    <p class="fs_16 mt_10 lih150per">
+                        Multi Accordion은 여러 아코디언이 동시에 열릴 수 있는 형태입니다. <br>
+                        data-type="multi" 속성을 추가하여 사용합니다.
+                    </p>
+
+                    <div class="mt_40">
+                        <ul class="wv_accordion" data-type="multi">
+                            <li>
+                                <button class="wv_accordion_btn">탭1</button>
+                                <div class="wv_accordion_panel" id="wv_accordion_panel_1">
+                                    <p>탭1의 내용입니다.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="wv_accordion_btn">탭2</button>
+                                <div class="wv_accordion_panel" id="wv_accordion_panel_2">
+                                    <p>탭2의 내용입니다.</p>
+                                </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{%- endblock %}
+
+{% block script %}
+    <script src="/assets/js/wv_compo.min.js"></script>
+{%- endblock %}
