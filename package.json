@@ -1,21 +1,42 @@
 {
-  "name": "publishing-factory",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "sed",
+  "version": "1.0.0",
+  "main": "gulpfile.babel.js",  
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "gulp dev",
+    "build": "gulp build",
+    "imagemin" : "gulp image_min"
   },
   "devDependencies": {
-    "@rollup/plugin-inject": "^5.0.5",
-    "sass": "^1.75.0",
-    "vite": "^5.2.0"
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/register": "^7.25.9",
+    "autoprefixer": "^9.8.5",
+    "babelify": "^10.0.0",
+    "dart-sass": "^1.25.0",
+    "del": "^6.0.0",
+    "fs": "^0.0.1-security",
+    "gulp": "^4.0.2",
+    "gulp-bro": "^2.0.0",
+    "gulp-cached": "^1.1.1",
+    "gulp-data": "^1.3.1",
+    "gulp-dependents": "^1.2.5",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-newer": "^1.4.0",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-webserver": "^0.9.1",
+    "path": "^0.12.7",
+    "uglifyify": "^5.0.2"
   },
-  "dependencies": {
-    "fullpage.js": "^3.1.2",
-    "gsap": "^3.12.5",
-    "scrollmagic": "^2.0.8"
-  }
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
+

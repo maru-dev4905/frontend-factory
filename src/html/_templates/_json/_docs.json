@@ -1,0 +1,28 @@
+{
+  "docs_data": [
+    {
+      "name": "Fonts",
+      "href": "/pages/components/fonts.html"
+    },
+    {
+      "name": "Text Over",
+      "href": "/pages/components/Text Over.html"
+    },
+    {
+      "name": "Modal",
+      "href": "/pages/components/modal.html"
+    },
+    {
+      "name": "Target Button",
+      "href": "/pages/components/targetBtn.html"
+    },
+    {
+      "name": "Copy Button",
+      "href": "/pages/components/copyBtn.html"
+    },
+    {
+      "name": "More Button",
+      "href": "/pages/components/moreBtn.html"
+    }
+  ]
+}

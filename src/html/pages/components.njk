@@ -1,0 +1,38 @@
+{%- extends "_templates/_layout.njk" -%}
+{%- import "_templates/_macro/_macro.njk" as macro -%}
+
+{% block content %}
+    <main class="main">
+        {{ include( "_templates/_includes/_sidebarComponent.njk" ) | tabIndent(1) }}
+
+        <section class="sec_component">
+            <div class="inner_base">
+                <h2>Snippets</h2>
+                <p>
+                    재사용 가능한 컴포넌트를 모아놓은 페이지입니다. <br>
+                    각 컴포넌트는 <span class="fw_semibold">wv_compo.js</span> 파일을 통해 불러와 사용할 수 있습니다.
+                </p>
+                <ul class="grid_lay">
+                    <li>
+                        <a href="/pages/components/tab.html"></a>
+                    </li>
+                    <li>
+                        <a href="/pages/components/accordion.html"></a>
+                    </li>
+                    <li>
+                        <a href="/pages/components/modal.html"></a>
+                    </li>
+                    <li>
+                        <a href="/pages/components/target_btn.html"></a>
+                    </li>
+                    <li>
+                        <a href="/pages/components/copy_btn.html"></a>
+                    </li>
+                    <li>
+                        <a href="/pages/components/more_btn.html"></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+{%- endblock %}

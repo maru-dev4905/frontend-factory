@@ -1,0 +1,115 @@
+{%- extends "_templates/_layout.njk" -%}
+{%- import "_templates/_macro/_macro.njk" as macro -%}
+
+{% block content %}
+    <main class="main">
+        {{ include( "_templates/_includes/_sidebarComponent.njk" ) | tabIndent(1) }}
+
+        <section class="sec_component">
+            <div class="inner_base ">
+                <h2 class="pt_60 fs_24">Default Tab</h2>
+                <p class="fs_16 mt_10">
+                    탭 컴포넌트는 여러 개의 탭을 가지고 있고, 각 탭을 클릭하면 해당 탭에 맞는 내용이 표시되는 컴포넌트입니다.
+                </p>
+
+                <div class="content">
+                    <div class="mt_40">
+                        <div class="wv_tab">
+                            <div class="wv_tab_menu">
+                                <button type="button" class="wv_tab_btn active">Tab 1</button>
+                                <button type="button" class="wv_tab_btn">Tab 2</button>
+                                <button type="button" class="wv_tab_btn">Tab 3</button>
+                            </div>
+                            <div class="wv_tab_content">
+                                <div class="wv_tab_panel">Content for Tab 1</div>
+                                <div class="wv_tab_panel">Content for Tab 2</div>
+                                <div class="wv_tab_panel">Content for Tab 3</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="pt_100 fs_24">Tab in Tab</h2>
+                    <p class="fs_16 mt_10">탭 안에 중첩된 탭을 사용할 수 있습니다.</p>
+                    <div class="mt_40">
+                        <div class="wv_tab">
+                            <div class="wv_tab_menu">
+                                <button class="wv_tab_btn active">Tab 1</button>
+                                <button class="wv_tab_btn">Tab 2</button>
+                            </div>
+                            <div class="wv_tab_content">
+                                <div class="wv_tab_panel active">
+                                    <p>Content for Tab 1</p>
+                                    <!-- 중첩된 탭 -->
+                                    <div class="wv_tab mt_40">
+                                        <div class="wv_tab_menu">
+                                            <button class="wv_tab_btn active">Sub Tab 1</button>
+                                            <button class="wv_tab_btn">Sub Tab 2</button>
+                                        </div>
+                                        <div class="wv_tab_content">
+                                            <div class="wv_tab_panel active">Sub Content for Tab 1</div>
+                                            <div class="wv_tab_panel">Sub Content for Tab 2</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wv_tab_panel">Content for Tab 2</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="pt_100 fs_24">Tab Scroll</h2>
+                    <p class="fs_16 mt_10 lih150per">
+                        탭이 많을 경우 스크롤이 가능합니다. <br>
+                        .wv_tab_menu에 scrollbar_custom 클래스를 추가한 후 <br>
+                        .scr에 스크롤이 가능한 버튼을 넣어주세요.
+                    </p>
+                    <div class="mt_40" style="width: 500px;">
+                        <div class="wv_tab">
+                            <div class="wv_tab_menu scrollbar_custom">
+                                <div class="scr">
+                                    <button type="button" class="wv_tab_btn active">Tab1</button>
+                                    <button type="button" class="wv_tab_btn">Tab2</button>
+                                    <button type="button" class="wv_tab_btn">Tab3</button>
+                                    <button type="button" class="wv_tab_btn">Tab4</button>
+                                    <button type="button" class="wv_tab_btn">Tab5</button>
+                                    <button type="button" class="wv_tab_btn">Tab6</button>
+                                    <button type="button" class="wv_tab_btn">Tab7</button>
+                                    <button type="button" class="wv_tab_btn">Tab8</button>
+                                </div>
+                            </div>
+                            <div class="wv_tab_content">
+                                <div class="wv_tab_panel active">
+                                    <p>Content for Tab 1</p>
+                                </div>
+                                <div class="wv_tab_panel">
+                                    <p>Content for Tab 2</p>
+                                </div>
+                                <div class="wv_tab_panel">
+                                    <p>Content for Tab 3</p>
+                                </div>
+                                <div class="wv_tab_panel">
+                                    <p>Content for Tab 4</p>
+                                </div>
+                                <div class="wv_tab_panel">
+                                    <p>Content for Tab 5</p>
+                                </div>
+                                <div class="wv_tab_panel">
+                                    <p>Content for Tab 6</p>
+                                </div>
+                                <div class="wv_tab_panel">
+                                    <p>Content for Tab 7</p>
+                                </div>
+                                <div class="wv_tab_panel">
+                                    <p>Content for Tab 8</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{%- endblock %}
+
+{% block script %}
+    <script src="/assets/js/wv_compo.min.js"></script>
+{%- endblock %}
