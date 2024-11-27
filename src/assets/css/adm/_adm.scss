@@ -953,6 +953,7 @@ main.admin_page{
 
 /* 관리자 페이지 UI 기본 모달 */
 .adm_modal{
+  display: block;
   position: fixed;
   top: 50%; left: 50%;
   z-index: 100000;
@@ -964,15 +965,35 @@ main.admin_page{
   border-radius: 30px;
   padding: 50px 20px 60px;
   border: none;
+  background-color: var(--adm_white1);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+    transition: opacity 0.3s ease-in-out,
+                        visibility 0.3s ease-in-out;
+
+  &.active{
+    opacity: 1;
+    visibility: visible;
+  }
 }
 .dim{
-  display: none;
+  display: block;
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0; left: 0;
   z-index: 99999;
   background: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+    transition: opacity 0.3s ease-in-out,
+                        visibility 0.3s ease-in-out;
+
+  &.active{
+    opacity: 1;
+    visibility: visible;
+  }
 }
 /* 관리자 페이지 UI 기본 모달 END */
 
