@@ -5,31 +5,32 @@
     <main class="main">
         {{ include( "_templates/_includes/_sidebarComponent.njk" ) | tabIndent(1) }}
 
-        <section class="sec_component">
+        <section class="sec_component pt_100">
             <div class="inner_base">
-                <h2>Snippets</h2>
-                <p>
+                <h2 class="fs_32 mb_10">Snippets</h2>
+                <p class="fs_16 fw_regular lih150per mb_40">
                     재사용 가능한 컴포넌트를 모아놓은 페이지입니다. <br>
                     각 컴포넌트는 <span class="fw_semibold">wv_compo.js</span> 파일을 통해 불러와 사용할 수 있습니다.
                 </p>
-                <ul class="grid_lay">
-                    <li>
-                        <a href="/pages/components/tab.html"></a>
+
+                <ul class="grid_lay guide_list_menu gap40">
+                    <li class="grid_col" style="--colST: 1; --colED: 4;">
+                        <a href="/pages/components/tab.html">Tab</a>
                     </li>
-                    <li>
-                        <a href="/pages/components/accordion.html"></a>
+                    <li class="grid_col" style="--colST: 4; --colED: 7;">
+                        <a href="/pages/components/accordion.html">Accordion</a>
                     </li>
-                    <li>
-                        <a href="/pages/components/modal.html"></a>
+                    <li class="grid_col" style="--colST: 7; --colED: 10;">
+                        <a href="/pages/components/modal.html">Modal</a>
                     </li>
-                    <li>
-                        <a href="/pages/components/target_btn.html"></a>
+                    <li class="grid_col" style="--colST: 10; --colED: -1;">
+                        <a href="/pages/components/targetBtn.html">Target Button</a>
                     </li>
-                    <li>
-                        <a href="/pages/components/copy_btn.html"></a>
+                    <li class="grid_col" style="--colST: 1; --colED: 4;">
+                        <a href="/pages/components/tab.html">Copy Button</a>
                     </li>
-                    <li>
-                        <a href="/pages/components/more_btn.html"></a>
+                    <li class="grid_col" style="--colST: 4; --colED: 7;">
+                        <a href="/pages/components/accordion.html">More Button</a>
                     </li>
                 </ul>
             </div>

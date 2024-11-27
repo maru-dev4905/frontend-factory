@@ -96,7 +96,20 @@ main.admin_page{
 .adm_ico.ico_medium{
   width: 24px;
   height: 24px;
-
+}
+.gifont::before,
+.gifont::after{
+  font-family: 'Material Symbols Outlined' !important;;
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
 }
 /* ICONS END */
 
@@ -225,55 +238,59 @@ main.admin_page{
   padding: 0 60px;
   background-color: var(--adm_white1);
   border-bottom: 1px solid var(--adm_white3);
-}
-.adm_logo a,
-.adm_logo{
-  display : flex;
-  align-items: center;
-  height: 100%;
-}
-.adm_logo img{
-  height: calc(100% - 50px);
-  max-width : max-content;
-}
-.adm_hd_cont{
-  display: flex;
-  align-items: center;
-}
-.adm_hd_cont .countdown{
-  color: var(--adm_gray1);
-  margin-right: 20px;
-}
-.adm_hd_cont .logout_btn,
-.adm_hd_cont .renew_btn{
-  display : flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 125%;
-  color: var(--adm_gray1);
-  border: 1px solid var(--adm_white3);
-  height: 40px;
-  padding: 0 15px ;
-  margin-right : 10px;
-  border-radius: 40px;
-  transition: background-color 0.2s ease-in-out;
-}
-.adm_hd_cont .logout_btn:hover,
-.adm_hd_cont .renew_btn:hover{
-  background-color: var(--adm_white3-hov);
-}
-.adm_hd_cont .adm_name{
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 125%;
-  color: var(--adm_gray1);
-  padding-left: 10px;
-}
-.adm_hd_cont .adm_name strong{
-  font-weight: 600;
-  color: var(--adm_black2);
+
+  .adm_logo{
+    display : flex;
+    align-items: center;
+    height: 100%;
+    a{
+      display : flex;
+      align-items: center;
+      height: 100%;
+    }
+    img{
+      height: calc(100% - 50px);
+      max-width : max-content;
+    }
+  }
+  .adm_hd_cont{
+    display: flex;
+    align-items: center;
+    .countdown{
+      color: var(--adm_gray1);
+      margin-right: 20px;
+    }
+  }
+  .logout_btn,
+  .renew_btn{
+    display : flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 125%;
+    color: var(--adm_gray1);
+    border: 1px solid var(--adm_white3);
+    height: 40px;
+    padding: 0 15px ;
+    margin-right : 10px;
+    border-radius: 40px;
+    transition: background-color 0.2s ease-in-out;
+    &:hover{
+      background-color: var(--adm_white3-hov);
+    }
+  }
+  .adm_name{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 125%;
+    color: var(--adm_gray1);
+    padding-left: 10px;
+    strong{
+      font-weight: 600;
+      color: var(--adm_black2);
+    }
+  }
 }
 /* 헤더 END */
 
@@ -290,43 +307,43 @@ main.admin_page{
   border-right: 2px solid var(--adm_white2);
   transition: width 0.4s ease-in-out,
                       padding 0.4s ease-in-out;
-}
-.adm_menu.hide{
-  width : 70px;
-  padding: 52px 12px;
-}
-.adm_menu nav{
-  position : relative;
-  z-index : 1100;
-}
-.adm_menu nav button,
-.adm_menu nav a{
-  display : flex;
-  align-items: center;
-  gap: 10px;
-  position : relative;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 125%;
-  margin-bottom: 28px;
-}
-.wv_adm .adm_menu nav button,
-.wv_adm .adm_menu nav a{
-  transition: margin 0.4s ease-in-out;
-}
-.adm_menu nav button{
-  width: 100%;
-}
-.adm_menu nav button::after{
-  content: "\e91f";
-  color: var(--adm_gray1);
-  position: absolute;
-  top: 50%; right: 16px;
-  font-size: 24px;
-  transform: translateY(-50%) rotate(90deg);
-  font-family: wv_admin_ico;
-  transition: color 0.3s ease-in-out,
-                      transform 0.2s ease-in-out;
+  &.hide{
+    width : 70px;
+    padding: 52px 12px;
+
+  }
+  nav{
+    position : relative;
+    z-index : 1100;
+    button, a{
+      display : flex;
+      align-items: center;
+      gap: 10px;
+      position : relative;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 125%;
+      margin-bottom: 28px;
+      transition: margin 0.4s ease-in-out;
+    }
+    button{width: 100%;}
+    button:after{
+      content: "\e313";
+      color: var(--adm_gray1);
+      position: absolute;
+      top: 50%; right: 16px;
+      font-size: 24px;
+      font-weigh:600;
+      transform: translateY(-50%);
+      transition: color 0.3s ease-in-out,
+      transform 0.2s ease-in-out;
+      font-variation-settings:
+              'FILL' 0,
+              'wght' 500,
+              'GRAD' 0,
+              'opsz' 24;
+    }
+  }
 }
 .adm_menu.hide nav button,
 .adm_menu.hide nav a{
@@ -513,6 +530,22 @@ main.admin_page{
   &.on .selected_value ~  i{
     transform: rotate(270deg);
   }
+  &::after{
+    content: "\e313";
+    color: var(--adm_gray1);
+    position: absolute;
+    top: 50%; right: 14px;
+    font-size: 24px;
+    font-weigh:600;
+    transform: translateY(-50%);
+    transition: color 0.3s ease-in-out,
+    transform 0.2s ease-in-out;
+    font-variation-settings:
+            'FILL' 0,
+            'wght' 500,
+            'GRAD' 0,
+            'opsz' 24;
+  }
 }
 .side_lang_list{
   position: absolute;
@@ -615,7 +648,7 @@ main.admin_page{
   align-items: center;
   width : 170px;
   height: 100%;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--adm_gray1);
   transition: background-color 0.2s ease-in-out,
@@ -635,7 +668,7 @@ main.admin_page{
   display: flex;
   align-items: center;
   width : var(--width);
-  height: 60px;
+  height: 48px;
   border-radius: 60px;
   overflow: hidden;
 }
@@ -643,7 +676,7 @@ main.admin_page{
   width : calc(100% - 60px);
   height: 100%;
   padding: 0 30px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   border: 1px solid var(--adm_white3);
   border-right: none;
@@ -664,17 +697,6 @@ main.admin_page{
   background-color: var(--adm_gray3);
   transition: background-color 0.2s ease-in-out;
 }
-.adm_search button i{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position : absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  content: "";
-  width : 24px;
-  height: 24px;
-}
 .adm_search button:hover{
   background-color: var(--adm_gray1);
 }
@@ -687,7 +709,7 @@ main.admin_page{
   display: flex;
   align-items: center;
   width : var(--width);
-  height: 60px;
+  height: 48px;
   border-radius: 60px;
   overflow: hidden;
 }
@@ -695,7 +717,7 @@ main.admin_page{
   width : calc(100% - 60px);
   height: 100%;
   padding: 0 30px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   border: 1px solid var(--adm_white3);
   border-right: none;
@@ -802,10 +824,9 @@ main.admin_page{
 }
 .adm_table td,
 .adm_table th{
-  height: 60px;
-  font-size:  20px;
+  font-size:  16px;
   text-align: center;
-  padding: 15px 20px;
+  padding: 10px 20px;
   color: var(--adm_black2);
   border-bottom: 1px solid var(--adm_white3);
 }
@@ -865,7 +886,7 @@ main.admin_page{
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 150%;
   }
@@ -912,7 +933,7 @@ main.admin_page{
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 20px;
+    font-size: 16   px;
     font-weight: 400;
     line-height: 150%;
   }
@@ -982,6 +1003,9 @@ main.admin_page{
   padding: 15px 30px;
   border-radius: 30px;
   border: 1px solid var(--adm_white3);
+}
+.adm_login_cont input::placeholder{
+  color: #9AA2A5;
 }
 .adm_login_cont button[type=submit]{
   height: 60px;

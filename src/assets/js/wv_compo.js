@@ -67,3 +67,4 @@ document.addEventListener('DOMContentLoaded', () => {
   $(".wv_modal").length !== 0 && wvModal();
   $(".wv_copy_btn").length !== 0 && copyBtn({ feedback: "modal"});
 });
+

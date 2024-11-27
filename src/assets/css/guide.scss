@@ -64,14 +64,17 @@ main {
 }
 
 aside {
-  position: sticky;
-  top: rem(78px);
-  left: 0;
   min-width: rem(320px);
   border-right: 1px solid #ebebeb;
   background-color: #F6F9FC;
   padding: rem(20px) 0;
 
+  > div{
+    position: sticky;
+    top: rem(78px);
+    left: 0;
+    padding: rem(20px) 0;
+  }
   a {
     width: 100%;
     padding: rem(10px) rem(40px);
@@ -94,6 +97,22 @@ section {
 
 .sec_component {
   padding-bottom: 100px;
+
+  .guide_list_menu{
+    li{
+        border-bottom: 1px solid #ebebeb;
+        background-color: #f6f6f6;
+        transition: background-color .2s ease-in-out;
+
+        &:hover{
+            background-color: #ebebeb;
+        }
+    }
+    a{
+        display: block;
+      padding: rem(20px) rem(20px);
+    }
+  }
 
   //Tab Start
   .wv_tab {
@@ -186,16 +205,16 @@ section {
       overflow: hidden;
       transition: max-height 0.25s ease-in-out, padding 0.25s ease-in-out;
     }
-  }
 
-  li:not(:last-child) {
-    margin-bottom: rem(10px);
-  }
+    li:not(:last-child) {
+      margin-bottom: rem(10px);
+    }
 
-  li.active {
-    .wv_accordion_panel {
-      max-height: 200px;
-      padding: rem(20px);
+    li.active {
+      .wv_accordion_panel {
+        max-height: 200px;
+        padding: rem(20px);
+      }
     }
   }
 

@@ -1,0 +1,29 @@
+{%- extends "_templates/_layout.njk" -%}
+{%- import "_templates/_macro/_macro.njk" as macro -%}
+
+{% block content %}
+    <main class="main">
+        {{ include( "_templates/_includes/_sidebarComponent.njk" ) | tabIndent(1) }}
+
+        <section class="sec_component pt_100">
+            <div class="inner_base">
+                <h2 class="fs_32 mb_10">Admin</h2>
+                <p class="fs_16 fw_regular lih150per mb_40">
+                    관리자 페이지를 확인 가능하며, <br>
+                    페이지에서 사용하는 UI를 확인 가능합니다.
+                </p>
+                <ul class="grid_lay guide_list_menu">
+                    <li class="grid_col" style="--colST: 1; --colED: 4;">
+                        <a href="/pages/admin/admin.html" target="_blank">Admin</a>
+                    </li>
+                    <li class="grid_col" style="--colST: 4; --colED: 7;">
+                        <a href="/pages/admin/snippet.html">Snippet</a>
+                    </li>
+                    <li class="grid_col" style="--colST: 7; --colED: 10;">
+                        <a href="/pages/admin/login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+{%- endblock %}

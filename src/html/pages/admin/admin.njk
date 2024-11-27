@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WV"/>
+    <meta name="keyword" content="WV" />
+    <title>WV ADMIN</title>
+
+    <link rel="icon" type="image/svg+xml" href="/assets/images/wever_favicon.svg" />
+    <link rel="stylesheet" href="/assets/css/project/sample/_test_variables.scss">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="/assets/css/wv.min.css">
+    <link rel="stylesheet" href="/assets/css/wv_admin.min.css">
+</head>
+<body>
+<div id="wv" class="theme_light">
+    <header class="adm_hd">
+        <h1 class="adm_logo">
+            <a href="../../index.html"><img src="../../assets/images/common/logo_b.svg" alt="wever 로고"></a>
+        </h1>
+        <div class="adm_hd_cont">
+            <div class="countdown fs_16 fw_regular">
+                <span class="countdown_minutes">9</span>
+                분
+                <span class="countdown_seconds">59</span>
+                초
+            </div>
+            <button type="button" class="renew_btn">
+                <i class="material-symbols-outlined fill fs_20 adm_fc_gray1">refresh</i>
+                갱신
+            </button>
+            <button type="button" class="logout_btn">
+                <i class="material-symbols-outlined fill ico_logout fs_20 adm_fc_gray1">logout</i>
+                로그아웃
+            </button>
+            <h2 class="adm_name"><strong>최고관리자</strong> 님</h2>
+        </div>
+    </header>
+    <aside class="adm_menu">
+        <div class="lang_select">
+            <button class="lang_btn dp_f al_center gap10 wv_target_btn gifont" type="button" role="combobox" data-target="langList">
+                <i class="material-symbols-outlined fill fs_24 adm_fc_gray1">language</i>
+                <div class="dp_f al_center jtf_bet w_100">
+                    <span class="selected_value clamp1 lih125per adm_fc_gray1 txt_over_dot fs_16">매칭코리아 - 한국어</span><i class="ico_arrow_bold fs_24 adm_fc_gray1"></i>
+                </div>
+            </button>
+            <div class="side_lang_list scrollbar_custom" id="langList">
+                <div class="dp_f fd_col">
+                    <a href="/d5056fd0471372cb2ad2b197836acf4b4f68fb1670f766587ed089f0564a8067/Language?lang=ko">매칭코리아 - 한국어</a>
+                    <a href="/d5056fd0471372cb2ad2b197836acf4b4f68fb1670f766587ed089f0564a8067/Language?lang=en">매칭코리아 - 영어</a>
+                    <a href="/d5056fd0471372cb2ad2b197836acf4b4f68fb1670f766587ed089f0564a8067/Language?lang=zh">매칭코리아 - 중국어</a>
+                    <a href="/d5056fd0471372cb2ad2b197836acf4b4f68fb1670f766587ed089f0564a8067/Language?lang=es">매칭코리아 - 스페인어</a>
+                    <a href="/d5056fd0471372cb2ad2b197836acf4b4f68fb1670f766587ed089f0564a8067/Language?lang=fr">매칭코리아 - 프랑스어</a>
+                    <a href="/d5056fd0471372cb2ad2b197836acf4b4f68fb1670f766587ed089f0564a8067/Language?lang=hi">매칭코리아 - 힌디어</a>
+                    <a href="/d5056fd0471372cb2ad2b197836acf4b4f68fb1670f766587ed089f0564a8067/Language?lang=ar">매칭코리아 - 아랍어</a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <i class="material-symbols-outlined fill fw_light fs_24 ">
+                            extension
+                        </i>
+                        <span>프로젝트 매칭 관리</span>
+                    </a>
+                </li>
+                <li>
+                    <button type="button" class="wv_target_btn gifont" data-target="navList2">
+
+                        <i class="material-symbols-outlined fill fw_light fs_24">cancel</i>
+                        <span>미매칭 종료건 관리</span>
+                    </button>
+                    <ul class="sub_menu scrollbar_custom" id="navList2">
+                        <li><a href="#">미매칭 종료건 관리1</a></li>
+                        <li>
+                            <button type="button" class="wv_target_btn" data-target="navList2-2">미매칭 종료건 관리2</button>
+                            <ul id="navList2-2">
+                                <li><a href="#">미매칭 종료건 관리2-1</a></li>
+                                <li><a href="#">미매칭 종료건 관리2-2</a></li>
+                                <li><a href="#">미매칭 종료건 관리2-3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button type="button" class="wv_target_btn" data-target="navList232">미매칭 종료건 관리3</button>
+                            <ul id="navList2-3">
+                                <li><a href="#">미매칭 종료건 관리3-1</a></li>
+                                <li><a href="#">미매칭 종료건 관리3-2</a></li>
+                                <li><a href="#">미매칭 종료건 관리3-3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class=" material-symbols-outlined fill fw_light fs_24">business_center</i>
+                        <span>제안분야 관리</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class=" material-symbols-outlined fill fw_light fs_24">psychology</i>
+                        <span>관심분야 관리</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class=" material-symbols-outlined fill fw_light fs_24">forum</i>
+                        <span>FAQ 관리</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class=" material-symbols-outlined fill fw_light fs_24">description</i>
+                        <span>서비스 약관 관리</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class=" material-symbols-outlined fill fw_light fs_24">desktop_windows</i>
+                        <span>홈페이지 콘텐츠 관리</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class=" material-symbols-outlined fill fw_light fs_24">group</i>
+                        <span>회원 관리</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class=" material-symbols-outlined fill fw_light fs_24">manage_accounts</i>
+                        <span>관리자 관리</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./adm_login.html">
+                        <i class=" material-symbols-outlined fill fw_light fs_24">account_circle</i>
+                        <span>로그인</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <button type="button" class="adm_menu_btn">
+            <i class="material-icons adm_fc_gray1">
+                arrow_back_ios_new
+            </i>
+        </button>
+    </aside>
+    <main class="admin_page ">
+
+        <div class="adm_content">
+            <div class="adm_cont_hd">
+                <ol class="adm_breadcrumb">
+                    <li>
+                        <a href="/">1depth</a>
+                    </li>
+                    <li aria-current="page">
+                        현재 페이지
+                    </li>
+                </ol>
+                <h2 class="dp_f al_end gap10 fs_40 fw_bold lih125per fc_black1">
+                    페이지에 타이틀 영역입니다
+                    <span class="fs_20 fw_regular fc_gray1 lih150per">페이지에 관한 간단한 설명 영역입니다</span>
+                </h2>
+                <p class="fs_16 fw_regular lih150per mt_20">
+                    현재 관리자 페이지에 관한 사용 방법이나 자세한 설명을 적는 영역입니다.
+                </p>
+            </div>
+
+            <div class="adm_cont">
+                <div class="adm_inner">
+
+                    <article class="component">
+                        <h3 class="fs_30 fw_semibold pb_30 mt_100">Button</h3>
+                        <div class="dp_f fd_col gap20" style="border-radius: 10px; background-color: var(--adm_gray1); padding: 20px; flex: 1;">
+                            <h4 class="fs_24 fw_medium fc_white1">WHITE BUTTON</h4>
+                            <div class="dp_f gap20">
+                                <button type="button" class="adm_btn solid_white1 adm_fc_white1">WHITE1 Solid</button>
+                                <button type="button" class="adm_btn solid_white2 adm_fc_white2">WHITE2 Solid</button>
+                                <button type="button" class="adm_btn solid_white3 adm_fc_white3">WHITE3 Solid</button>
+                                <button type="button" class="adm_btn fill_white1">WHITE1 Fill</button>
+                                <button type="button" class="adm_btn fill_white2">WHITE2 Fill</button>
+                                <button type="button" class="adm_btn fill_white3">WHITE3 Fill</button>
+                            </div>
+                            <div class="dp_f gap20">
+                                <button type="button" class="adm_btn solid_white1 round adm_fc_white1">WHITE1 Solid</button>
+                                <button type="button" class="adm_btn solid_white2 round adm_fc_white2">WHITE2 Solid</button>
+                                <button type="button" class="adm_btn solid_white3 round adm_fc_white3">WHITE3 Solid</button>
+                                <button type="button" class="adm_btn fill_white1 round">WHITE1 Fill</button>
+                                <button type="button" class="adm_btn fill_white2 round">WHITE2 Fill</button>
+                                <button type="button" class="adm_btn fill_white3 round">WHITE3 Fill</button>
+                            </div>
+                        </div>
+                        <div class="dp_f fd_col gap20 mt_20" style="border-radius: 10px; background-color: var(--adm_white3); padding: 20px; flex: 1;">
+                            <h4 class="fs_24 fw_medium fc_gray1">GRAY BUTTON</h4>
+                            <div class="dp_f gap20">
+                                <button type="button" class="adm_btn solid_gray1">GRAY1 Solid</button>
+                                <button type="button" class="adm_btn solid_gray2">GRAY2 Solid</button>
+                                <button type="button" class="adm_btn solid_gray3">GRAY3 Solid</button>
+                                <button type="button" class="adm_btn solid_gray4">GRAY4 Solid</button>
+                                <button type="button" class="adm_btn fill_gray1 adm_fc_white1">GRAY1 Fill</button>
+                                <button type="button" class="adm_btn fill_gray2 adm_fc_white2">GRAY2 Fill</button>
+                                <button type="button" class="adm_btn fill_gray3 adm_fc_white3">GRAY3 Fill</button>
+                                <button type="button" class="adm_btn fill_gray4">GRAY4 Fill</button>
+                            </div>
+                            <div class="dp_f gap20">
+                                <button type="button" class="adm_btn solid_gray1 round ">GRAY1 Solid</button>
+                                <button type="button" class="adm_btn solid_gray2 round ">GRAY2 Solid</button>
+                                <button type="button" class="adm_btn solid_gray3 round ">GRAY3 Solid</button>
+                                <button type="button" class="adm_btn solid_gray4 round ">GRAY4 Solid</button>
+                                <button type="button" class="adm_btn fill_gray1 round adm_fc_white1">GRAY1 Fill</button>
+                                <button type="button" class="adm_btn fill_gray2 round adm_fc_white2">GRAY2 Fill</button>
+                                <button type="button" class="adm_btn fill_gray3 round adm_fc_white3">GRAY3 Fill</button>
+                                <button type="button" class="adm_btn fill_gray4 round ">GRAY4 Fill</button>
+                            </div>
+                        </div>
+                        <div class="dp_f fd_col gap20 mt_20" style="border-radius: 10px; background-color: var(--adm_white2); padding: 20px; flex: 1;">
+                            <h4 class="fs_24 fw_medium fc_black1">BLACK BUTTON</h4>
+                            <div class="dp_f gap20">
+                                <button type="button" class="adm_btn solid_black1">BLACK1 Solid</button>
+                                <button type="button" class="adm_btn solid_black2">BLACK2 Solid</button>
+                                <button type="button" class="adm_btn fill_black1 adm_fc_white1">BLACK1 Fill</button>
+                                <button type="button" class="adm_btn fill_black2 adm_fc_white2">BLACK2 Fill</button>
+                            </div>
+                            <div class="dp_f gap20">
+                                <button type="button" class="adm_btn solid_black1 round ">BLACK1 Solid</button>
+                                <button type="button" class="adm_btn solid_black2 round ">BLACK2 Solid</button>
+                                <button type="button" class="adm_btn fill_black1 round adm_fc_white1">BLACK1 Fill</button>
+                                <button type="button" class="adm_btn fill_black2 round adm_fc_white2">BLACK2 Fill</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="component ">
+                        <h3 class="fs_30 fw_semibold pb_30 mt_100">Tab Component</h3>
+                        <div class="adm_tab">
+                            <button class="adm_tab_btn active">전체 보기</button>
+                            <button class="adm_tab_btn">등록 제안 검토</button>
+                            <button class="adm_tab_btn">추가사항 요청/응답</button>
+                            <button class="adm_tab_btn">파트너 추천</button>
+                            <button class="adm_tab_btn">협상 구체화</button>
+                            <button class="adm_tab_btn">수수료 정산</button>
+                            <button class="adm_tab_btn">최종 협약</button>
+                            <button class="adm_tab_btn">매칭 완료</button>
+                        </div>
+                    </article>
+
+                    <article class="component">
+                        <h3 class="fs_30 fw_semibold mt_100">Search bar Component</h3>
+                        <p class="fs_20 fw_medium mt_12 pb_30">.adm_create_bar에 style="--width: ??px" 를 입력하면 너비값이 적용됩니다.</p>
+
+                        <div class="adm_search" style="--width: 750px;">
+                            <form name="searchForm" method="get" action="/<?=$_SESSION['wv_adm_url']?>/board/<?=$wv_category?>/list" class="dp_f adm_search mx_auto" >
+                                <input type="text" class="form-control rounded-0" name="keyword" value=""  placeholder="검색어를 입력해주세요 (프로젝트 제목 검색)">
+                                <button type="submit"><i class="material-symbols-outlined fill fw_light fs_30 adm_fc_white1">search</i></button>
+                            </form>
+                        </div>
+                    </article>
+
+                    <article class="component">
+                        <h3 class="fs_30 fw_semibold mt_100">Create bar Component</h3>
+                        <p class="fs_20 fw_medium mt_12 pb_30">.adm_create_bar에 style="--width: ??px" 를 입력하면 너비값이 적용됩니다.</p>
+
+                        <div class="adm_create_bar" style="--width: 480px;">
+                            <input type="text" id="parent_field" placeholder="추가할 항목의 이름을 입력해주세요.">
+                            <button class="" onclick=""><i class="material-symbols-outlined fill fw_light fs_30 adm_fc_white1">add</i></button>
+                        </div>
+
+                    </article>
+
+                    <article class="component">
+                        <h3 class="fs_30 fw_semibold pb_30 mt_100">New Post Button Component</h3>
+
+                        <a href="#" class="adm_btn solid_gray3 round w_130 h_44">
+                            <i class="material-symbols-outlined fill fw_light fs_24 adm_fc_gray1">add</i>새 글 등록
+                        </a>
+                    </article>
+
+                    <article class="component">
+                        <h3 class="fs_30 fw_semibold pb_30 mt_100">List Component <span class="fs_24 fw_medium">(table style)</span></h3>
+                        <table class="adm_table">
+                            <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>발행유무</th>
+                                <th>제목</th>
+                                <th>작성일</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>28</td>
+                                <td>발행됨</td>
+                                <td class="ta_left">매칭 후 바로 계약에 들어가나요?</td>
+                                <td>2024-04-03</td>
+                                <td>
+                                    <div class="dp_f al_center jtf_end gap10">
+                                        <button type="button" class="adm_btn fill_gray1 round ico_btn" onclick="location.href=''">
+                                            <i class="material-symbols-outlined fill fs_24 adm_fc_white1">edit</i>
+                                        </button>
+                                        <button type="button" class="adm_btn solid_gray3 round ico_btn">
+                                            <i class="material-symbols-outlined fill fs_24 fc_white1">delete</i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </article>
+
+                    <article class="component">
+                        <h3 class="fs_30 fw_semibold pb_30 mt_100">Pagination Component</h3>
+                        <ul class="adm_pagination mt_60">
+                            <li class="page-item first disabled m-1">
+                                <a href="" class="page-link px-0 fd_center" title="처음">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path opacity="0.5" d="M14.2657 11.4343L18.45 7.25C18.8642 6.83579 18.8642 6.16421 18.45 5.75C18.0358 5.33579 17.3642 5.33579 16.95 5.75L11.4071 11.2929C11.0166 11.6834 11.0166 12.3166 11.4071 12.7071L16.95 18.25C17.3642 18.6642 18.0358 18.6642 18.45 18.25C18.8642 17.8358 18.8642 17.1642 18.45 16.75L14.2657 12.5657C13.9533 12.2533 13.9533 11.7467 14.2657 11.4343Z" fill="currentColor"></path>
+                                        <path d="M8.2657 11.4343L12.45 7.25C12.8642 6.83579 12.8642 6.16421 12.45 5.75C12.0358 5.33579 11.3642 5.33579 10.95 5.75L5.40712 11.2929C5.01659 11.6834 5.01659 12.3166 5.40712 12.7071L10.95 18.25C11.3642 18.6642 12.0358 18.6642 12.45 18.25C12.8642 17.8358 12.8642 17.1642 12.45 16.75L8.2657 12.5657C7.95328 12.2533 7.95328 11.7467 8.2657 11.4343Z" fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="page-item previous disabled m-1">
+                                <a class="page-link px-0 fd_center" title="이전">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.2657 11.4343L15.45 7.25C15.8642 6.83579 15.8642 6.16421 15.45 5.75C15.0358 5.33579 14.3642 5.33579 13.95 5.75L8.40712 11.2929C8.01659 11.6834 8.01659 12.3166 8.40712 12.7071L13.95 18.25C14.3642 18.6642 15.0358 18.6642 15.45 18.25C15.8642 17.8358 15.8642 17.1642 15.45 16.75L11.2657 12.5657C10.9533 12.2533 10.9533 11.7467 11.2657 11.4343Z" fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="page-item m-1 active">
+                                <a href="javascript:void(0);" class="page-link fd_center" title="현재 페이지">1</a>
+                            </li>
+                            <li class="page-item next disabled m-1">
+                                <a class="page-link px-0 fd_center" title="다음"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.6343 12.5657L8.45001 16.75C8.0358 17.1642 8.0358 17.8358 8.45001 18.25C8.86423 18.6642 9.5358 18.6642 9.95001 18.25L15.4929 12.7071C15.8834 12.3166 15.8834 11.6834 15.4929 11.2929L9.95001 5.75C9.5358 5.33579 8.86423 5.33579 8.45001 5.75C8.0358 6.16421 8.0358 6.83579 8.45001 7.25L12.6343 11.4343C12.9467 11.7467 12.9467 12.2533 12.6343 12.5657Z" fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="page-item last disabled m-1">
+                                <a class="page-link px-0 fd_center" title="마지막">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path opacity="0.5" d="M9.63433 11.4343L5.45001 7.25C5.0358 6.83579 5.0358 6.16421 5.45001 5.75C5.86423 5.33579 6.5358 5.33579 6.95001 5.75L12.4929 11.2929C12.8834 11.6834 12.8834 12.3166 12.4929 12.7071L6.95001 18.25C6.5358 18.6642 5.86423 18.6642 5.45001 18.25C5.0358 17.8358 5.0358 17.1642 5.45001 16.75L9.63433 12.5657C9.94675 12.2533 9.94675 11.7467 9.63433 11.4343Z" fill="currentColor"></path>
+                                        <path d="M15.6343 11.4343L11.45 7.25C11.0358 6.83579 11.0358 6.16421 11.45 5.75C11.8642 5.33579 12.5358 5.33579 12.95 5.75L18.4929 11.2929C18.8834 11.6834 18.8834 12.3166 18.4929 12.7071L12.95 18.25C12.5358 18.6642 11.8642 18.6642 11.45 18.25C11.0358 17.8358 11.0358 17.1642 11.45 16.75L15.6343 12.5657C15.9467 12.2533 15.9467 11.7467 15.6343 11.4343Z" fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="component">
+                        <h3 class="fs_30 fw_semibold pb_30 mt_100">Radio & Checkbox Component</h3>
+                        <div class="dp_f gap20">
+                            <div class="adm_radio">
+                                <input type="radio" id="radio1" name="radio" value="radio1">
+                                <label for="radio1"><span></span> Radio1</label>
+                            </div>
+                            <div class="adm_radio">
+                                <input type="radio" id="radio2" name="radio" value="radio2">
+                                <label for="radio2"><span></span> Radio2</label>
+                            </div>
+                            <div class="adm_radio">
+                                <input type="radio" id="radio3" name="radio" value="radio3">
+                                <label for="radio3"><span></span> Radio3</label>
+                            </div>
+                        </div>
+                        <div class="dp_f gap20 mt_40">
+                            <div class="adm_checkbox">
+                                <input type="checkbox" id="checkbox1" name="checkbox" value="checkbox1">
+                                <label for="checkbox1"><span></span> Checkbox1</label>
+                            </div>
+                            <div class="adm_checkbox">
+                                <input type="checkbox" id="checkbox2" name="checkbox" value="checkbox2">
+                                <label for="checkbox2"><span></span> Checkbox2</label>
+                            </div>
+                            <div class="adm_checkbox">
+                                <input type="checkbox" id="checkbox3" name="checkbox" value="checkbox3">
+                                <label for="checkbox3"><span></span> Checkbox3</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="component">
+                        <h3 class="fs_30 fw_semibold pb_30 mt_100">Modal</h3>
+                        <button class="wv_modal_btn adm_btn round fill_black2 adm_fc_white2 pt_10 pb_10 pl_30 pr_30" data-modal="testModal">모달창 열기</button>
+                        <dialog class="wv_modal adm_modal" id="testModal">
+                            <p class="fs_20 lih150per ta_center">
+                                해당 분류가 선택된 프로젝트 제안 내역이 있어 <br>
+                                삭제할 수 없습니다.
+                            </p>
+                            <button type="button" class="fs_16 adm_btn fill_gray3 adm_fc_white1 wv_modal_btn round pl_36 pr_36 pt_10 pb_10  mx_auto mt_80 close_modal" data-modal="testModal">확인</button>
+                        </dialog>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="dim"></div>
+</div>
+
+<script type="module" src="/assets/js/adm.js"></script>
+<script type="module" src="/assets/js/wv_compo.js"></script>
+</body>
+</html>

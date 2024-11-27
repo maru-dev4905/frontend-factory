@@ -35,7 +35,7 @@
                                 </div>
                                 <div class="wv_tab_content">
                                     <div class="wv_tab_panel">
-                                        <button class="wv_copy_btn">COPY</button>
+                                        <button class="wv_copy_btn" data-target="copy1">COPY</button>
                                         <pre><code class="html" id="copy1"><textarea>
 <div class="wv_tab">
     <div class="wv_tab_menu">
@@ -52,7 +52,7 @@
 </code></pre>
                                     </div>
                                     <div class="wv_tab_panel">
-                                        <button class="wv_copy_btn">COPY</button>
+                                        <button class="wv_copy_btn" data-target="copy2">COPY</button>
                                         <pre><code class="js" id="copy2"><textarea>
   const tabs = $(".wv_tab");
 
@@ -162,6 +162,67 @@
                                     <p>Content for Tab 8</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="code_block mt_20">
+                        <div class="wv_tab">
+                            <div class="wv_tab_menu">
+                                <button type="button" class="wv_tab_btn active">HTML</button>
+                            </div>
+                            <div class="wv_tab_content">
+                                <div class="wv_tab_panel">
+                                    <button class="wv_copy_btn" data-target="copy3">COPY</button>
+<pre><code class="html" id="copy3"><textarea>
+<div class="wv_tab">
+    <div class="wv_tab_menu scrollbar_custom">
+        <div class="scr">
+            <button type="button" class="wv_tab_btn active">Tab1</button>
+            <button type="button" class="wv_tab_btn">Tab2</button>
+            <button type="button" class="wv_tab_btn">Tab3</button>
+            <button type="button" class="wv_tab_btn">Tab4</button>
+            <button type="button" class="wv_tab_btn">Tab5</button>
+            <button type="button" class="wv_tab_btn">Tab6</button>
+            <button type="button" class="wv_tab_btn">Tab7</button>
+            <button type="button" class="wv_tab_btn">Tab8</button>
+        </div>
+    </div>
+    <div class="wv_tab_content">
+        <div class="wv_tab_panel active">
+            <p>Content for Tab 1</p>
+        </div>
+        <div class="wv_tab_panel">
+            <p>Content for Tab 2</p>
+        </div>
+        <div class="wv_tab_panel">
+            <p>Content for Tab 3</p>
+        </div>
+        <div class="wv_tab_panel">
+            <p>Content for Tab 4</p>
+        </div>
+        <div class="wv_tab_panel">
+            <p>Content for Tab 5</p>
+        </div>
+        <div class="wv_tab_panel">
+            <p>Content for Tab 6</p>
+        </div>
+        <div class="wv_tab_panel">
+            <p>Content for Tab 7</p>
+        </div>
+        <div class="wv_tab_panel">
+            <p>Content for Tab 8</p>
+        </div>
+    </div>
+</div></textarea>
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wv_modal" id="copySuccessModal">
+                        <div class="wv_modal_content">
+                            <p>Copied to clipboard!</p>
                         </div>
                     </div>
                 </div>
