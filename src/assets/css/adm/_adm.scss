@@ -335,8 +335,12 @@ main.admin_page{
       font-size: 24px;
       font-weigh:600;
       transform: translateY(-50%);
+      opacity: 1;
+      visibility: visible;
       transition: color 0.3s ease-in-out,
-      transform 0.2s ease-in-out;
+      transform 0.2s ease-in-out,
+    opacity 0.2s ease-in-out,
+    visibility 0.2s ease-in-out;
       font-variation-settings:
               'FILL' 0,
               'wght' 500,
@@ -373,7 +377,11 @@ main.admin_page{
   color: var(--adm_white1);
 }
 .adm_menu nav button.on::after{
-  transform: translateY(-50%) rotate(270deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+.adm_menu.hide nav button::after{
+  opacity: 0;
+  visibility: hidden;
 }
 
 .adm_menu nav button span,
@@ -433,6 +441,10 @@ main.admin_page{
   max-height: 1000px;
   margin-bottom: 30px;
 }
+.adm_menu.hide nav button.on + .sub_menu{
+  margin-bottom: 0;
+  max-height: 0;
+}
 .adm_menu nav button + .sub_menu a,
 .adm_menu nav button + .sub_menu button{
   display: flex;
@@ -444,16 +456,32 @@ main.admin_page{
   line-height: 125%;
   color: var(--adm_gray1);
 }
+.adm_menu nav button + .sub_menu a,
+.adm_menu nav button + .sub_menu button{
+  white-space: nowrap;
+}
 .adm_menu nav button + .sub_menu button::after{
-  position: absolute;
-  top: 50%; right: 16px;
-  transform: translateY(-50%) rotate(90deg);
-  content: "\e91f";
-  font-size: 18px;
-  font-family: wv_admin_ico;
+  content: "\e313";
   color: var(--adm_gray1);
+  position: absolute;
+  top: 50%; right: 14px;
+  font-size: 24px;
+  font-weigh:600;
+  transform-origin: center;
+  transform: translateY(-50%);
   transition: color 0.3s ease-in-out,
-                      transform 0.2s ease-in-out;
+  transform 0.2s ease-in-out,
+opacity 0.2s ease-in-out,
+visibility 0.2s ease-in-out;
+  background-color: #fff;
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+  font-variation-settings:
+          'FILL' 0,
+          'wght' 500,
+          'GRAD' 0,
+          'opsz' 24;
 }
 .adm_menu nav button + .sub_menu button+ul{
     max-height: 0;
@@ -464,7 +492,7 @@ main.admin_page{
   font-weight: 600;
 }
 .adm_menu nav button + .sub_menu button.on::after{
-  transform: translateY(-50%) rotate(270deg);
+  transform: translateY(-50%) rotate(180deg);
 }
 .adm_menu nav button + .sub_menu button.on+ul{
   max-height: 200px;
@@ -480,7 +508,9 @@ main.admin_page{
 .adm_menu nav button + .sub_menu button+ul li:last-child a{
   margin-bottom: 24px;
 }
+.adm_menu nav button + .sub_menu button::after{
 
+}
 .adm_menu_btn{
   display : flex;
   padding-left: 5px;
@@ -523,12 +553,9 @@ main.admin_page{
     left 0.4s ease-in-out,
     padding 0.4s ease-in-out;
 
-  .selected_value ~ i{
-    transform: rotate(90deg);
-    transition: transform 0.2s ease-in-out;
-  }
-  &.on .selected_value ~  i{
-    transform: rotate(270deg);
+  &.on::after{
+    transform-origin: center;
+    transform: translateY(-50%) rotate(180deg);
   }
   &::after{
     content: "\e313";
@@ -537,15 +564,22 @@ main.admin_page{
     top: 50%; right: 14px;
     font-size: 24px;
     font-weigh:600;
+    transform-origin: center;
     transform: translateY(-50%);
     transition: color 0.3s ease-in-out,
-    transform 0.2s ease-in-out;
+    transform 0.2s ease-in-out,
+    opacity 0.2s ease-in-out,
+    visibility 0.2s ease-in-out;
     font-variation-settings:
             'FILL' 0,
             'wght' 500,
             'GRAD' 0,
             'opsz' 24;
   }
+}
+.adm_menu.hide .lang_btn::after{
+  opacity: 0;
+  visibility: hidden;
 }
 .side_lang_list{
   position: absolute;

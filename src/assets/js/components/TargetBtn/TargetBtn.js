@@ -30,6 +30,7 @@ export default function wvTargetBtn() {
     switch (type) {
       case "add":
         if (!targetElem.hasClass(className)) {
+          btn.addClass(className);
           targetElem.addClass(className);
         }
         btn.addClass("active");
@@ -37,6 +38,7 @@ export default function wvTargetBtn() {
 
       case "remove":
         if (targetElem.hasClass(className)) {
+          btn.removeClass(className);
           targetElem.removeClass(className);
         }
         btn.removeClass("active");
@@ -45,7 +47,7 @@ export default function wvTargetBtn() {
       case "toggle":
       default:
         targetElem.toggleClass(className);
-        btn.toggleClass("active");
+        btn.toggleClass(className);
         break;
     }
   });
