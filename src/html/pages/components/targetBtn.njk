@@ -1,0 +1,82 @@
+{%- extends "_templates/_layout.njk" -%}
+{%- import "_templates/_macro/_macro.njk" as macro -%}
+
+{% block content %}
+    <main class="main">
+        {{ include( "_templates/_includes/_sidebarComponent.njk" ) | tabIndent(1) }}
+
+        <section class="sec_component">
+            <div class="inner_base ">
+                <div class="content target_compo">
+
+                    <h2 class="pt_60 fs_24">Target Button</h2>
+                    <p class="fs_16 mt_10 lih150per">
+                        Target Button 은 버튼을 클릭하면 단순히 data-target 에 적힌 값의 해당하는 id 값을 가진 <br>
+                        요소에 버튼에 있는 속성 data-class 값을 클래스로 추가해주는 기능입니다.
+                    </p>
+
+                    <div class="mt_40">
+                        <button
+                                class="wv_target_btn"
+                                data-target='["example1"]'>
+                            Toggle "on" Class
+                        </button>
+                        <div id="example1">Target Element</div>
+                    </div>
+
+                    <h2 class="pt_60 fs_24">Target Button - Class</h2>
+                    <p class="fs_16 mt_10 lih150per">
+                        data-target 에는 여러개의 값을 배열 형태로 넣어줄 수 있습니다. <br>
+                        배열의 첫 번째 값은 id 값이며, 두 번째 값은 추가할 클래스명을 넣어주면 됩니다. <br>
+                        (기본 값은 on 입니다.)
+                    </p>
+
+                    <div class="mt_40">
+                        <button
+                                class="wv_target_btn"
+                                data-target='["example2", "highlight"]'>
+                            Toggle "highlight" Class
+                        </button>
+                        <div id="example2">Target Element</div>
+                    </div>
+
+                    <h2 class="pt_60 fs_24">Target Button - Add, Remove, Toggle</h2>
+                    <p class="fs_16 mt_10 lih150per">
+                        세번 째 값으로 add, remove, toggle 값을 넣어주면 해당 클래스를 추가, 제거, 토글 할 수 있습니다. <br>
+                        (기본 값은 toggle 입니다.)
+                    </p>
+
+                    <div class="mt_40">
+                        <button
+                                class="wv_target_btn"
+                                data-target='["example3", "highlight", "add"]'>
+                            Add "highlight" Class
+                        </button>
+                        <div id="example3">Target Element</div>
+
+                        <button
+                                class="wv_target_btn mt_30"
+                                data-target='["example4", "highlight", "remove"]'>
+                            Remove "highlight" Class
+                        </button>
+                        <div id="example4" class="highlight">Target Element</div>
+
+                        <button
+                                class="wv_target_btn mt_30"
+                                data-target='["example5", "highlight", "toggle"]'>
+                            Toggle "highlight" Class
+                        </button>
+                        <div id="example5">Target Element</div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>as
+    </main>
+{%- endblock %}
+
+{% block script %}
+    <script src="/assets/js/common.min.js"></script>
+    <script src="/assets/js/wv_compo.min.js"></script>
+{%- endblock %}
