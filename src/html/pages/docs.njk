@@ -3,9 +3,14 @@
 
 {% block content %}
     <main class="main">
-        <section>
-            <div class="container">
-                DOCS PAGE
+        {{ include( "_templates/_includes/_sidebarDocs.njk" ) | tabIndent(1) }}
+
+        <section class="sec_component pt_100">
+            <div class="inner_base">
+                <h2 class="fs_32 mb_10">CSS Docs</h2>
+                <p class="fs_16 fw_regular lih150per mb_40">
+
+                </p>
             </div>
         </section>
     </main>

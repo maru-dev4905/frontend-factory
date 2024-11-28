@@ -73,13 +73,14 @@ const html = () => {
   const gnbJson_all = {...gnbJson};
   const docsJson_all = {...docsJson};
   const componentJson_all = {...componentJson};
+
   const gnbDatafile = () => {
     return gnbJson_all;
   }
-  const componentDatafile = () => {
-    return componentJson_all;
-  }
   const docsDatafile = () => {
+    return docsJson_all;
+  }
+  const componentDatafile = () => {
     return componentJson_all;
   }
 
@@ -91,8 +92,8 @@ const html = () => {
   ])
       .pipe(plumber({errorHandler: onErrorHandler}))      // 에러 발생 시 gulp 종료 방지 및 에러 핸들링
       .pipe(data(gnbDatafile))                               // _gnb.json 적용
-      .pipe(data(componentDatafile))                 // _components.json 적용
       .pipe(data(docsDatafile))                             // _docs.json 적용
+      .pipe(data(componentDatafile))                 // _components.json 적용
       .pipe(nunjucksRender({                              // njk 적용
         envOptions: {                                      // njk 옵션 설정
           autoescape: false,                               // njk 문법의 오류가 있더라도 진행
