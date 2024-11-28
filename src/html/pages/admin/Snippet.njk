@@ -16,6 +16,12 @@
 
     <link rel="stylesheet" href="/assets/css/wv.min.css">
     <link rel="stylesheet" href="/assets/css/wv_admin.min.css">
+    <link rel="stylesheet" href="/assets/css/adm_guide.min.css">
+
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/github.min.css">	<!-- 구문 강조 CSS호출 -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>	<!-- 구문 강조 js 호출 -->
+    <script>hljs.highlightAll();</script> <!-- 코드 구문 강조 호출 -->
 </head>
 <body>
 <div id="wv" class="theme_light">
@@ -41,7 +47,7 @@
             <h2 class="adm_name"><strong>최고관리자</strong> 님</h2>
         </div>
     </header>
-    <aside class="adm_menu">
+    <aside class="adm_menu hide">
         <div class="lang_select">
             <button class="lang_btn dp_f al_center gap10 wv_target_btn gifont" type="button" role="combobox" data-target='["langList"]'>
                 <i class="material-symbols-outlined fill fs_24 adm_fc_gray1">language</i>
@@ -177,79 +183,267 @@
             <div class="adm_cont">
                 <div class="adm_inner">
 
-                    <article class="component">
-                        <h3 class="fs_30 fw_semibold pb_30 mt_100">Button</h3>
-                        <div class="dp_f fd_col gap20" style="border-radius: 10px; background-color: var(--adm_gray1); padding: 20px; flex: 1;">
-                            <h4 class="fs_24 fw_medium fc_white1">WHITE BUTTON</h4>
-                            <div class="dp_f gap20">
-                                <button type="button" class="adm_btn solid_white1 adm_fc_white1">WHITE1 Solid</button>
-                                <button type="button" class="adm_btn solid_white2 adm_fc_white2">WHITE2 Solid</button>
-                                <button type="button" class="adm_btn solid_white3 adm_fc_white3">WHITE3 Solid</button>
-                                <button type="button" class="adm_btn fill_white1">WHITE1 Fill</button>
-                                <button type="button" class="adm_btn fill_white2">WHITE2 Fill</button>
-                                <button type="button" class="adm_btn fill_white3">WHITE3 Fill</button>
+                    <article class="component adm_guide">
+                        <h3 class="fs_40 fw_bold pb_30 mt_200">Color</h3>
+                        <h4 class="fs_28 fw_semibold pb_10">Theme - Light</h4>
+                        <p class="fs_16 fw_regular lih150per mb_30">
+                            관리자 페이지에서 사용하는 테마입니다. <br>
+                            색상을 클릭하시면 HEX 코드를 복사할 수 있습니다.
+                        </p>
+                        <ul class="pt_30" style="border-top: 1px solid rgba(0,0,0,0.2);">
+                            <li>
+                                <h3 class="fs_20 fw_semibold pb_20">White</h3>
+                            </li>
+                            <li class="grid_lay jtf_bet gap20">
+                                <div class="grid_col dp_f al_center gap20" style="--colST: 1; --colED:4;">
+                                    <button class="wv_copy_btn color_box" data-target="themeColor1-1" style="background-color: #FFFFFF;"></button>
+                                    <p class="dp_f fd_col gap10 fs_16 fw_medium">
+                                        <span>white1</span>
+                                        <span class="op_5" id="themeColor1-1">#FFFFFF</span>
+                                        <span class="op_5">.adm_fc_white1</span>
+                                    </p>
+                                </div>
+                                <div class="grid_col dp_f al_center gap20" style="--colST: 4; --colED:7;">
+                                    <button class="wv_copy_btn color_box" data-target="themeColor1-2" style="background-color: #F2F3F4;"></button>
+                                    <p class="dp_f fd_col gap10 fs_16 fw_medium">
+                                        <span>white2</span>
+                                        <span class="op_5" id="themeColor1-2">#F2F3F4</span>
+                                        <span class="op_5">.adm_fc_white2</span>
+                                    </p>
+                                </div>
+                                <div class="grid_col dp_f al_center gap20" style="--colST: 7; --colED:10;">
+                                    <button class="wv_copy_btn color_box" data-target="themeColor1-3" style="background-color: #DEE3E6;"></button>
+                                    <p class="dp_f fd_col gap10 fs_16 fw_medium">
+                                        <span>white3</span>
+                                        <span class="op_5" id="themeColor1-3">#DEE3E6</span>
+                                        <span class="op_5">.adm_fc_white3</span>
+                                    </p>
+                                </div>
+                                <div class="grid_col dp_f al_center gap20" style="--colST: 10; --colED:-1;">
+                                    <button class="wv_copy_btn color_box" data-target="themeColor1-4" style="background-color: #FBFAFA;"></button>
+                                    <p class="dp_f fd_col gap10 fs_16 fw_medium">
+                                        <span>white3-hov</span>
+                                        <span class="op_5" id="themeColor1-4">#FBFAFA</span>
+                                        <span class="op_5">.adm_fc_white4</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="fs_20 fw_semibold mt_40 pb_20">Gray</h3>
+                            </li>
+                            <li class="grid_lay jtf_bet gap20">
+                                <div class="grid_col dp_f al_center gap20" style="--colST: 1; --colED:4;">
+                                    <button class="wv_copy_btn color_box" data-target="themeColor2-1" style="background-color: #5C676B;"></button>
+                                    <p class="dp_f fd_col gap10 fs_16 fw_medium">
+                                        <span>gray1</span>
+                                        <span class="op_5" id="themeColor2-1">#5C676B</span>
+                                        <span class="op_5">.adm_fc_gray1</span>
+                                    </p>
+                                </div>
+                                <div class="grid_col dp_f al_center gap20" style="--colST: 4; --colED:7;">
+                                    <button class="wv_copy_btn color_box" data-target="themeColor2-2" style="background-color: #9AA2A5;"></button>
+                                    <p class="dp_f fd_col gap10 fs_16 fw_medium">
+                                        <span>gray2</span>
+                                        <span class="op_5" id="themeColor2-2">#9AA2A5</span>
+                                        <span class="op_5">.adm_fc_gray</span>
+                                    </p>
+                                </div>
+                                <div class="grid_col dp_f al_center gap20" style="--colST: 7; --colED:10;">
+                                    <button class="wv_copy_btn color_box" data-target="themeColor2-3" style="background-color: #B0B5B9;"></button>
+                                    <p class="dp_f fd_col gap10 fs_16 fw_medium">
+                                        <span>gray3</span>
+                                        <span class="op_5" id="themeColor2-3">#B0B5B9</span>
+                                        <span class="op_5">.adm_fc_gray3</span>
+                                    </p>
+                                </div>
+                                <div class="grid_col dp_f al_center gap20" style="--colST: 10; --colED:-1;">
+                                    <button class="wv_copy_btn color_box" data-target="themeColor2-4" style="background-color: #C6CBCE;"></button>
+                                    <p class="dp_f fd_col gap10 fs_16 fw_medium">
+                                        <span>gray4</span>
+                                        <span class="op_5" id="themeColor2-4">#C6CBCE</span>
+                                        <span class="op_5">.adm_fc_gray4</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="fs_20 fw_semibold mt_40 pb_20">Black</h3>
+                            </li>
+                            <li class="grid_lay jtf_bet gap20">
+                                <div class="grid_col dp_f al_center gap20" style="--colST: 1; --colED:4;">
+                                    <button class="wv_copy_btn color_box" data-target="themeColor3-1" style="background-color: #000000;"></button>
+                                    <p class="dp_f fd_col gap10 fs_16 fw_medium">
+                                        <span>black1</span>
+                                        <span class="op_5" id="themeColor3-1">#000000</span>
+                                        <span class="op_5">.adm_fc_black1</span>
+                                    </p>
+                                </div>
+                                <div class="grid_col dp_f al_center gap20" style="--colST: 4; --colED:7;">
+                                    <button class="wv_copy_btn color_box" data-target="themeColor3-2" style="background-color: #111719;"></button>
+                                    <p class="dp_f fd_col gap10 fs_16 fw_medium">
+                                        <span>black2</span>
+                                        <span class="op_5" id="themeColor3-2">#111719</span>
+                                        <span class="op_5">.adm_fc_black2</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+
+
+                        <h3 class="fs_40 fw_bold pb_30 mt_160">Button</h3>
+                        <p class="fs_16 fw_regular lih150per mb_30">
+                            위의 색상표를 참고하여 만들어둔 버튼이며, <br>
+                            .adm_btn에 추가 클래스를 입력 후 사용하시면 됩니다. <br>
+                            버튼의 색상은 위의 색상표를 참고해주세요. <br>
+                            버튼 스타일은 아래 클래스를 추가해주시면 됩니다. <br><br>
+                            <em>solid_색상명</em> : 배경색이 있는 버튼 <br>
+                            <em>fill_색상명</em> : 배경색이 없는 버튼 <br>
+                            <em>round</em> : 둥근 모서리 버튼 <br>
+                            <em>adm_fc_색상명</em> : 글자색을 지정하는 클래스 <br><br>
+                            아래 예시 버튼을 클릭하시면 스타일이 지정된 클래스명이 복사됩니다.
+                        </p>
+                        <div class="pt_30" style="border-top: 1px solid rgba(0,0,0,0.2);">
+                            <div class="dp_f fd_col gap20" style="border-radius: 10px; background-color: var(--adm_gray1); padding: 20px; flex: 1;">
+                                <h4 class="fs_24 fw_medium adm_fc_white1">WHITE BUTTON</h4>
+                                <div class="dp_f gap10">
+                                    <button class="wv_copy_btn adm_btn solid_white1 adm_fc_white1" data-target="whiteBtn1-1">WHITE1 Solid</button>
+                                    <p id="whiteBtn1-1" class="dp_n">adm_btn solid_white1 adm_fc_white1</p>
+                                    <button class="wv_copy_btn adm_btn solid_white2 adm_fc_white2" data-target="whiteBtn1-2">WHITE2 Solid</button>
+                                    <p id="whiteBtn1-2" class="dp_n">adm_btn solid_white2 adm_fc_white2</p>
+                                    <button class="wv_copy_btn adm_btn solid_white3 adm_fc_white3" data-target="whiteBtn1-3">WHITE3 Solid</button>
+                                    <p id="whiteBtn1-3" class="dp_n">adm_btn solid_white3 adm_fc_white3</p>
+                                    <button class="wv_copy_btn adm_btn fill_white1" data-target="whiteBtn1-4">WHITE1 Fill</button>
+                                    <p id="whiteBtn1-4" class="dp_n">adm_btn fill_white1</p>
+                                    <button class="wv_copy_btn adm_btn fill_white2" data-target="whiteBtn1-5">WHITE2 Fill</button>
+                                    <p id="whiteBtn1-5" class="dp_n">adm_btn fill_white2</p>
+                                    <button class="wv_copy_btn adm_btn fill_white3" data-target="whiteBtn1-6">WHITE3 Fill</button>
+                                    <p id="whiteBtn1-6" class="dp_n">adm_btn fill_white3</p>
+                                </div>
+                                <div class="dp_f gap10">
+                                    <button class="wv_copy_btn adm_btn solid_white1 round adm_fc_white1" data-target="whiteBtn1-7">WHITE1 Solid</button>
+                                    <p id="whiteBtn1-7" class="dp_n">adm_btn solid_white1 round adm_fc_white1</p>
+                                    <button class="wv_copy_btn adm_btn solid_white2 round adm_fc_white2" data-target="whiteBtn1-8">WHITE2 Solid</button>
+                                    <p id="whiteBtn1-8" class="dp_n">adm_btn solid_white2 round adm_fc_white2</p>
+                                    <button class="wv_copy_btn adm_btn solid_white3 round adm_fc_white3" data-target="whiteBtn1-9">WHITE3 Solid</button>
+                                    <p id="whiteBtn1-9" class="dp_n">adm_btn solid_white3 round adm_fc_white3</p>
+                                    <button class="wv_copy_btn adm_btn fill_white1 round" data-target="whiteBtn1-10">WHITE1 Fill</button>
+                                    <p id="whiteBtn1-10" class="dp_n">adm_btn fill_white1 round</p>
+                                    <button class="wv_copy_btn adm_btn fill_white2 round" data-target="whiteBtn1-11">WHITE2 Fill</button>
+                                    <p id="whiteBtn1-11" class="dp_n">adm_btn fill_white2 round</p>
+                                    <button class="wv_copy_btn adm_btn fill_white3 round" data-target="whiteBtn1-12">WHITE3 Fill</button>
+                                    <p id="whiteBtn1-12" class="dp_n">adm_btn fill_white3 round</p>
+                                </div>
                             </div>
-                            <div class="dp_f gap20">
-                                <button type="button" class="adm_btn solid_white1 round adm_fc_white1">WHITE1 Solid</button>
-                                <button type="button" class="adm_btn solid_white2 round adm_fc_white2">WHITE2 Solid</button>
-                                <button type="button" class="adm_btn solid_white3 round adm_fc_white3">WHITE3 Solid</button>
-                                <button type="button" class="adm_btn fill_white1 round">WHITE1 Fill</button>
-                                <button type="button" class="adm_btn fill_white2 round">WHITE2 Fill</button>
-                                <button type="button" class="adm_btn fill_white3 round">WHITE3 Fill</button>
+                            <div class="dp_f fd_col gap20 mt_20" style="border-radius: 10px; background-color: var(--adm_white3); padding: 20px; flex: 1;">
+                                <h4 class="fs_24 fw_medium adm_fc_gray1">GRAY BUTTON</h4>
+                                <div class="dp_f gap20">
+                                    <button class="wv_copy_btn adm_btn solid_gray1" data-target="grayBtn1-1">GRAY1 Solid</button>
+                                    <p id="grayBtn1-1" class="dp_n">adm_btn solid_gray1</p>
+                                    <button class="wv_copy_btn adm_btn solid_gray2" data-target="grayBtn1-2">GRAY2 Solid</button>
+                                    <p id="grayBtn1-2" class="dp_n">adm_btn solid_gray2</p>
+                                    <button class="wv_copy_btn adm_btn solid_gray3" data-target="grayBtn1-3">GRAY3 Solid</button>
+                                    <p id="grayBtn1-3" class="dp_n">adm_btn solid_gray3</p>
+                                    <button class="wv_copy_btn adm_btn solid_gray4" data-target="grayBtn1-4">GRAY4 Solid</button>
+                                    <p id="grayBtn1-4" class="dp_n">adm_btn solid_gray4</p>
+                                    <button class="wv_copy_btn adm_btn fill_gray1 adm_fc_white1" data-target="grayBtn1-5">GRAY1 Fill</button>
+                                    <p id="grayBtn1-5" class="dp_n">adm_btn fill_gray1 adm_fc_white1</p>
+                                    <button class="wv_copy_btn adm_btn fill_gray2 adm_fc_white2" data-target="grayBtn1-6">GRAY2 Fill</button>
+                                    <p id="grayBtn1-6" class="dp_n">adm_btn fill_gray2 adm_fc_white2</p>
+                                    <button class="wv_copy_btn adm_btn fill_gray3 adm_fc_white3" data-target="grayBtn1-7">GRAY3 Fill</button>
+                                    <p id="grayBtn1-7" class="dp_n">adm_btn fill_gray3 adm_fc_white3</p>
+                                    <button class="wv_copy_btn adm_btn fill_gray4" data-target="grayBtn1-8">GRAY4 Fill</button>
+                                    <p id="grayBtn1-8" class="dp_n">adm_btn fill_gray4</p>
+                                </div>
+                                <div class="dp_f gap20">
+                                    <button class="wv_copy_btn adm_btn solid_gray1 round " data-target="grayBtn1-9">GRAY1 Solid</button>
+                                    <p id="grayBtn1-9" class="dp_n">adm_btn solid_gray1 round</p>
+                                    <button class="wv_copy_btn adm_btn solid_gray2 round " data-target="grayBtn1-10">GRAY2 Solid</button>
+                                    <p id="grayBtn1-10" class="dp_n">adm_btn solid_gray2 round</p>
+                                    <button class="wv_copy_btn adm_btn solid_gray3 round " data-target="grayBtn1-11">GRAY3 Solid</button>
+                                    <p id="grayBtn1-11" class="dp_n">adm_btn solid_gray3 round</p>
+                                    <button class="wv_copy_btn adm_btn solid_gray4 round " data-target="grayBtn1-12">GRAY4 Solid</button>
+                                    <p id="grayBtn1-12" class="dp_n">adm_btn solid_gray4 round</p>
+                                    <button class="wv_copy_btn adm_btn fill_gray1 round adm_fc_white1" data-target="grayBtn1-13">GRAY1 Fill</button>
+                                    <p id="grayBtn1-13" class="dp_n">adm_btn fill_gray1 round adm_fc_white1</p>
+                                    <button class="wv_copy_btn adm_btn fill_gray2 round adm_fc_white2" data-target="grayBtn1-14">GRAY2 Fill</button>
+                                    <p id="grayBtn1-14" class="dp_n">adm_btn fill_gray2 round adm_fc_white2</p>
+                                    <button class="wv_copy_btn adm_btn fill_gray3 round adm_fc_white3" data-target="grayBtn1-15">GRAY3 Fill</button>
+                                    <p id="grayBtn1-15" class="dp_n">adm_btn fill_gray3 round adm_fc_white3</p>
+                                    <button class="wv_copy_btn adm_btn fill_gray4 round" data-target="grayBtn1-16">GRAY4 Fill</button>
+                                    <p id="grayBtn1-16" class="dp_n">adm_btn fill_gray4 round</p>
+                                </div>
+                            </div>
+                            <div class="dp_f fd_col gap20 mt_20" style="border-radius: 10px; background-color: var(--adm_white2); padding: 20px; flex: 1;">
+                                <h4 class="fs_24 fw_medium adm_fc_black1">BLACK BUTTON</h4>
+                                <div class="dp_f gap20">
+                                    <button class="wv_copy_btn adm_btn solid_black1" data-target="blackBtn1-1">BLACK1 Solid</button>
+                                    <p id="blackBtn1-1" class="dp_n">adm_btn solid_black1</p>
+                                    <button class="wv_copy_btn adm_btn solid_black2" data-target="blackBtn1-2">BLACK2 Solid</button>
+                                    <p id="blackBtn1-2" class="dp_n">adm_btn solid_black2</p>
+                                    <button class="wv_copy_btn adm_btn fill_black1 adm_fc_white1" data-target="blackBtn1-3">BLACK1 Fill</button>
+                                    <p id="blackBtn1-3" class="dp_n">adm_btn fill_black1 adm_fc_white1</p>
+                                    <button class="wv_copy_btn adm_btn fill_black2 adm_fc_white2" data-target="blackBtn1-4">BLACK2 Fill</button>
+                                    <p id="blackBtn1-4" class="dp_n">adm_btn fill_black2 adm_fc_white2</p>
+                                </div>
+                                <div class="dp_f gap20">
+                                    <button class="wv_copy_btn adm_btn solid_black1 round " data-target="blackBtn1-5">BLACK1 Solid</button>
+                                    <p id="blackBtn1-5" class="dp_n">adm_btn solid_black1 round </p>
+                                    <button class="wv_copy_btn adm_btn solid_black2 round " data-target="blackBtn1-6">BLACK2 Solid</button>
+                                    <p id="blackBtn1-6" class="dp_n">adm_btn solid_black2 round </p>
+                                    <button class="wv_copy_btn adm_btn fill_black1 round adm_fc_white1" data-target="blackBtn1-7">BLACK1 Fill</button>
+                                    <p id="blackBtn1-7" class="dp_n">adm_btn fill_black1 round adm_fc_white1 </p>
+                                    <button class="wv_copy_btn adm_btn fill_black2 round adm_fc_white2" data-target="blackBtn1-8">BLACK2 Fill</button>
+                                    <p id="blackBtn1-8" class="dp_n">adm_btn fill_black2 round adm_fc_white2 </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="dp_f fd_col gap20 mt_20" style="border-radius: 10px; background-color: var(--adm_white3); padding: 20px; flex: 1;">
-                            <h4 class="fs_24 fw_medium fc_gray1">GRAY BUTTON</h4>
-                            <div class="dp_f gap20">
-                                <button type="button" class="adm_btn solid_gray1">GRAY1 Solid</button>
-                                <button type="button" class="adm_btn solid_gray2">GRAY2 Solid</button>
-                                <button type="button" class="adm_btn solid_gray3">GRAY3 Solid</button>
-                                <button type="button" class="adm_btn solid_gray4">GRAY4 Solid</button>
-                                <button type="button" class="adm_btn fill_gray1 adm_fc_white1">GRAY1 Fill</button>
-                                <button type="button" class="adm_btn fill_gray2 adm_fc_white2">GRAY2 Fill</button>
-                                <button type="button" class="adm_btn fill_gray3 adm_fc_white3">GRAY3 Fill</button>
-                                <button type="button" class="adm_btn fill_gray4">GRAY4 Fill</button>
+
+                        <h3 class="fs_40 fw_bold pb_30 mt_160">Tab</h3>
+                        <p class="fs_16 fw_regular lih150per mb_30">
+                            탭 메뉴입니다. <br>
+                            .adm_tab_btn에 active 클래스를 추가하시면 활성화된 탭이 됩니다.
+                        </p>
+
+                        <div class="pt_30" style="border-top: 1px solid rgba(0,0,0,0.2);">
+                            <div class="adm_tab">
+                                <a href="#" class="adm_tab_btn active">전체 보기</a>
+                                <a href="#" class="adm_tab_btn">등록 제안 검토</a>
+                                <a href="#" class="adm_tab_btn">추가사항 요청/응답</a>
+                                <a href="#" class="adm_tab_btn">파트너 추천</a>
+                                <a href="#" class="adm_tab_btn">협상 구체화</a>
+                                <a href="#" class="adm_tab_btn">수수료 정산</a>
+                                <a href="#" class="adm_tab_btn">최종 협약</a>
+                                <a href="#" class="adm_tab_btn">매칭 완료</a>
                             </div>
-                            <div class="dp_f gap20">
-                                <button type="button" class="adm_btn solid_gray1 round ">GRAY1 Solid</button>
-                                <button type="button" class="adm_btn solid_gray2 round ">GRAY2 Solid</button>
-                                <button type="button" class="adm_btn solid_gray3 round ">GRAY3 Solid</button>
-                                <button type="button" class="adm_btn solid_gray4 round ">GRAY4 Solid</button>
-                                <button type="button" class="adm_btn fill_gray1 round adm_fc_white1">GRAY1 Fill</button>
-                                <button type="button" class="adm_btn fill_gray2 round adm_fc_white2">GRAY2 Fill</button>
-                                <button type="button" class="adm_btn fill_gray3 round adm_fc_white3">GRAY3 Fill</button>
-                                <button type="button" class="adm_btn fill_gray4 round ">GRAY4 Fill</button>
-                            </div>
-                        </div>
-                        <div class="dp_f fd_col gap20 mt_20" style="border-radius: 10px; background-color: var(--adm_white2); padding: 20px; flex: 1;">
-                            <h4 class="fs_24 fw_medium fc_black1">BLACK BUTTON</h4>
-                            <div class="dp_f gap20">
-                                <button type="button" class="adm_btn solid_black1">BLACK1 Solid</button>
-                                <button type="button" class="adm_btn solid_black2">BLACK2 Solid</button>
-                                <button type="button" class="adm_btn fill_black1 adm_fc_white1">BLACK1 Fill</button>
-                                <button type="button" class="adm_btn fill_black2 adm_fc_white2">BLACK2 Fill</button>
-                            </div>
-                            <div class="dp_f gap20">
-                                <button type="button" class="adm_btn solid_black1 round ">BLACK1 Solid</button>
-                                <button type="button" class="adm_btn solid_black2 round ">BLACK2 Solid</button>
-                                <button type="button" class="adm_btn fill_black1 round adm_fc_white1">BLACK1 Fill</button>
-                                <button type="button" class="adm_btn fill_black2 round adm_fc_white2">BLACK2 Fill</button>
+
+                            <div class="code_block mt_20">
+                                <div class="wv_tab">
+                                    <div class="wv_tab_menu">
+                                        <button type="button" class="wv_tab_btn active">HTML</button>
+                                    </div>
+                                    <div class="wv_tab_content">
+                                        <div class="wv_tab_panel">
+                                            <button class="wv_copy_btn" data-target="tabCopyHtml">COPY</button>
+                                            <pre><code class="html" id="tabCopyHtml"><textarea>
+<div class="adm_tab">
+    <a href="#" class="adm_tab_btn active">전체 보기</a>
+    <a href="#" class="adm_tab_btn">등록 제안 검토</a>
+    <a href="#" class="adm_tab_btn">추가사항 요청/응답</a>
+    <a href="#" class="adm_tab_btn">파트너 추천</a>
+    <a href="#" class="adm_tab_btn">협상 구체화</a>
+    <a href="#" class="adm_tab_btn">수수료 정산</a>
+    <a href="#" class="adm_tab_btn">최종 협약</a>
+    <a href="#" class="adm_tab_btn">매칭 완료</a>
+</div></textarea>
+</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </article>
 
                     <article class="component ">
-                        <h3 class="fs_30 fw_semibold pb_30 mt_100">Tab Component</h3>
-                        <div class="adm_tab">
-                            <button class="adm_tab_btn active">전체 보기</button>
-                            <button class="adm_tab_btn">등록 제안 검토</button>
-                            <button class="adm_tab_btn">추가사항 요청/응답</button>
-                            <button class="adm_tab_btn">파트너 추천</button>
-                            <button class="adm_tab_btn">협상 구체화</button>
-                            <button class="adm_tab_btn">수수료 정산</button>
-                            <button class="adm_tab_btn">최종 협약</button>
-                            <button class="adm_tab_btn">매칭 완료</button>
-                        </div>
+
                     </article>
 
                     <article class="component">
@@ -401,6 +595,12 @@
             </div>
         </div>
     </main>
+
+    <div class="wv_modal" id="copySuccessModal">
+        <div class="wv_modal_content">
+            <p>Copied to clipboard!</p>
+        </div>
+    </div>
     <div class="dim"></div>
 </div>
 

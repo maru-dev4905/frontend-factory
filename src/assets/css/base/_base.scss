@@ -183,7 +183,7 @@
 
 /* Opacity */
 @for $op from 0 through 10{
-  .op_#{$op}{opacity: calc($op / 10) !important;}
+  .op_#{$op}{opacity: calc(#{$op} / 10) !important;}
 }
 /* Opacity  END */
 
