@@ -1,0 +1,61 @@
+{%- extends "_templates/_layout.njk" -%}
+{%- import "_templates/_macro/_macro.njk" as macro -%}
+
+{% block content %}
+    <main class="main">
+        {{ include( "_templates/_includes/_sidebarComponent.njk" ) | tabIndent(1) }}
+
+        <section class="sec_component">
+            <div class="inner_base ">
+                <div class="content">
+
+                    <h2 class="pt_60 fs_24">Scroll Button</h2>
+                    <p class="fs_16 mt_10 lih150per">
+                        Scroll Button은 지정한 위치로 이동하는 앵커드 버튼입니다. <br>
+                        data-scr-target 속성에 이동할 위치의 id값을 입력하여 사용합니다. <br>
+                        data-scr-offset 속성은 True/False로 설정하며, True일 경우 이동한 위치에 헤더가 가려지지 않도록 조정합니다. <br>
+                        data-scr-target 속성이 없을 경우, 페이지 상단으로 이동합니다.
+                    </p>
+
+                    <div class="mt_40">
+                        <div style="text-align: center; margin: 50px 0;" class="scr_btn_wrap">
+
+                            <!-- 기본 스크롤 -->
+                            <button class="btn wv_scr_btn"
+                                    data-scr-target="section1"
+                                    data-scr-offset="false">
+                                Scroll to Section 1
+                            </button>
+
+                            <!-- 헤더 오프셋 활성화 -->
+                            <button class="btn wv_scr_btn"
+                                    data-scr-target="section2"
+                                    data-scr-offset="true">
+                                Scroll to Section 2 with Offset
+                            </button>
+
+                            <!-- 사용자 정의 속도 및 애니메이션 -->
+                            <button class="btn wv_scr_btn"
+                                    data-scr-target="section3"
+                                    data-scr-offset="true"
+                                    data-scr-speed="1000"
+                                    data-scr-easing="linear">
+                                Scroll to Section 3 (1s, Linear)
+                            </button>
+
+                            <section id="section1">Section 1</section>
+                            <section id="section2">Section 2</section>
+                            <section id="section3">Section 3</section>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+{%- endblock %}
+
+{% block script %}
+    <script src="/assets/js/common.min.js"></script>
+    <script src="/assets/js/wv_compo.min.js"></script>
+{%- endblock %}

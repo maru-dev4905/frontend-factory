@@ -21,6 +21,10 @@
       "href": "/pages/components/copyBtn.html"
     },
     {
+      "name": "Scroll Button",
+      "href": "/pages/components/scrBtn.html"
+    },
+    {
       "name": "More Button",
       "href": "/pages/components/moreBtn.html"
     }

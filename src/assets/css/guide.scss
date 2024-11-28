@@ -98,6 +98,7 @@ section {
 .sec_component {
   padding-bottom: 100px;
 
+  // List Page
   .guide_list_menu{
     li{
         border-bottom: 1px solid #ebebeb;
@@ -113,6 +114,7 @@ section {
       padding: rem(20px) rem(20px);
     }
   }
+  // List Page END
 
   //Tab Start
   .wv_tab {
@@ -175,9 +177,9 @@ section {
       }
     }
   }
-
   // Tab END
 
+  // Accordion
   .wv_accordion {
     width: 100%;
 
@@ -217,8 +219,9 @@ section {
       }
     }
   }
+  // Accordion END
 
-
+  //Modal
   .dim {
     position: fixed;
     top: 0;
@@ -236,7 +239,6 @@ section {
       visibility: visible;
     }
   }
-
   .wv_modal {
     position: fixed;
     top: 50%;
@@ -258,7 +260,6 @@ section {
       visibility: visible;
     }
   }
-
   .wv_modal_btn:not(.close_modal){
     padding: .625rem 1.25rem;
     border: 1px solid #ebebeb;
@@ -281,7 +282,9 @@ section {
       background-color: transparent
     }
   }
+  //Modal END
 
+//  Target Btn
 .target_compo{
   button{
     padding: 10px 20px;
@@ -317,12 +320,40 @@ section {
     }
   }
 }
+  //  Target Btn END
 
+  // Scr Button
+  .scr_btn_wrap{
+    .hd_offset {
+      height: 60px;
+    }
+    section {
+      padding: 100px 20px;
+      margin-top: 200px;
+      border: 1px solid #ccc;
+      text-align: center;
 
+      &:last-child{
+        margin-bottom: 500px;
+      }
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px 0;
+      background: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+  }
+  // Scr Button END
 
-
-
-
+  // Guide Code Block
   .code_block{
     position: relative;
     code{
@@ -365,6 +396,7 @@ section {
       }
     }
   }
+  // Guide Code Block END
 }
 
 
