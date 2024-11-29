@@ -1,10 +1,15 @@
 {%- extends "_templates/_layout.njk" -%}
 {%- import "_templates/_macro/_macro.njk" as macro -%}
 
-{% block content %}
-    <main class="main">
-        {{ include( "_templates/_includes/_sidebarComponent.njk" ) | tabIndent(1) }}
 
+{% block css %}
+    <link href="../assets/css/wv.min.css" rel="stylesheet" />
+    <link href="../assets/css/guide.min.css" rel="stylesheet" />
+{%- endblock %}
+
+{% block content %}
+    {{ include( "_templates/_includes/_header.njk" ) | tabIndent(1) }}
+    <main class="main">
         <section class="sec_component pt_100">
             <div class="inner_base">
                 <h2 class="fs_32 mb_10">Admin</h2>
@@ -14,13 +19,13 @@
                 </p>
                 <ul class="grid_lay guide_list_menu">
                     <li class="grid_col" style="--colST: 1; --colED: 4;">
-                        <a href="/pages/admin/admin.html" target="_blank">Admin</a>
+                        <a href="../../pages/admin/admin.html" target="_blank">Admin</a>
                     </li>
                     <li class="grid_col" style="--colST: 4; --colED: 7;">
-                        <a href="/pages/admin/snippet.html" target="_blank">Snippet</a>
+                        <a href="../../pages/admin/snippet.html" target="_blank">Snippet</a>
                     </li>
                     <li class="grid_col" style="--colST: 7; --colED: 10;">
-                        <a href="/pages/admin/login.html" target="_blank">Login</a>
+                        <a href="../../pages/admin/login.html" target="_blank">Login</a>
                     </li>
                 </ul>
             </div>

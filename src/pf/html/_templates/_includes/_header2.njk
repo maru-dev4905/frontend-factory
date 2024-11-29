@@ -1,0 +1,14 @@
+<header class="header hd_offset">
+    <h1 class="logo">
+        <a href="/"><img src="/assets/images/common/logo_b.svg" alt=""></a>
+    </h1>
+    <nav class="gnb">
+        <ul class="dp_f al_center gap40">
+            {%- for navgation in gnb_data %}
+                <li class="fs_16">
+                    <a href="{{ navgation.href2 }}">{{ navgation.name }}</a>
+                </li>
+            {%- endfor %}
+        </ul>
+    </nav>
+</header>

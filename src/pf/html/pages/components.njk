@@ -1,6 +1,17 @@
 {%- extends "_templates/_layout.njk" -%}
 {%- import "_templates/_macro/_macro.njk" as macro -%}
 
+{% block plugin %}
+    <script src="../assets/plugins/jquery.min.js"></script>
+    <script src="../assets/plugins/gsap.min.js"></script>
+    <script src="../assets/plugins/ScrollTrigger.min.js"></script>
+{%- endblock %}
+
+{% block css %}
+    <link href="../assets/css/wv.min.css" rel="stylesheet" />
+    <link href="../assets/css/guide.min.css" rel="stylesheet" />
+{%- endblock %}
+
 {% block content %}
     <main class="main">
         {{ include( "_templates/_includes/_sidebarComponent.njk" ) | tabIndent(1) }}
@@ -15,25 +26,25 @@
 
                 <ul class="grid_lay guide_list_menu gap40">
                     <li class="grid_col" style="--colST: 1; --colED: 4;">
-                        <a href="/pages/components/tab.html">Tab</a>
+                        <a href="../../pf/pages/components/tab.html">Tab</a>
                     </li>
                     <li class="grid_col" style="--colST: 4; --colED: 7;">
-                        <a href="/pages/components/accordion.html">Accordion</a>
+                        <a href="../../pf/pages/components/accordion.html">Accordion</a>
                     </li>
                     <li class="grid_col" style="--colST: 7; --colED: 10;">
-                        <a href="/pages/components/modal.html">Modal</a>
+                        <a href="../../pf/pages/components/modal.html">Modal</a>
                     </li>
                     <li class="grid_col" style="--colST: 10; --colED: -1;">
-                        <a href="/pages/components/targetBtn.html">Target Button</a>
+                        <a href="../../pf/pages/components/targetBtn.html">Target Button</a>
                     </li>
                     <li class="grid_col" style="--colST: 1; --colED: 4;">
-                        <a href="/pages/components/tab.html">Copy Button</a>
+                        <a href="../../pf/pages/components/tab.html">Copy Button</a>
                     </li>
                     <li class="grid_col" style="--colST: 4; --colED: 7;">
-                        <a href="/pages/components/scrBtn.html">Scroll Button</a>
+                        <a href="../../pf/pages/components/scrBtn.html">Scroll Button</a>
                     </li>
                     <li class="grid_col" style="--colST: 7; --colED: 10;">
-                        <a href="/pages/components/accordion.html">More Button</a>
+                        <a href="../../pf/pages/components/accordion.html">More Button</a>
                     </li>
                 </ul>
             </div>

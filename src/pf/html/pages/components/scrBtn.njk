@@ -1,9 +1,26 @@
 {%- extends "_templates/_layout.njk" -%}
 {%- import "_templates/_macro/_macro.njk" as macro -%}
 
+{% block plugin %}
+    <script src="../../assets/plugins/jquery.min.js"></script>
+    <script src="../../assets/plugins/gsap.min.js"></script>
+    <script src="../../assets/plugins/ScrollTrigger.min.js"></script>
+{%- endblock %}
+
+{% block css %}
+    <link href="../../assets/css/wv.min.css" rel="stylesheet" />
+    <link href="../../assets/css/guide.min.css" rel="stylesheet" />
+{%- endblock %}
+
+{% block js %}
+    <script src="../../assets/js/font.js"></script>
+    <script src="../../assets/js/common.min.js"></script>
+    <script src="../../assets/js/wv_compo.min.js"></script>
+{%- endblock %}
+
 {% block content %}
     <main class="main">
-        {{ include( "_templates/_includes/_sidebarComponent.njk" ) | tabIndent(1) }}
+        {{ include( "_templates/_includes/_sidebarComponent2.njk" ) | tabIndent(1) }}
 
         <section class="sec_component">
             <div class="inner_base ">
@@ -53,9 +70,4 @@
             </div>
         </section>
     </main>
-{%- endblock %}
-
-{% block script %}
-    <script src="/assets/js/common.min.js"></script>
-    <script src="/assets/js/wv_compo.min.js"></script>
 {%- endblock %}

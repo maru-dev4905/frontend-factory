@@ -23,8 +23,8 @@ import imagemin from "gulp-imagemin";
 import jsonMinify from "gulp-json-minify";
 
 // routes -----------------------------------------------------------
-const src = './src';
-const dist = './dist';
+const src = './src/pf';
+const dist = './dist/pf';
 const ass = '/assets';
 
 // src 폴더의 경로 설정
@@ -204,7 +204,7 @@ const webserver = () => {
   return gulp.src(dist)                                // webserver를 실행 할 폴더 경로
       .pipe(
           ws({                                               // webserver 옵션 설정
-            // port: 8000,                                   // 기본 8000, 필요 시 변경 가능
+            port: 8000,                                   // 기본 8000, 필요 시 변경 가능
             livereload: true,                                // 작업 중 파일 저장 시 브라우저 자동 새로고침 (기본 false)
             open: true                                       // Gulp 실행 시 자동으로 브라우저를 띄우고 localhost 서버 열기 (기본 false)
           })
