@@ -2,6 +2,8 @@
 
 body {
   min-height: 100vh;
+}
+*{
   font-family: 'Pretendard', "Noto Sans KR", sans-serif;
 }
 
@@ -67,7 +69,6 @@ aside {
   min-width: rem(320px);
   border-right: 1px solid #ebebeb;
   background-color: #F6F9FC;
-  padding: rem(20px) 0;
 
   > div{
     position: sticky;
@@ -352,6 +353,24 @@ section {
     }
   }
   // Scr Button END
+
+  //Copy Button
+  .copy_btn_wrap{
+    .wv_copy_btn{
+      padding: 10px 20px;
+        border: 1px solid #ebebeb;
+        border-radius: 4px;
+        background-color: #f6f6f6;
+        cursor: pointer;
+        transition: background-color .2s ease-in-out;
+
+        &:hover{
+            background-color: #ebebeb;
+        }
+
+    }
+  }
+  //Copy Button END
 
   // Guide Code Block
   .code_block{

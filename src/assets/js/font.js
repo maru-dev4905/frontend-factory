@@ -1,3 +1,5 @@
+import projectConfig from "./project-config";
+
 const loadFontsAndInit = (fontNames, callback) => {
   Promise.all(
       fontNames.map((fontName) =>
@@ -27,6 +29,10 @@ const loadFontsAndInit = (fontNames, callback) => {
       })
       .catch((error) => console.error('Error loading fonts:', error));
 };
+
+loadFontsAndInit(projectConfig.fonts, () => {
+  console.log("Project initialization can start here.");
+});
 
 export default loadFontsAndInit;
 // 예제: 폰트를 로드한 뒤 초기화 실행

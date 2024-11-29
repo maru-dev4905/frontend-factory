@@ -7,13 +7,112 @@
 
         <section class="sec_component">
             <div class="inner_base ">
-                <div class="content">
-                    <!-- Alert 방식 Copy Button -->
-                    <button class="wv_copy_btn" data-text="This is sample text">Copy Text</button>
+                <div class="content copy_btn_wrap">
 
-                    <!-- Target 방식 Copy Button -->
-                    <p id="exampleText">This is text inside a target element.</p>
-                    <button class="wv_copy_btn" data-target="exampleText">Copy Target Text</button>
+                    <h2 class="pt_60 fs_24">Copy Text Button</h2>
+                    <p class="fs_16 mt_10 lih150per">
+                        Copy Button은 클립보드에 텍스트를 복사하는 기능을 제공합니다. <br>
+                        기본 alert 창이 나오지만 project-config.js 에서 copyFeedback을 modal로 변경하면 모달창으로 변경됩니다. <br>
+                        modal은 copySuccessModal id를 가진 요소를 사용합니다.
+                        <br><br>
+                        data-text 속성에 복사할 텍스트를 입력하면 버튼 클릭 시 해당 텍스트가 클립보드에 복사됩니다.
+                    </p>
+                    <div class="mt_40">
+                        <button class="wv_copy_btn" data-text="Hello, World!">Copy Text</button>
+                        <div class="code_block mt_20">
+                            <div class="wv_tab">
+                                <div class="wv_tab_menu">
+                                    <button type="button" class="wv_tab_btn active">HTML</button>
+                                </div>
+                                <div class="wv_tab_content">
+                                    <div class="wv_tab_panel">
+                                        <button class="wv_copy_btn" data-target="copyBtn1html">COPY</button>
+                                        <pre><code class="html" id="copyBtn1html"><textarea>
+<button class="wv_copy_btn" data-text="Hello, World!">Copy Text</button></textarea>
+</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="pt_60 fs_24">Copy Target Button</h2>
+                    <p class="fs_16 mt_10 lih150per">
+                        data-target 속성을 사용하여 복사할 텍스트를 지정할 수 있습니다. <br>
+                        data-target 속성에 복사할 텍스트의 id를 입력하면 버튼 클릭 시 해당 텍스트가 클립보드에 복사됩니다.
+                    </p>
+                    <div class="mt_40">
+                        <button class="wv_copy_btn" data-target="exampleId">Copy Target</button>
+                        <div id="exampleId" style="width: 100%; padding: 20px; margin-top:10px; background-color: #ebebeb">
+                            Hello, World! Copy Target Button Example Text
+                        </div>
+                        <div class="code_block mt_20">
+                            <div class="wv_tab">
+                                <div class="wv_tab_menu">
+                                    <button type="button" class="wv_tab_btn active">HTML</button>
+                                </div>
+                                <div class="wv_tab_content">
+                                    <div class="wv_tab_panel">
+                                        <button class="wv_copy_btn" data-target="copyBtn2html">COPY</button>
+                                        <pre><code class="html" id="copyBtn2html"><textarea>
+<button class="wv_copy_btn" data-target="exampleId">Copy Target</button></textarea>
+</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="pt_60 fs_24">Copy URL Button</h2>
+                    <p class="fs_16 mt_10 lih150per">
+                        버튼에 data-type="window" 속성을 추가하면 현재 URL을 클립보드에 복사할 수 있습니다. <br>
+                    </p>
+                    <div class="mt_40">
+                        <button class="wv_copy_btn" data-type="window">Copy URL</button>
+                        <div class="code_block mt_20">
+                            <div class="wv_tab">
+                                <div class="wv_tab_menu">
+                                    <button type="button" class="wv_tab_btn active">HTML</button>
+                                </div>
+                                <div class="wv_tab_content">
+                                    <div class="wv_tab_panel">
+                                        <button class="wv_copy_btn" data-target="copyBtn3html">COPY</button>
+                                        <pre><code class="html" id="copyBtn3html"><textarea>
+<button class="wv_copy_btn" data-type="window">Copy URL</button></textarea>
+</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="pt_60 fs_24">Copy Social Button</h2>
+                    <p class="fs_16 mt_10 lih150per">
+                        버튼에 data-type="social" 속성을 추가한 후 data-platform="플랫폼명"을 입력하면 해당 플랫폼의 공유할 수 있습니다. <br>
+                        (플랫폼명: kakao, facebook, twitter) <br><br>
+                        project-config.js 에서 kakaoKey를 설정하면 카카오 공유 시 사용할 키를 설정할 수 있습니다.
+                    </p>
+                    <div class="mt_40">
+                        <button class="wv_copy_btn" data-type="social" data-platform="kakao">Share to Kakao</button>
+                        <button class="wv_copy_btn" data-type="social" data-platform="facebook">Share to Facebook</button>
+                        <button class="wv_copy_btn" data-type="social" data-platform="twitter">Share to Twitter</button>
+                        <div class="code_block mt_20">
+                            <div class="wv_tab">
+                                <div class="wv_tab_menu">
+                                    <button type="button" class="wv_tab_btn active">HTML</button>
+                                </div>
+                                <div class="wv_tab_content">
+                                    <div class="wv_tab_panel">
+                                        <button class="wv_copy_btn" data-target="copyBtn3html">COPY</button>
+                                        <pre><code class="html" id="copyBtn3html"><textarea>
+<button class="wv_copy_btn" data-type="window">Copy URL</button></textarea>
+</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
                     <div class="wv_modal" id="copySuccessModal">
                         <div class="wv_modal_content">
