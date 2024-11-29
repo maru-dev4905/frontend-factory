@@ -1,11 +1,11 @@
 {
   "name": "sed",
   "version": "1.0.0",
-  "main": "gulpfile.babel.js",  
+  "main": "gulpfile.babel.js",
   "scripts": {
     "dev": "gulp dev",
     "build": "gulp build",
-    "imagemin" : "gulp image_min"
+    "imagemin": "gulp image_min"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
@@ -37,6 +37,8 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "gulp-json-minify": "^1.2.3"
+  }
 }
-

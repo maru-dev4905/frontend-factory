@@ -20,6 +20,7 @@ import bro from "gulp-bro";
 import babelify from "babelify";
 import minify from "gulp-minify";
 import imagemin from "gulp-imagemin";
+import jsonMinify from "gulp-json-minify";
 
 // routes -----------------------------------------------------------
 const src = './src';
@@ -34,6 +35,7 @@ const path_src = {
   js: src + ass + '/js',
   video: src + ass + '/videos',
   plugin: src + ass + '/plugins',
+  json: src + ass + '/json'
 }
 
 // 빌드될 dist 폴더의 경로 설정
@@ -43,7 +45,8 @@ const path_dist = {
   images: dist + ass + '/images',
   js: dist + ass + '/js',
   video: dist + ass + '/videos',
-  plugin: dist + ass + '/plugins'
+  plugin: dist + ass + '/plugins',
+  json: dist + ass + '/json'
 };
 
 
@@ -66,7 +69,7 @@ const html = () => {
     });
   };
 
-  // _gnb.json 파일 적용을 위한 변수
+  // .json 파일 적용을 위한 변수
   const gnbJson = JSON.parse(fs.readFileSync(path_src.html + '/_templates/_json/_gnb.json'));
   const docsJson = JSON.parse(fs.readFileSync(path_src.html + '/_templates/_json/_docs.json'));
   const componentJson = JSON.parse(fs.readFileSync(path_src.html + '/_templates/_json/_components.json'));
@@ -187,6 +190,12 @@ const plugin = () => {
 
 }
 
+const json = () => {
+  return gulp.src(path_src.json + '/**/**/*')      // dist로 이동할 이미지 대상
+      .pipe(jsonMinify())
+      .pipe(gulp.dest(path_dist.json));              // 이동 목적지 설정
+}
+
 // clean task
 const clean = () => del([dist]);                       // dist 폴더 삭제
 
@@ -225,8 +234,12 @@ const watch = () => {
   file_management(video_watcher, path_src.video, path_dist.video);
 
   //   plugins watch
-  const plugin_watcher = gulp.watch(path_src.video + "/**/*", plugin);
+  const plugin_watcher = gulp.watch(path_src.plugin + "/**/*", plugin);
   file_management(plugin_watcher, path_src.plugin, path_dist.plugin);
+
+  //  json watch
+  const json_watcher = gulp.watch(path_src.json + "/**/*", json);
+  file_management(json_watcher, path_src.json, path_dist.json);
 }
 
 // watch - 파일 감시 및 삭제를 위한 함수 
@@ -271,7 +284,7 @@ const file_management = (watcher_target, src_path, dist_path) => {
 const prepare = gulp.series([clean, image]);
 
 // 위 prepare 실행 완료 후 순차적으로 실행되어야 하는 task 그룹
-const assets = gulp.series([html, css, js, video, plugin]);
+const assets = gulp.series([html, css, js, video, plugin, json]);
 
 // 동시에 여러 개의 task가 실행되어야 하는 그룹 (병렬 실행)
 const live = gulp.parallel([webserver, watch]);
