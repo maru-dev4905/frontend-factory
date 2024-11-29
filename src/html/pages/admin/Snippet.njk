@@ -397,6 +397,35 @@
                             </div>
                         </div>
 
+                        <h3 class="fs_40 fw_bold pb_30 mt_160">Icon</h3>
+                        <p class="fs_16 fw_regular lih150per mb_30">
+                            아이콘은 material-symbols-outlined 클래스를 사용하시면 됩니다. <br>
+                            아이콘의 크기는 wv.css에 정의된 폰트 사이즈 클래스를 사용하시거나 관리자 페이지 css에서 수정해주셔도 됩니다. <br>
+                            두께 또한 wv.css에 정의된 클래스를 사용하시거나 관리자 페이지 css에서 수정해주셔도 됩니다. <br>
+                            아이콘의 색상은 fill 클래스를 사용하시면 됩니다. <br><br>
+
+                            아이콘의 종류는 <a href="https://fonts.google.com/icons" target="_blank" class="fw_semibold">Google Material Icons</a>에서 확인하실 수 있으며,
+                            <br>
+                            Icon name 코드를 카피한 후 i 태그에 입력하시면 됩니다.
+                        </p>
+                        <div class="pt_30" style="border-top: 1px solid rgba(0,0,0,0.2);">
+                            <div class="dp_f fd_col gap20" style="border-radius: 10px; background-color: var(--adm_white3); padding: 20px; flex: 1;">
+                                 <h4 class="fs_24 fw_medium adm_fc_black1">ICON</h4>
+                                <div class="dp_f gap20">
+                                    <i class="material-symbols-outlined fill fs_24">extension</i>
+                                    <i class="material-symbols-outlined fill fs_24">home</i>
+                                    <i class="material-symbols-outlined fill fs_24">search</i>
+                                    <i class="material-symbols-outlined fill fs_24">language</i>
+                                    <i class="material-symbols-outlined fill fs_24">cancel</i>
+                                    <i class="material-symbols-outlined fill fs_24">business_center</i>
+                                    <i class="material-symbols-outlined fill fs_24">refresh</i>
+                                    <i class="material-symbols-outlined fill fs_24">forum</i>
+                                    <i class="material-symbols-outlined fill fs_24">manage_accounts</i>
+                                    <i class="material-symbols-outlined fill fs_24">account_Circle</i>
+                                </div>
+                            </div>
+                        </div>
+
                         <h3 class="fs_40 fw_bold pb_30 mt_160">Tab</h3>
                         <p class="fs_16 fw_regular lih150per mb_30">
                             탭 메뉴입니다. <br>
@@ -440,78 +469,139 @@
                                 </div>
                             </div>
                         </div>
-                    </article>
 
-                    <article class="component ">
+                        <h3 class="fs_40 fw_semibold mt_160">Search bar</h3>
+                        <p class="fs_16 fw_medium mt_12 pb_30">.adm_create_bar에 style="--width: ??px" 를 입력하면 너비값이 적용됩니다.</p>
+                        <div class="pt_30" style="border-top: 1px solid rgba(0,0,0,0.2);">
+                            <div class="adm_search" style="--width: 750px;">
+                                <form name="searchForm" method="get" action="#" class="dp_f adm_search mx_auto" >
+                                    <input type="text" class="form-control rounded-0" name="keyword" value=""  placeholder="검색어를 입력해주세요 (프로젝트 제목 검색)">
+                                    <button type="submit"><i class="material-symbols-outlined fill fw_light fs_30 adm_fc_white1">search</i></button>
+                                </form>
+                            </div>
 
-                    </article>
-
-                    <article class="component">
-                        <h3 class="fs_30 fw_semibold mt_100">Search bar Component</h3>
-                        <p class="fs_20 fw_medium mt_12 pb_30">.adm_create_bar에 style="--width: ??px" 를 입력하면 너비값이 적용됩니다.</p>
-
-                        <div class="adm_search" style="--width: 750px;">
-                            <form name="searchForm" method="get" action="/<?=$_SESSION['wv_adm_url']?>/board/<?=$wv_category?>/list" class="dp_f adm_search mx_auto" >
-                                <input type="text" class="form-control rounded-0" name="keyword" value=""  placeholder="검색어를 입력해주세요 (프로젝트 제목 검색)">
-                                <button type="submit"><i class="material-symbols-outlined fill fw_light fs_30 adm_fc_white1">search</i></button>
-                            </form>
+                            <div class="code_block mt_20">
+                                <div class="wv_tab">
+                                    <div class="wv_tab_menu">
+                                        <button type="button" class="wv_tab_btn active">HTML</button>
+                                    </div>
+                                    <div class="wv_tab_content">
+                                        <div class="wv_tab_panel">
+                                            <button class="wv_copy_btn" data-target="searchBarCopyHtml">COPY</button>
+                                            <pre><code class="html" id="searchBarCopyHtml"><textarea>
+<div class="adm_search" style="--width: 750px;">
+    <form name="searchForm" method="get" action="#" class="dp_f adm_search mx_auto" >
+        <input type="text" class="form-control rounded-0" name="keyword" value=""  placeholder="검색어를 입력해주세요 (프로젝트 제목 검색)">
+        <button type="submit"><i class="material-symbols-outlined fill fw_light fs_30 adm_fc_white1">search</i></button>
+    </form>
+</div></textarea>
+</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </article>
 
-                    <article class="component">
-                        <h3 class="fs_30 fw_semibold mt_100">Create bar Component</h3>
-                        <p class="fs_20 fw_medium mt_12 pb_30">.adm_create_bar에 style="--width: ??px" 를 입력하면 너비값이 적용됩니다.</p>
+                        <h3 class="fs_40 fw_semibold pb_30 mt_160">New Post Button</h3>
+                        <div class="pt_30" style="border-top: 1px solid rgba(0,0,0,0.2);">
+                            <a href="#" class="adm_btn solid_gray3 round w_130 h_44">
+                                <i class="material-symbols-outlined fill fw_light fs_24 adm_fc_gray1">add</i>새 글 등록
+                            </a>
 
-                        <div class="adm_create_bar" style="--width: 480px;">
-                            <input type="text" id="parent_field" placeholder="추가할 항목의 이름을 입력해주세요.">
-                            <button class="" onclick=""><i class="material-symbols-outlined fill fw_light fs_30 adm_fc_white1">add</i></button>
+                            <div class="code_block mt_20">
+                                <div class="wv_tab">
+                                    <div class="wv_tab_menu">
+                                        <button type="button" class="wv_tab_btn active">HTML</button>
+                                    </div>
+                                    <div class="wv_tab_content">
+                                        <div class="wv_tab_panel">
+                                            <button class="wv_copy_btn" data-target="newPostBtnCopyHtml">COPY</button>
+                                            <pre><code class="html" id="newPostBtnCopyHtml"><textarea>
+<a href="#" class="adm_btn solid_gray3 round w_130 h_44">
+    <i class="material-symbols-outlined fill fw_light fs_24 adm_fc_gray1">add</i>새 글 등록
+</a></textarea>
+</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                    </article>
-
-                    <article class="component">
-                        <h3 class="fs_30 fw_semibold pb_30 mt_100">New Post Button Component</h3>
-
-                        <a href="#" class="adm_btn solid_gray3 round w_130 h_44">
-                            <i class="material-symbols-outlined fill fw_light fs_24 adm_fc_gray1">add</i>새 글 등록
-                        </a>
-                    </article>
-
-                    <article class="component">
-                        <h3 class="fs_30 fw_semibold pb_30 mt_100">List Component <span class="fs_24 fw_medium">(table style)</span></h3>
+                        <h3 class="fs_40 fw_semibold pb_30 mt_160">List Component <span class="fs_24 fw_medium">(table style)</span></h3>
                         <table class="adm_table">
                             <thead>
-                            <tr>
-                                <th>No.</th>
-                                <th>발행유무</th>
-                                <th>제목</th>
-                                <th>작성일</th>
-                                <th>&nbsp;</th>
-                            </tr>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>발행유무</th>
+                                    <th>제목</th>
+                                    <th>작성일</th>
+                                    <th>&nbsp;</th>
+                                </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>28</td>
-                                <td>발행됨</td>
-                                <td class="ta_left">매칭 후 바로 계약에 들어가나요?</td>
-                                <td>2024-04-03</td>
-                                <td>
-                                    <div class="dp_f al_center jtf_end gap10">
-                                        <button type="button" class="adm_btn fill_gray1 round ico_btn" onclick="location.href=''">
-                                            <i class="material-symbols-outlined fill fs_24 adm_fc_white1">edit</i>
-                                        </button>
-                                        <button type="button" class="adm_btn solid_gray3 round ico_btn">
-                                            <i class="material-symbols-outlined fill fs_24 fc_white1">delete</i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>발행됨</td>
+                                    <td class="ta_left">매칭 후 바로 계약에 들어가나요?</td>
+                                    <td>2024-04-03</td>
+                                    <td>
+                                        <div class="dp_f al_center jtf_end gap10">
+                                            <button type="button" class="adm_btn fill_gray1 round ico_btn" onclick="location.href=''">
+                                                <i class="material-symbols-outlined fill fs_24 adm_fc_white1">edit</i>
+                                            </button>
+                                            <button type="button" class="adm_btn solid_gray3 round ico_btn">
+                                                <i class="material-symbols-outlined fill fs_24 fc_white1">delete</i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
-                    </article>
+                        <div class="code_block mt_20">
+                            <div class="wv_tab">
+                                <div class="wv_tab_menu">
+                                    <button type="button" class="wv_tab_btn active">HTML</button>
+                                </div>
+                                <div class="wv_tab_content">
+                                    <div class="wv_tab_panel">
+                                        <button class="wv_copy_btn" data-target="tableCopyHtml">COPY</button>
+                                        <pre><code class="html" id="tableCopyHtml"><textarea>
+<table class="adm_table">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>발행유무</th>
+            <th>제목</th>
+            <th>작성일</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>28</td>
+            <td>발행됨</td>
+            <td class="ta_left">매칭 후 바로 계약에 들어가나요?</td>
+            <td>2024-04-03</td>
+            <td>
+                <div class="dp_f al_center jtf_end gap10">
+                    <button type="button" class="adm_btn fill_gray1 round ico_btn" onclick="location.href=''">
+                        <i class="material-symbols-outlined fill fs_24 adm_fc_white1">edit</i>
+                    </button>
+                    <button type="button" class="adm_btn solid_gray3 round ico_btn">
+                        <i class="material-symbols-outlined fill fs_24 fc_white1">delete</i>
+                    </button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table></textarea>
+</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                    <article class="component">
-                        <h3 class="fs_30 fw_semibold pb_30 mt_100">Pagination Component</h3>
+                        <h3 class="fs_40 fw_semibold pb_30 mt_160">Pagination</h3>
                         <ul class="adm_pagination mt_60">
                             <li class="page-item first disabled m-1">
                                 <a href="" class="page-link px-0 fd_center" title="처음">
@@ -546,10 +636,56 @@
                                 </a>
                             </li>
                         </ul>
-                    </article>
+                        <div class="code_block mt_20">
+                            <div class="wv_tab">
+                                <div class="wv_tab_menu">
+                                    <button type="button" class="wv_tab_btn active">HTML</button>
+                                </div>
+                                <div class="wv_tab_content">
+                                    <div class="wv_tab_panel">
+                                        <button class="wv_copy_btn" data-target="paginationCopyHtml">COPY</button>
+                                        <pre><code class="html" id="paginationCopyHtml"><textarea>
+                        <ul class="adm_pagination mt_60">
+                            <li class="page-item first disabled m-1">
+                                <a href="" class="page-link px-0 fd_center" title="처음">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path opacity="0.5" d="M14.2657 11.4343L18.45 7.25C18.8642 6.83579 18.8642 6.16421 18.45 5.75C18.0358 5.33579 17.3642 5.33579 16.95 5.75L11.4071 11.2929C11.0166 11.6834 11.0166 12.3166 11.4071 12.7071L16.95 18.25C17.3642 18.6642 18.0358 18.6642 18.45 18.25C18.8642 17.8358 18.8642 17.1642 18.45 16.75L14.2657 12.5657C13.9533 12.2533 13.9533 11.7467 14.2657 11.4343Z" fill="currentColor"></path>
+                                        <path d="M8.2657 11.4343L12.45 7.25C12.8642 6.83579 12.8642 6.16421 12.45 5.75C12.0358 5.33579 11.3642 5.33579 10.95 5.75L5.40712 11.2929C5.01659 11.6834 5.01659 12.3166 5.40712 12.7071L10.95 18.25C11.3642 18.6642 12.0358 18.6642 12.45 18.25C12.8642 17.8358 12.8642 17.1642 12.45 16.75L8.2657 12.5657C7.95328 12.2533 7.95328 11.7467 8.2657 11.4343Z" fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="page-item previous disabled m-1">
+                                <a class="page-link px-0 fd_center" title="이전">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.2657 11.4343L15.45 7.25C15.8642 6.83579 15.8642 6.16421 15.45 5.75C15.0358 5.33579 14.3642 5.33579 13.95 5.75L8.40712 11.2929C8.01659 11.6834 8.01659 12.3166 8.40712 12.7071L13.95 18.25C14.3642 18.6642 15.0358 18.6642 15.45 18.25C15.8642 17.8358 15.8642 17.1642 15.45 16.75L11.2657 12.5657C10.9533 12.2533 10.9533 11.7467 11.2657 11.4343Z" fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="page-item m-1 active">
+                                <a href="javascript:void(0);" class="page-link fd_center" title="현재 페이지">1</a>
+                            </li>
+                            <li class="page-item next disabled m-1">
+                                <a class="page-link px-0 fd_center" title="다음"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.6343 12.5657L8.45001 16.75C8.0358 17.1642 8.0358 17.8358 8.45001 18.25C8.86423 18.6642 9.5358 18.6642 9.95001 18.25L15.4929 12.7071C15.8834 12.3166 15.8834 11.6834 15.4929 11.2929L9.95001 5.75C9.5358 5.33579 8.86423 5.33579 8.45001 5.75C8.0358 6.16421 8.0358 6.83579 8.45001 7.25L12.6343 11.4343C12.9467 11.7467 12.9467 12.2533 12.6343 12.5657Z" fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="page-item last disabled m-1">
+                                <a class="page-link px-0 fd_center" title="마지막">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path opacity="0.5" d="M9.63433 11.4343L5.45001 7.25C5.0358 6.83579 5.0358 6.16421 5.45001 5.75C5.86423 5.33579 6.5358 5.33579 6.95001 5.75L12.4929 11.2929C12.8834 11.6834 12.8834 12.3166 12.4929 12.7071L6.95001 18.25C6.5358 18.6642 5.86423 18.6642 5.45001 18.25C5.0358 17.8358 5.0358 17.1642 5.45001 16.75L9.63433 12.5657C9.94675 12.2533 9.94675 11.7467 9.63433 11.4343Z" fill="currentColor"></path>
+                                        <path d="M15.6343 11.4343L11.45 7.25C11.0358 6.83579 11.0358 6.16421 11.45 5.75C11.8642 5.33579 12.5358 5.33579 12.95 5.75L18.4929 11.2929C18.8834 11.6834 18.8834 12.3166 18.4929 12.7071L12.95 18.25C12.5358 18.6642 11.8642 18.6642 11.45 18.25C11.0358 17.8358 11.0358 17.1642 11.45 16.75L15.6343 12.5657C15.9467 12.2533 15.9467 11.7467 15.6343 11.4343Z" fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul></textarea>
+</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                    <article class="component">
-                        <h3 class="fs_30 fw_semibold pb_30 mt_100">Radio & Checkbox Component</h3>
+                        <h3 class="fs_40 fw_semibold pb_30 mt_160">Radio & Checkbox</h3>
                         <div class="dp_f gap20">
                             <div class="adm_radio">
                                 <input type="radio" id="radio1" name="radio" value="radio1">
@@ -578,18 +714,25 @@
                                 <label for="checkbox3"><span></span> Checkbox3</label>
                             </div>
                         </div>
-                    </article>
 
-                    <article class="component">
-                        <h3 class="fs_30 fw_semibold pb_30 mt_100">Modal</h3>
-                        <button class="wv_modal_btn adm_btn round fill_black2 adm_fc_white2 pt_10 pb_10 pl_30 pr_30" data-modal="testModal">모달창 열기</button>
+
+                        <h3 class="fs_40 fw_semibold pb_30 mt_160">Modal</h3>
+                        <button class="wv_modal_btn adm_btn round fill_black2 adm_fc_gray2 pt_10 pb_10 pl_30 pr_30" data-modal="testModal">모달창 열기</button>
                         <dialog class="wv_modal adm_modal" id="testModal">
                             <p class="fs_20 lih150per ta_center">
                                 해당 분류가 선택된 프로젝트 제안 내역이 있어 <br>
                                 삭제할 수 없습니다.
                             </p>
-                            <button type="button" class="fs_16 adm_btn fill_gray3 adm_fc_white1 wv_modal_btn round pl_36 pr_36 pt_10 pb_10  mx_auto mt_80 close_modal" data-modal="testModal">확인</button>
+                            <button type="button" class="pos_st fs_16 adm_btn fill_gray3 adm_fc_white1 wv_modal_btn round pl_36 pr_36 pt_10 pb_10  mx_auto mt_80 close_modal" data-modal="testModal">확인</button>
                         </dialog>
+                    </article>
+
+                    <article class="component">
+
+                    </article>
+
+                    <article class="component">
+
                     </article>
                 </div>
             </div>
@@ -598,7 +741,7 @@
 
     <div class="wv_modal" id="copySuccessModal">
         <div class="wv_modal_content">
-            <p>Copied to clipboard!</p>
+            <p class="ta_center">Copied to clipboard!</p>
         </div>
     </div>
     <div class="dim"></div>
