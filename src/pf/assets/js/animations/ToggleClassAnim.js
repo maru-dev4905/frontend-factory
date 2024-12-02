@@ -1,5 +1,3 @@
-import ScrollMagic from 'scrollmagic';
-
 const toggleClassAnim = (ctrl) => {
   $(".anim").each(function (i) {
     new ScrollMagic.Scene({
