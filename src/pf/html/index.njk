@@ -1,16 +1,30 @@
+{% set depth %}{{ 'depth1' }}{% endset %}
 {%- extends "_templates/_layout.njk" -%}
 
+{% block plugin %}
+    <script src="../../assets/plugins/jquery.min.js"></script>
+    <script src="../../assets/plugins/gsap.min.js"></script>
+    <script src="../../assets/plugins/ScrollTrigger.min.js"></script>
+{%- endblock %}
+
 {% block css %}
-    <link href="./assets/css/wv.min.css" rel="stylesheet" />
-    <link href="./assets/css/guide.min.css" rel="stylesheet" />
+    <link href="./assets/css/wv.min.css" rel="stylesheet"/>
+    <link href="./assets/css/guide.min.css" rel="stylesheet"/>
+{%- endblock %}
+
+{% block js %}
+    <script src="./assets/js/font.js" rel="stylesheet"></script>
+    <script src="./assets/js/common.js" rel="stylesheet"></script>
+    <script src="./assets/js/wv_compo.js" rel="stylesheet"></script>
 {%- endblock %}
 
 {% block content %}
-  <main class="main">
-    <section>
-        <div class="container">
-            MAIN PAGE
-        </div>
-    </section>
-  </main>
+    {{ include( "_templates/_includes/_header.njk" ) | tabIndent(1) }}
+    <main class="main">
+        <section>
+            <div class="container">
+                MAIN PAGE
+            </div>
+        </section>
+    </main>
 {%- endblock %}

@@ -3,32 +3,38 @@
     {
       "name": "Tab",
       "href": "../../pf/pages/components/tab.html",
-      "href2": "../../../pf/pages/components/tab.html"
+      "href2": "../../../../pf/pages/components/tab.html",
+      "href3": "../../../../../pf/pages/components/tab.html"
     },
     {
       "name": "Accordion",
       "href": "../../pf/pages/components/accordion.html",
-      "href2": "../../../pf/pages/components/accordion.html"
+      "href2": "../../../../pf/pages/components/accordion.html",
+      "href3": "../../../../../pf/pages/components/accordion.html"
     },
     {
       "name": "Modal",
       "href": "../../pf/pages/components/modal.html",
-      "href2": "../../../pf/pages/components/modal.html"
+      "href2": "../../../../pf/pages/components/modal.html",
+      "href3": "../../../../../pf/pages/components/modal.html"
     },
     {
       "name": "Target Button",
       "href": "../../pf/pages/components/targetBtn.html",
-      "href2": "../../../pf/pages/components/targetBtn.html"
+      "href2": "../../../../pf/pages/components/targetBtn.html",
+      "href3": "../../../../../pf/pages/components/targetBtn.html"
     },
     {
       "name": "Copy Button",
       "href": "../../pf/pages/components/copyBtn.html",
-      "href2": "../../../pf/pages/components/copyBtn.html"
+      "href2": "../../../../pf/pages/components/copyBtn.html",
+      "href3": "../../../../../pf/pages/components/copyBtn.html"
     },
     {
       "name": "Scroll Button",
       "href": "../../pf/pages/components/scrBtn.html",
-      "href2": "../../../pf/pages/components/scrBtn.html"
+      "href2": "../../../../pf/pages/components/scrBtn.html",
+      "href3": "../../../../../pf/pages/components/scrBtn.html"
     }
   ]
 }

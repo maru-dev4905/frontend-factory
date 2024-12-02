@@ -1,3 +1,4 @@
+{% set depth %}{{ 'depth2' }}{% endset %}
 {%- extends "_templates/_layout.njk" -%}
 {%- import "_templates/_macro/_macro.njk" as macro -%}
 
@@ -8,10 +9,13 @@
 {%- endblock %}
 
 {% block content %}
+    {{ include( "_templates/_includes/_header.njk" ) | tabIndent(1) }}
     <main class="main">
         <section>
             <div class="container">
                 DOWNLOAD PAGE
+
+                <a href="./wv_v1.0.0.zip" download>V1.0.0 Download</a>
             </div>
         </section>
     </main>

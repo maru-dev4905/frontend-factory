@@ -150,7 +150,7 @@ const js = () => {
   return gulp.src([
     path_src.js + '/*.js'                            // 트렌스파일 대상 경로 (util.js 는 main.js 에 import 하기 때문에 호출 안함)
   ])
-      .pipe(sourcemaps.init({loadMaps: true}))                // 소스맵 초기화 (기존의 소스 맵을 유지하고 수정하는 데 사용하기 위해 옵션 설정)
+      // .pipe(sourcemaps.init({loadMaps: true}))                // 소스맵 초기화 (기존의 소스 맵을 유지하고 수정하는 데 사용하기 위해 옵션 설정)
       .pipe(bro({                                                // 트렌스파일 시작
         transform: [
           babelify.configure({presets: ['@babel/preset-env']}), // ES6 이상의 문법을 일반 브라우저가 코드를 이해할 수 있도록 변환
@@ -158,10 +158,17 @@ const js = () => {
         ]
       }))
       .pipe(sourcemaps.write('./'))                             // 소스맵 작성
-      .pipe(minify({                                              // 트렌스파일된 코드 압축 및 min 파일 생성
-        ext: {min: '.min.js'},                                  // 축소된 파일을 출력하는 파일 이름의 접미사 설정
-        ignoreFiles: ['-min.js']                                  // 해당 패턴과 일치하는 파일을 축소하지 않음
-      }))
+      // .pipe(minify({                                              // 트렌스파일된 코드 압축 및 min 파일 생성
+      //   ext: {min: '.min.js'},                                  // 축소된 파일을 출력하는 파일 이름의 접미사 설정
+      //   ignoreFiles: ['-min.js','project-config.js']                                  // 해당 패턴과 일치하는 파일을 축소하지 않음
+      // }))
+      .pipe(gulp.dest(path_dist.js));                           // 트렌스파일 후 생성될 목적지 설정
+}
+
+const js2 = () => {
+  return gulp.src([
+    path_src.js + '/*.js'                            // 트렌스파일 대상 경로 (util.js 는 main.js 에 import 하기 때문에 호출 안함)
+  ])
       .pipe(gulp.dest(path_dist.js));                           // 트렌스파일 후 생성될 목적지 설정
 }
 
@@ -193,6 +200,10 @@ const plugin = () => {
 const json = () => {
   return gulp.src(path_src.json + '/**/**/*')      // dist로 이동할 이미지 대상
       .pipe(jsonMinify())
+      .pipe(gulp.dest(path_dist.json));              // 이동 목적지 설정
+}
+const json2 = () => {
+  return gulp.src(path_src.json + '/**/**/*')      // dist로 이동할 이미지 대상
       .pipe(gulp.dest(path_dist.json));              // 이동 목적지 설정
 }
 
@@ -284,7 +295,8 @@ const file_management = (watcher_target, src_path, dist_path) => {
 const prepare = gulp.series([clean, image]);
 
 // 위 prepare 실행 완료 후 순차적으로 실행되어야 하는 task 그룹
-const assets = gulp.series([html, css, js, video, plugin, json]);
+const devAssets = gulp.series([html, css, js, video, plugin, json]);
+const exportAssets = gulp.series([html, css, js, video, plugin, json]);
 
 // 동시에 여러 개의 task가 실행되어야 하는 그룹 (병렬 실행)
 const live = gulp.parallel([webserver, watch]);
@@ -292,11 +304,9 @@ const live = gulp.parallel([webserver, watch]);
 
 // export (gulp 실행 명령어) ----------------------------------------
 
-// gulp build 실행 (prepare 실행 후 assets 실행) - build만 실행
-export const build = gulp.series([prepare, assets]);
+export const build = gulp.series([prepare, exportAssets]);
 
-// gulp dev 실행 (build 실행 후 live 실행) - build 실행 후 live 실행
-export const dev = gulp.series([build, live]);
+export const dev = gulp.series([prepare,devAssets, live]);
 
 // gulp image_min 실행 (이미지 최적화 하나만을 위한 명령) 
 export const image_min = gulp.series([image_optimization]);

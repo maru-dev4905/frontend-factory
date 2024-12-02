@@ -1,12 +1,11 @@
 import projectConfig from "./project-config";
-
 const loadFontsAndInit = (fontNames, callback) => {
   Promise.all(
       fontNames.map((fontName) =>
           new Promise((resolve, reject) => {
             const link = document.createElement('link');
             link.rel = 'stylesheet';
-            fetch('/assets/json/font.json')
+            fetch('./assets/json/font.json')
                 .then((response) => response.json())
                 .then((fonts) => {
                   if (fonts[fontName]) {
@@ -35,7 +34,3 @@ loadFontsAndInit(projectConfig.fonts, () => {
 });
 
 export default loadFontsAndInit;
-// 예제: 폰트를 로드한 뒤 초기화 실행
-// loadFontsAndInit(['Roboto', 'NotoSansKR'], () => {
-//   console.log('Project initialization can start here.');
-// });

@@ -1,3 +1,4 @@
+{% set depth %}{{ 'depth2' }}{% endset %}
 {%- extends "_templates/_layout.njk" -%}
 {%- import "_templates/_macro/_macro.njk" as macro -%}
 
@@ -9,9 +10,8 @@
 {%- endblock %}
 
 {% block content %}
+    {{ include( "_templates/_includes/_header.njk" ) | tabIndent(1) }}
     <main class="main">
-        {{ include( "_templates/_includes/_sidebarDocs.njk" ) | tabIndent(1) }}
-
         <section class="sec_component pt_100">
             <div class="inner_base">
                 <h2 class="fs_32 mb_10">CSS Docs</h2>

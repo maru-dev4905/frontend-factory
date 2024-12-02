@@ -1,3 +1,4 @@
+{% set depth %}{{ 'depth2' }}{% endset %}
 {%- extends "_templates/_layout.njk" -%}
 {%- import "_templates/_macro/_macro.njk" as macro -%}
 
@@ -19,13 +20,13 @@
                 </p>
                 <ul class="grid_lay guide_list_menu">
                     <li class="grid_col" style="--colST: 1; --colED: 4;">
-                        <a href="../../pages/admin/admin.html" target="_blank">Admin</a>
+                        <a href="../../pf/pages/admin/admin.html" target="_blank">Admin</a>
                     </li>
                     <li class="grid_col" style="--colST: 4; --colED: 7;">
-                        <a href="../../pages/admin/snippet.html" target="_blank">Snippet</a>
+                        <a href="../../pf/pages/admin/snippet.html" target="_blank">Snippet</a>
                     </li>
                     <li class="grid_col" style="--colST: 7; --colED: 10;">
-                        <a href="../../pages/admin/login.html" target="_blank">Login</a>
+                        <a href="../../pf/pages/admin/login.html" target="_blank">Login</a>
                     </li>
                 </ul>
             </div>
