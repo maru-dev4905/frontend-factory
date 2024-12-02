@@ -1,4 +1,3 @@
-import projectConfig from "./project-config";
 const loadFontsAndInit = (fontNames, callback) => {
   Promise.all(
       fontNames.map((fontName) =>
@@ -29,7 +28,7 @@ const loadFontsAndInit = (fontNames, callback) => {
       .catch((error) => console.error('Error loading fonts:', error));
 };
 
-loadFontsAndInit(projectConfig.fonts, () => {
+loadFontsAndInit( window.projectConfig.fonts , () => {
   console.log("Project initialization can start here.");
 });
 

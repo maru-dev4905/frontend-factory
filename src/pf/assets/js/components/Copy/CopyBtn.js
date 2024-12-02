@@ -1,8 +1,6 @@
-import projectConfig from "../../project-config";
-
 export default function wvCopyBtn() {
   const copyBtns = $(".wv_copy_btn");
-  const { copyFeedback, socialShareConfig } = projectConfig;
+  const { copyFeedback, socialShareConfig } = window.projectConfig;
 
   copyBtns.on("click", function () {
     const btn = $(this);
