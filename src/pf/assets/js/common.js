@@ -1,4 +1,4 @@
-import font from './common/font.js';
+import getFontCdn from './common/font.js';
 import checkRes from './common/checkRes.js';
 import checkScrollDir from './common/checkScrollDir.js';
 import debounce from './common/debounce.js';
@@ -21,9 +21,7 @@ if(window.w >= 768){
 }
 
 $(document).ready(function () {
-  font(window.projectConfig.fonts, () => {
-    console.log("Project initialization can start here.");
-  });
+  getFontCdn('Pretendard');
   console.log(1, 'document.ready');
 });
 

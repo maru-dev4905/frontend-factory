@@ -1,32 +1,17 @@
-const loadFontsAndInit = (fontNames, callback) => {
-  Promise.all(
-      fontNames.map((fontName) =>
-          new Promise((resolve, reject) => {
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            fetch('../../assets/json/font.json')
-                .then((response) => response.json())
-                .then((fonts) => {
-                  if (fonts[fontName]) {
-                    link.href = fonts[fontName];
-                    link.onload = resolve;
-                    link.onerror = reject;
-                    document.head.appendChild(link);
-                    console.log(`Font "${fontName}" loaded.`);
-                  } else {
-                    reject(`Font "${fontName}" not found in font.json.`);
-                  }
-                })
-                .catch(reject);
-          })
-      )
-  )
-      .then(() => {
-        console.log('All fonts loaded.');
-        if (typeof callback === 'function') callback(); // 폰트가 로드되면 초기화 실행
-      })
-      .catch((error) => console.error('Error loading fonts:', error));
-};
+const getFontCdn = (key) => {
+  const font = window.projectConfig.fonts;
+  const keyArr = Object.keys(font);
+  const keyStr = keyArr.find(item => item == key);
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
 
+  if (typeof keyStr != 'undefined') {
+    link.href = font[keyStr];
+    document.head.appendChild(link);
+    console.log(`Font "${keyStr}" loaded.`);
+  } else {
+    throw `Font "${key}" not found.`
+  }
+}
 
-export default loadFontsAndInit;
+export default getFontCdn;
