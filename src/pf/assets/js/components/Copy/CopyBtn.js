@@ -89,6 +89,12 @@ function shareSocial(platform, config) {
           "_blank"
       );
       break;
+    case "blog":
+      window.open(
+          `http://blog.naver.com/openapi/share?url=${encodeURIComponent(shareUrl)}`,
+          "_blank"
+      );
+      break;
     default:
       console.warn("Unsupported platform:", platform);
   }

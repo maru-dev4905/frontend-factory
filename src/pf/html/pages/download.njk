@@ -11,11 +11,13 @@
 {% block content %}
     {{ include( "_templates/_includes/_header.njk" ) | tabIndent(1) }}
     <main class="main">
-        <section>
-            <div class="container">
-                DOWNLOAD PAGE
+        <section class="sec_component pt_100">
+            <div class="inner_base">
+                <h2 class="fs_32 mb_10">Download</h2>
 
-                <a href="./wv_v1.0.0.zip" download>V1.0.0 Download</a>
+                <div class="mt_60 download_wrap">
+                    <a href="./wv_v1.0.0.zip" download>V1.0.0 Download</a>
+                </div>
             </div>
         </section>
     </main>

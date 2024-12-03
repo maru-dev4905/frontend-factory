@@ -4,7 +4,7 @@ const loadFontsAndInit = (fontNames, callback) => {
           new Promise((resolve, reject) => {
             const link = document.createElement('link');
             link.rel = 'stylesheet';
-            fetch('./assets/json/font.json')
+            fetch('../../assets/json/font.json')
                 .then((response) => response.json())
                 .then((fonts) => {
                   if (fonts[fontName]) {
@@ -28,8 +28,5 @@ const loadFontsAndInit = (fontNames, callback) => {
       .catch((error) => console.error('Error loading fonts:', error));
 };
 
-loadFontsAndInit( window.projectConfig.fonts , () => {
-  console.log("Project initialization can start here.");
-});
 
 export default loadFontsAndInit;

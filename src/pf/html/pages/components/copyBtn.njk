@@ -3,20 +3,22 @@
 {%- import "_templates/_macro/_macro.njk" as macro -%}
 
 {% block plugin %}
-    <script src="../../assets/plugins/jquery.min.js"></script>
-    <script src="../../assets/plugins/gsap.min.js"></script>
-    <script src="../../assets/plugins/ScrollTrigger.min.js"></script>
+    <script src="../../../assets/plugins/jquery.min.js"></script>
+    <script src="../../../assets/plugins/gsap.min.js"></script>
+    <script src="../../../assets/plugins/ScrollTrigger.min.js"></script>
+    <script src="../../../assets/plugins/ScrollMagic.min.js"></script>
 {%- endblock %}
 
 {% block css %}
-    <link href="../../assets/css/wv.min.css" rel="stylesheet" />
-    <link href="../../assets/css/guide.min.css" rel="stylesheet" />
+    <link href="../../../assets/css/wv.min.css" rel="stylesheet" />
+    <link href="../../../assets/css/guide.min.css" rel="stylesheet" />
 {%- endblock %}
 
 {% block js %}
-    <script src="../../assets/js/font.js"></script>
-    <script src="../../assets/js/common.min.js"></script>
-    <script src="../../assets/js/wv_compo.min.js"></script>
+    <script src="../../../assets/js/project-config.js" type="module"></script>
+    <script src="../../../assets/js/common.js" type="module"></script>
+    <script src="../../../assets/js/wv_compo.js" type="module"></script>
+    <script src="../../../assets/js/wv_animation.js" type="module"></script>
 {%- endblock %}
 
 {% block content %}
@@ -115,6 +117,7 @@
                         <button class="wv_copy_btn" data-type="social" data-platform="kakao">Share to Kakao</button>
                         <button class="wv_copy_btn" data-type="social" data-platform="facebook">Share to Facebook</button>
                         <button class="wv_copy_btn" data-type="social" data-platform="twitter">Share to Twitter</button>
+                        <button class="wv_copy_btn" data-type="social" data-platform="blog">Share to Naver Blog</button>
                         <div class="code_block mt_20">
                             <div class="wv_tab">
                                 <div class="wv_tab_menu">
@@ -126,7 +129,8 @@
                                         <pre><code class="html" id="copyBtn3html"><textarea>
 <button class="wv_copy_btn" data-type="social" data-platform="kakao">Share to Kakao</button>
 <button class="wv_copy_btn" data-type="social" data-platform="facebook">Share to Facebook</button>
-<button class="wv_copy_btn" data-type="social" data-platform="twitter">Share to Twitter</button></textarea>
+<button class="wv_copy_btn" data-type="social" data-platform="twitter">Share to Twitter</button>
+<button class="wv_copy_btn" data-type="social" data-platform="blog">Share to Naver Blog</button></textarea>
 </code></pre>
                                     </div>
                                 </div>

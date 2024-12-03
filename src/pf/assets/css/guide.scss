@@ -372,6 +372,21 @@ section {
   }
   //Copy Button END
 
+  .download_wrap{
+    a{
+        display: block;
+        padding: 10px 20px;
+        border: 1px solid #ebebeb;
+        border-radius: 4px;
+        background-color: #f6f6f6;
+        transition: background-color .2s ease-in-out;
+
+        &:hover{
+            background-color: #ebebeb;
+        }
+    }
+  }
+
   // Guide Code Block
   .code_block{
     position: relative;
