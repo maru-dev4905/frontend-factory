@@ -1,0 +1,40 @@
+{%- macro include(fileName) -%}
+  {%- include fileName ignore missing -%}
+{%- endmacro -%}
+{#- // 들여쓰기(Tab Indent) 조정을 위한 macro -#}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+
+  {% block css %}
+  {% endblock %}
+
+  {% block plugin %}
+  {% endblock %}
+
+  {% block js %}
+  {% endblock %}
+
+{#  gide plugin#}
+  <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/github.min.css">	<!-- 구문 강조 CSS호출 -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>	<!-- 구문 강조 js 호출 -->
+  <script>hljs.highlightAll();</script> <!-- 코드 구문 강조 호출 -->
+{#  gide plugin END#}
+</head>
+<body>
+<div class="wv">
+  {% block content %}
+  {% endblock %}
+  {{ include( "_templates/_includes/_footer.njk" ) | tabIndent(1) }}
+</div>
+<!-- //wrap -->
+
+{% block script %}
+{% endblock %}
+</body>
+</html>

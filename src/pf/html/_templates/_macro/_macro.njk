@@ -1,0 +1,9 @@
+{%- macro image( class, src, alt, width="", height="auto" ) -%}
+  <figure class="{{ class }}">
+    <img src="{{ src }}" width="{{ width }}" height="{{ height }}">
+    <figcaption>{{ alt }}</figcaption>
+  </figure>
+{%- endmacro %}
+
+
+{#  {{ macro.image( "image_box", "/assets/images/visuals/visual.png", "메인 이미지 입니다.", width="400px" ) }}#}

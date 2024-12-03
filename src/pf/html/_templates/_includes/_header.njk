@@ -1,0 +1,20 @@
+<header class="header hd_offset">
+{#    <h1 class="logo">#}
+{#        <a href="/"><img src="/assets/images/common/logo_b.svg" alt=""></a>#}
+{#    </h1>#}
+    <nav class="gnb">
+        <ul class="dp_f al_center gap40">
+            {%- for navgation in gnb_data %}
+                <li class="fs_16">
+                    {%- if depth == 'depth1' %}
+                        <a href="{{ navgation.href }}">{{ navgation.name }}</a>
+                    {%- elseif depth == 'depth2' %}
+                        <a href="{{ navgation.href2 }}">{{ navgation.name }}</a>
+                    {%- elseif depth == 'depth3' %}
+                        <a href="{{ navgation.href3 }}">{{ navgation.name }}</a>
+                    {%- endif %}
+                </li>
+            {%- endfor %}
+        </ul>
+    </nav>
+</header>

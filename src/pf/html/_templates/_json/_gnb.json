@@ -1,0 +1,28 @@
+{
+  "gnb_data": [
+    {
+      "name": "Docs",
+      "href": "../pf/pages/docs.html",
+      "href2": "../../pf/pages/docs.html",
+      "href3": "../../../pf/pages/docs.html"
+    },
+    {
+      "name": "Components",
+      "href": "../pf/pages/components.html",
+      "href2": "../../pf/pages/components.html",
+      "href3": "../../../pf/pages/components.html"
+    },
+    {
+      "name": "Download",
+      "href": "../pf/pages/download.html",
+      "href2": "../../pf/pages/download.html",
+      "href3": "../../../pf/pages/download.html"
+    },
+    {
+      "name": "Admin",
+      "href": "../pf/pages/admin.html",
+      "href2": "../../pf/pages/admin.html",
+      "href3": "../../../pf/pages/admin.html"
+    }
+  ]
+}
