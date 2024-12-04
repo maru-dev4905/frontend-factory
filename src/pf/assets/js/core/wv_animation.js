@@ -1,4 +1,4 @@
-import toggleClassAnim from "./animations/ToggleClassAnim";
+import toggleClassAnim from '../module/animations/ToggleClassAnim';
 
 
 window.onload = function() {

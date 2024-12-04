@@ -14,10 +14,13 @@
 {%- endblock %}
 
 {% block js %}
-    <script src="./assets/js/project-config.js" type="module"></script>
-    <script src="./assets/js/common.js" type="module"></script>
-    <script src="./assets/js/wv_compo.js" type="module"></script>
-    <script src="./assets/js/wv_animation.js" type="module"></script>
+    <script src="./assets/js/core/wv_common.js" type="module"></script>
+    <script src="./assets/js/core/wv_form.js"></script>
+    <script src="./assets/js/core/wv_animation.js"></script>
+    <script src="./assets/js/core/adm.js"></script>
+
+    <script src="./assets/js/custom/wv_common.js" type="module"></script>
+    <script src="./assets/js/custom/project-config.js"></script>
 {%- endblock %}
 
 {% block content %}

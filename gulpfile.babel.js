@@ -21,6 +21,7 @@ import babelify from "babelify";
 import minify from "gulp-minify";
 import imagemin from "gulp-imagemin";
 import jsonMinify from "gulp-json-minify";
+import babel from "gulp-babel"
 
 // routes -----------------------------------------------------------
 const src = './src/pf';
@@ -32,8 +33,8 @@ const path_src = {
   html: src + '/html',
   css: src + ass + '/css',
   images: src + ass + '/images',
-  js: src + ass + '/js',
-  jsConfig: src + ass + '/js/project_config.js',
+  coreJS: src + ass + '/js/core',
+  customJS: src + ass + '/js/custom',
   video: src + ass + '/videos',
   plugin: src + ass + '/plugins',
   json: src + ass + '/json'
@@ -44,8 +45,8 @@ const path_dist = {
   html: dist,
   css: dist + ass + '/css',
   images: dist + ass + '/images',
-  js: dist + ass + '/js',
-  jsConfig: dist + ass + '/js',
+  coreJS: dist + ass + '/js/core',
+  customJS: dist + ass + '/js/custom',
   video: dist + ass + '/videos',
   plugin: dist + ass + '/plugins',
   json: dist + ass + '/json'
@@ -148,31 +149,23 @@ const css = () => {
 }
 
 // js task
-const js = () => {
+const coreJS = () => {
   return gulp.src([
-    path_src.js + '/*.js',
-    '!' + path_src.js + '/project-config.js'// 트렌스파일 대상 경로 (util.js 는 main.js 에 import 하기 때문에 호출 안함)
+      path_src.coreJS + '/*.js'
   ])
-      // .pipe(sourcemaps.init({loadMaps: true}))                // 소스맵 초기화 (기존의 소스 맵을 유지하고 수정하는 데 사용하기 위해 옵션 설정)
       .pipe(bro({                                                // 트렌스파일 시작
         transform: [
           babelify.configure({presets: ['@babel/preset-env']}), // ES6 이상의 문법을 일반 브라우저가 코드를 이해할 수 있도록 변환
           ['uglifyify', {global: true}]                       // 코드 최소화 및 난독화
         ]
       }))
-      // .pipe(sourcemaps.write('./'))                             // 소스맵 작성
-      // .pipe(minify({                                              // 트렌스파일된 코드 압축 및 min 파일 생성
-      //   ext: {min: '.min.js'},                                  // 축소된 파일을 출력하는 파일 이름의 접미사 설정
-      //   ignoreFiles: ['-min.js','project-config.js']                                  // 해당 패턴과 일치하는 파일을 축소하지 않음
-      // }))
-      .pipe(gulp.dest(path_dist.js));                           // 트렌스파일 후 생성될 목적지 설정
+      .pipe(gulp.dest(path_dist.coreJS));
 }
-
-const configJS = () => {
+const customJS = () => {
   return gulp.src([
-    path_src.js + '/project-config.js'// 트렌스파일 대상 경로 (util.js 는 main.js 에 import 하기 때문에 호출 안함)
+      path_src.customJS + '/*.js'
   ])
-      .pipe(gulp.dest(path_dist.js));                           // 트렌스파일 후 생성될 목적지 설정
+      .pipe(gulp.dest(path_dist.customJS));
 }
 
 
@@ -236,13 +229,13 @@ const watch = () => {
   const scss_watcher = gulp.watch(path_src.css + "/**/*", css);
   file_management(scss_watcher, path_src.css, path_dist.css);
 
-  // js watch 
-  const js_watcher = gulp.watch(path_src.js + "/**/*", js);
-  file_management(js_watcher, path_src.js, path_dist.js);
+  // core JS watch
+  const coreJS_watcher = gulp.watch(path_src.coreJS + "/**/*", coreJS);
+  file_management(coreJS_watcher, path_src.coreJS, path_dist.coreJS);
 
-  // js config watch
-  const js_config_watcher = gulp.watch(path_src.jsConfig + "/**/*", configJS);
-  file_management(js_config_watcher, path_src.jsConfig, path_dist.jsConfig);
+  // custom JS watch
+  const customJS_watcher = gulp.watch(path_src.customJS + "/**/*", customJS);
+  file_management(customJS_watcher, path_src.customJS, path_dist.customJS);
 
   // img watch
   const image_watcher = gulp.watch(path_src.images + "/**/*", image);
@@ -303,8 +296,8 @@ const file_management = (watcher_target, src_path, dist_path) => {
 const prepare = gulp.series([clean, image]);
 
 // 위 prepare 실행 완료 후 순차적으로 실행되어야 하는 task 그룹
-const devAssets = gulp.series([html, css, js, configJS, video, plugin, json]);
-const exportAssets = gulp.series([html, css, js,  configJS, video, plugin, json]);
+const devAssets = gulp.series([html, css, customJS, coreJS, video, plugin, json]);
+const exportAssets = gulp.series([html, css,  customJS, coreJS, video, plugin, json]);
 
 // 동시에 여러 개의 task가 실행되어야 하는 그룹 (병렬 실행)
 const live = gulp.parallel([webserver, watch]);
