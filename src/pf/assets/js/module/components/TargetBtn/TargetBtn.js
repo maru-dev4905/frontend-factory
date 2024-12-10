@@ -33,7 +33,6 @@ export default function wvTargetBtn() {
           btn.addClass(className);
           targetElem.addClass(className);
         }
-        btn.addClass("active");
         break;
 
       case "remove":
@@ -41,14 +40,19 @@ export default function wvTargetBtn() {
           btn.removeClass(className);
           targetElem.removeClass(className);
         }
-        btn.removeClass("active");
         break;
 
       case "toggle":
       default:
-        targetElem.toggleClass(className);
-        btn.toggleClass(className);
-        break;
+        if(targetElem.hasClass(className)){
+          btn.removeClass(className);
+          targetElem.removeClass(className);
+          return;
+        }else{
+          btn.addClass(className);
+          targetElem.addClass(className);
+          return;
+        }
     }
   });
 }

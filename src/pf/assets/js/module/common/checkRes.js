@@ -7,7 +7,7 @@ const checkRes = () => {
     window.res = "mo";
   }
 
-  console.log(`window width size : ${window.w} \nwindow height size : ${window.h} \nwindow responsive : ${window.res} \nwindow location : ${window.loc}`);
+  console.log(`window width size : ${w} \nwindow height size : ${h} \nwindow responsive : ${res} \nwindow location : ${loc}`);
 
   return isRes;
 };

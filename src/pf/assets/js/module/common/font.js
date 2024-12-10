@@ -3,7 +3,8 @@ const getFontCdn = (key) => {
   const keyArr = Object.keys(font);
   const keyStr = keyArr.find(item => item == key);
   const link = document.createElement('link');
-  link.rel = 'stylesheet';
+  link.rel = 'preload';
+  link.as = 'style';
 
   if (typeof keyStr != 'undefined') {
     link.href = font[keyStr];
